@@ -5,25 +5,25 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CardShuffler : MonoBehaviour
+public class CCardShuffler : MonoBehaviour
 {
-    public List<DisplayCard> displayCards; // List of all display cards
+    public List<DisplayCard2> displayCards; // List of all display cards
     public Button shuffleButton; // Reference to the shuffle button
     public Animator cardAnimator; // Reference to the Animator component on the object you want to animate
 
-   
+
     public GameObject deck;
     public GameObject hand;
-    
+
     public BoardSlot boardSlot;
-    public DisplayCard dc;
+    public DisplayCard2 dc;
 
     private Dictionary<int, int> usedDetailsCount = new Dictionary<int, int>(); // Track used detail counts
 
     private void Start()
     {
-       // boardSlot = FindAnyObjectByType<BoardSlot>();
-   
+        // boardSlot = FindAnyObjectByType<BoardSlot>();
+
         foreach (var card in displayCards)
         {
             onStartShuffle(card);
@@ -33,7 +33,7 @@ public class CardShuffler : MonoBehaviour
         shuffleButton.onClick.AddListener(ShuffleCards);
     }
 
-    private void onStartShuffle(DisplayCard c) 
+    private void onStartShuffle(DisplayCard2 c)
     {
         int randomDetail;
         int detailCount;
@@ -49,7 +49,7 @@ public class CardShuffler : MonoBehaviour
         usedDetailsCount[randomDetail] = detailCount + 1;
 
         // Set the random detail ID and update the card information
-        if (c.transform.parent.name == "Deck"  || c.transform.parent.name == "Deck2")
+        if (c.transform.parent.name == "Deck" || c.transform.parent.name == "Deck2")
         {
             c.displayId = randomDetail;
             c.UpdateCardInformation();
@@ -60,14 +60,14 @@ public class CardShuffler : MonoBehaviour
 
     public void ShuffleCards()
     {
-        if (shuffleButton.gameObject.name == "Shuffle") 
+        if (shuffleButton.gameObject.name == "Shuffle")
         {
-         boardSlot.AnotherMethod();
+            boardSlot.AnotherMethod();
         }
 
-        if (shuffleButton.gameObject.name == "Shuffle2") 
+        if (shuffleButton.gameObject.name == "Shuffle2")
         {
-         boardSlot.AnotherMethod2();
+            boardSlot.AnotherMethod2();
         }
 
 
@@ -85,7 +85,7 @@ public class CardShuffler : MonoBehaviour
         }
     }
 
-    private void ShuffleCard(DisplayCard card)
+    private void ShuffleCard(DisplayCard2 card)
     {
         // Initialize variables to track the random detail and its count
         int randomDetail;
@@ -102,10 +102,10 @@ public class CardShuffler : MonoBehaviour
         usedDetailsCount[randomDetail] = detailCount + 1;
 
         // Set the random detail ID and update the card information
-        if (card.transform.parent.name == "Deck" || card.transform.parent.name == "Deck2") 
+        if (card.transform.parent.name == "Deck" || card.transform.parent.name == "Deck2")
         {
-        card.displayId = randomDetail;
-        card.UpdateCardInformation();
+            card.displayId = randomDetail;
+            card.UpdateCardInformation();
         }
 
 
@@ -118,7 +118,7 @@ public class CardShuffler : MonoBehaviour
     }
 
 
-    private IEnumerator CardsDelay(float delay) 
+    private IEnumerator CardsDelay(float delay)
     {
         int childCount = deck.transform.childCount;
         int handchildCount = hand.transform.childCount;
@@ -138,15 +138,15 @@ public class CardShuffler : MonoBehaviour
             Transform seventhLastCard = deck.transform.GetChild(childCount - 7); //7th card
             Transform eightLastCard = deck.transform.GetChild(childCount - 8);   //8th card
 
-            if (handchildCount == 8) 
+            if (handchildCount == 8)
             {
                 Debug.Log("Hand Already Fill");
             }
-            if (handchildCount == 7) 
+            if (handchildCount == 7)
             {
                 lastCard.SetParent(hand.transform);
             }
-            if(handchildCount == 6) 
+            if (handchildCount == 6)
             {
                 lastCard.SetParent(hand.transform);
                 secondLastCard.SetParent(hand.transform);
@@ -191,17 +191,17 @@ public class CardShuffler : MonoBehaviour
                 sixthLastCard.SetParent(hand.transform);
                 seventhLastCard.SetParent(hand.transform);
             }
-            if (handchildCount == 0) 
+            if (handchildCount == 0)
             {
-            // Change the parent of the last card to the Hand
-            lastCard.SetParent(hand.transform);
-            secondLastCard.SetParent(hand.transform);
-            thirdLastCard.SetParent(hand.transform);
-            fourthLastCard.SetParent(hand.transform);
-            fifthLastCard.SetParent(hand.transform);
-            sixthLastCard.SetParent(hand.transform);
-            seventhLastCard.SetParent(hand.transform);
-            eightLastCard.SetParent(hand.transform);
+                // Change the parent of the last card to the Hand
+                lastCard.SetParent(hand.transform);
+                secondLastCard.SetParent(hand.transform);
+                thirdLastCard.SetParent(hand.transform);
+                fourthLastCard.SetParent(hand.transform);
+                fifthLastCard.SetParent(hand.transform);
+                sixthLastCard.SetParent(hand.transform);
+                seventhLastCard.SetParent(hand.transform);
+                eightLastCard.SetParent(hand.transform);
             }
         }
     }

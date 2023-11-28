@@ -8,7 +8,7 @@ using UnityEngine.UIElements;
 using Image = UnityEngine.UI.Image;
 using static UnityEditor.Experimental.GraphView.GraphView;
 
-public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
+public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
 {
     public List<Card> display = new List<Card>();
     public int displayId;
@@ -18,25 +18,25 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     public TMP_Text healthText;
     public TMP_Text energyText;
 
-    public CardShuffler shuffler;
+    public CCardShuffler shuffler;
 
     private CanvasGroup canvasGroup;
     private Vector3 initialPosition;
 
     public bool isSelected = false;
 
-    public string tagToSearch = "Player2";
-    GameObject[] player2;
+    public string tagToSearch = "Player1";
+    GameObject[] player1;
 
-    public List<GameObject> adjacentCards = new List<GameObject>();
+    public List<GameObject> adjCards = new List<GameObject>();
 
-    public List<DisplayCard> allDisplayCards; // Reference to all DisplayCard instances
+    public List<DisplayCard2> allDisplayCards; // Reference to all DisplayCard instances
     UnityEngine.UI.Image outerBorder;
 
     public Image dice1;
     public Image dice2;
 
-    public static bool Discard;
+    private static bool DisCard;
 
     // Start is called before the first frame update
     void Start()
@@ -44,29 +44,27 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         canvasGroup = GetComponent<CanvasGroup>();
         UpdateCardInformation();
 
-        player2 = GameObject.FindGameObjectsWithTag(tagToSearch);
-
+        player1 = GameObject.FindGameObjectsWithTag(tagToSearch);
 
         // Populate allDisplayCards with all instances of DisplayCard
-        allDisplayCards = new List<DisplayCard>(FindObjectsOfType<DisplayCard>());
+        allDisplayCards = new List<DisplayCard2>(FindObjectsOfType<DisplayCard2>());
         outerBorder = this.transform.Find("OuterBorder").GetComponent<Image>();
-
         dice1.enabled = false;
         dice2.enabled = false;
 
-        Discard = false;
+        DisCard = false;
     }
 
     public void UpdateCardInformation()
     {
-        Card card = display.Find(c => c.cardId == displayId);
+        Card cardd = display.Find(c => c.cardId == displayId);
 
-        if (card != null)
+        if (cardd != null)
         {
-            nameText.text = card.cardName;
-            attackText.text = card.cardAttack.ToString();
-            healthText.text = card.cardHealth.ToString();
-            energyText.text = card.cardEnergy.ToString();   
+            nameText.text = cardd.cardName;
+            attackText.text = cardd.cardAttack.ToString();
+            healthText.text = cardd.cardHealth.ToString();
+            energyText.text = cardd.cardEnergy.ToString();
         }
         else
         {
@@ -90,12 +88,12 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         int dragging = BoardSlot.GetCurrentEnergy();
         int dragging2 = BoardSlot.GetCurrentEnergyP2();
 
-        if (transform.parent!=null && transform.parent.name == "Hand") 
+        if (transform.parent != null && transform.parent.name == "Hand")
         {
-           if (dragging > 0) 
-           {
-               transform.position = Input.mousePosition;
-           }
+            if (dragging > 0)
+            {
+                transform.position = Input.mousePosition;
+            }
         }
 
         if (transform.parent != null && transform.parent.name == "Hand2")
@@ -121,106 +119,95 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             transform.position = initialPosition;
 
             int cardEnergy = GetCardEnergy();
-            
+
         }
     }
 
     public int GetCardEnergy()
     {
-        Card card = display.Find(c => c.cardId == displayId);
-        if (card != null)
+        Card cardd = display.Find(c => c.cardId == displayId);
+        if (cardd != null)
         {
-            return card.cardEnergy;
+            return cardd.cardEnergy;
         }
         return 0; // Return 0 if the card is not found.
     }
 
     public int GetCardAttack() 
     {
-        Card card = display.Find(c => c.cardId == displayId);
-        if (card != null)
+        Card cardd = display.Find(c => c.cardId == displayId);
+        if (cardd != null)
         {
-            return card.cardAttack;
+            return cardd.cardAttack;
         }
         return 0; // Return 0 if the card is not found.
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        bool isP1Turn = ButtonTurn.GetPlayerTurn();    // Debug.Log("DC P1 Turn:"+isTurn);
-
-        if (isP1Turn)
+       // isSelected = !isSelected;
+        bool isP1Turn = ButtonTurn.GetPlayerTurn();
+      
+        if (!isP1Turn) 
         {
             isSelected = !isSelected;
             if (isSelected)
-            {      
+            {
                 outerBorder.color = Color.green;
 
-                foreach (GameObject p2 in player2)
+                foreach (GameObject p1 in player1)
                 {
-                    float distance = Vector3.Distance(p2.transform.position, transform.position);
+                    float distance = Vector3.Distance(p1.transform.position, transform.position);
 
                     if (distance < 165f)
                     {
-                        UnityEngine.UI.Image p2outerborder = p2.transform.Find("OuterBorder").GetComponent<Image>();
+                        UnityEngine.UI.Image p2outerborder = p1.transform.Find("OuterBorder").GetComponent<Image>();
                         p2outerborder.color = Color.blue;
 
-                        adjacentCards.Add(p2);
-
+                        adjCards.Add(p1);
+                      
                     }
                 }
 
-                // Unselect other DisplayCard instances
-                foreach (DisplayCard otherCard in allDisplayCards)
+                foreach (DisplayCard2 othercard in allDisplayCards) 
                 {
-                    if (otherCard != this)
+                    if (othercard!=this) 
                     {
-                        otherCard.isSelected = false;
-                        otherCard.adjacentCards.Clear();
-                        otherCard.outerBorder.color = Color.black;
-
-                    /*    foreach (GameObject ptwo in player2)
-                        {
-                            float dist = Vector3.Distance(ptwo.transform.position,otherCard.transform.position);
-
-                            if (dist<165f) 
-                            {
-                                UnityEngine.UI.Image ptwoouterborder = ptwo.transform.Find("OuterBorder").GetComponent<Image>();
-                                ptwoouterborder.color = Color.yellow;
-                            }
-
-                        }*/
+                        othercard.isSelected = false;
+                        othercard.adjCards.Clear();
+                        othercard.outerBorder.color = Color.yellow;
                     }
                 }
 
             }
             if (!isSelected)
             {
-                outerBorder.color = Color.black;
-               // DisplayCard2.dice1.enabled = false;
+                outerBorder.color = Color.yellow;
 
-                foreach (GameObject p2 in player2)
+                foreach (GameObject p1 in player1)
                 {
-                    float distance = Vector3.Distance(p2.transform.position, transform.position);
+                    float distance = Vector3.Distance(p1.transform.position, transform.position);
 
                     if (distance < 165f)
                     {
-                        UnityEngine.UI.Image p2outerborder = p2.transform.Find("OuterBorder").GetComponent<Image>();
-                        p2outerborder.color = Color.yellow; //FFFF00
+                        UnityEngine.UI.Image p1outerborder = p1.transform.Find("OuterBorder").GetComponent<Image>();
+                        p1outerborder.color = Color.black;
 
-                        adjacentCards.Clear();
+                        adjCards.Clear();
                     }
                 }
-            }
+
+            } 
         }
-        if (!isP1Turn) 
+
+        if (isP1Turn) 
         {
-            foreach (GameObject displayCardObject in player2)
+            foreach (GameObject displayCardObject in player1)
             {
-                DisplayCard2 dp = displayCardObject.GetComponent<DisplayCard2>();
-                if (dp != null && dp.adjCards.Contains(gameObject))
+                DisplayCard dp = displayCardObject.GetComponent<DisplayCard>();
+                if (dp != null && dp.adjacentCards.Contains(gameObject))
                 {
-                    foreach (DisplayCard lastselected in allDisplayCards)
+                    foreach (DisplayCard2 lastselected in allDisplayCards)
                     {
 
                         if (lastselected.isSelected)
@@ -228,60 +215,56 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                             lastselected.isSelected = false;
                             lastselected.outerBorder.color = Color.blue;
                         }
-                        else
+                        else 
                         {
                             isSelected = !isSelected;
                         }
                     }
-                    isSelected = !isSelected;
+                            isSelected = !isSelected;
                 }
             }
 
-
-            if (isSelected)
+           
+            if (isSelected) 
             {
-                foreach (GameObject displayCardObject in player2)
+                foreach (GameObject displayCardObject in player1) 
                 {
-                    DisplayCard2 dp = displayCardObject.GetComponent<DisplayCard2>();
-                    if (dp != null && dp.adjCards.Contains(gameObject))
+                    DisplayCard dp = displayCardObject.GetComponent<DisplayCard>();
+                    if (dp != null && dp.adjacentCards.Contains(gameObject)) 
                     {
                         outerBorder.color = Color.red;
-                        Debug.Log("Player2's Card Attack:"+dp.GetCardAttack());
+                        Debug.Log("Player1 Card's Attack:"+dp.GetCardAttack());
                         dice1.enabled = true;
                         dice2.enabled = true;
                         if (this.GetCardAttack() < dp.GetCardAttack()) 
                         {
-                            Discard = true;
+                            DisCard = true; 
                         }
+                      
                     }
                 }
             }
-            if (!isSelected)
+            if (!isSelected) 
             {
-                foreach (GameObject displayCardObject in player2)
+                foreach (GameObject displayCardObject in player1)
                 {
-                    DisplayCard2 dp = displayCardObject.GetComponent<DisplayCard2>();
-                    if (dp != null && dp.adjCards.Contains(gameObject))
+                    DisplayCard dp = displayCardObject.GetComponent<DisplayCard>();
+                    if (dp != null && dp.adjacentCards.Contains(gameObject))
                     {
-                        outerBorder.color = Color.blue;
+                        outerBorder.color = Color.blue;   //MainCamera Blue Color: 314D79    Board Color: 292E48 
                         dice1.enabled = false;
                         dice2.enabled = false;
                     }
                 }
             }
         }
-       
+
         Debug.Log(isSelected);
     }
 
     public bool GetDiscard() 
     {
-        return Discard;
+        return DisCard;
     }
 
-    public bool GetSelected() 
-    {
-        return isSelected;
-    }
-   
 }
