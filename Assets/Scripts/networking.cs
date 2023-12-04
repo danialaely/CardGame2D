@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class networking : MonoBehaviourPunCallbacks
 {
-    public GameObject board;
+    //public GameObject board;
+    public Camera mycamera;
 
     // Start is called before the first frame update
     void Start()
@@ -59,14 +60,20 @@ public class networking : MonoBehaviourPunCallbacks
         if (PhotonNetwork.IsMasterClient)
         {
             // Handle master client logic
-            board.transform.position = new Vector3(540f, 127.3906f, 129.8881f);
-            board.transform.rotation = Quaternion.Euler(0, 0, 0);
+
+            //board.transform.position = new Vector3(540f, 127.3906f, 129.8881f);
+            //board.transform.rotation = Quaternion.Euler(0, 0, 0);
+            mycamera.transform.position = new Vector3(515.5f, 261.4f, -10f);
+            mycamera.transform.rotation = Quaternion.Euler(0,0,0);
         }
         else
         {
             // Handle non-master client logic
-            board.transform.position = new Vector3(500f, 405f, 129.8881f);
-            board.transform.rotation = Quaternion.Euler(0, 0, 180);
+
+            //board.transform.position = new Vector3(500f, 405f, 129.8881f);
+            //board.transform.rotation = Quaternion.Euler(0, 0, 180);
+            mycamera.transform.position = new Vector3(515.5f, 261.4f, -10f);
+            mycamera.transform.rotation = Quaternion.Euler(0, 0, 180);
         }
     }
 }
