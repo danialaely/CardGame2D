@@ -4,6 +4,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
 
 public class CardShuffler : MonoBehaviour
 {
@@ -30,6 +31,9 @@ public class CardShuffler : MonoBehaviour
         }
 
         // Add a click listener to the shuffle button
+        if (!PhotonNetwork.IsMasterClient) 
+        {
+        }
         shuffleButton.onClick.AddListener(ShuffleCards);
     }
 

@@ -94,7 +94,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         {
            if (dragging > 0) 
            {
-               transform.position = Input.mousePosition;
+                transform.position = Input.mousePosition;
            }
         }
 

@@ -20,10 +20,11 @@ public class network_card : MonoBehaviourPun , IPunObservable
         if (photonView.IsMine)
         {
             //Do Nothing
+           
         }
         else 
         {
-            transform.position = Vector3.Lerp(transform.position, realPosition,0.1f);
+           transform.position = Vector3.Lerp(transform.position, realPosition,0.1f);
           //  transform.GetComponent<DisplayCard>().displayId = dispID;
           //  Debug.Log("Display id:"+ transform.GetComponent<DisplayCard>().displayId);
         }
