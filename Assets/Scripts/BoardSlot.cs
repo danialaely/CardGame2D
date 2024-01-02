@@ -25,7 +25,7 @@ public class BoardSlot : MonoBehaviour, IDropHandler
 
         //  if (card.transform.parent.name == "Hand"){ }
 
-        if (card != null && transform.childCount == 0)
+        if (card != null && transform.childCount == 0) 
         {
             int cardEnergy = card.GetCardEnergy();
 

@@ -8,7 +8,7 @@ using UnityEngine.UIElements;
 using Image = UnityEngine.UI.Image;
 //using static UnityEditor.Experimental.GraphView.GraphView;
 
-public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
+public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public List<Card> display = new List<Card>();
     public int displayId;
@@ -38,6 +38,15 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public static bool Discard;
 
+    public Camera mainCamera; // Reference to your main camera
+    private float originalOrthographicSize;
+    Vector3 originalCamPos;
+
+    private float lastClickTime = 0f;
+    private float doubleClickDelay = 0.2f; // Adjust this value based on your desired double-tap speed
+
+    // Vector2 difference = Vector2.zero;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,6 +64,20 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         dice2.enabled = false;
 
         Discard = false;
+
+
+        if (mainCamera == null)
+        {
+            // If the mainCamera reference is not set, try to find the main camera in the scene
+            mainCamera = Camera.main;
+        }
+
+        // Store the original orthographic size for resetting
+        if (mainCamera != null)
+        {
+            originalOrthographicSize = mainCamera.orthographicSize;
+            originalCamPos = mainCamera.transform.position;
+        }
     }
 
     public void UpdateCardInformation()
@@ -83,6 +106,8 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         initialPosition = transform.position;
         canvasGroup.alpha = 0.6f;
         canvasGroup.blocksRaycasts = false;
+
+       // difference = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition)-(Vector2)transform.position;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -94,7 +119,17 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         {
            if (dragging > 0) 
            {
-                transform.position = Input.mousePosition;
+                 //transform.position = Input.mousePosition;
+
+                 RectTransformUtility.ScreenPointToLocalPointInRectangle(transform.parent.GetComponent<RectTransform>(),Input.mousePosition, Camera.main,out Vector2 localPos);
+                 transform.localPosition = localPos;
+
+                //transform.position =  Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+                //transform.position = Camera.main.WorldToScreenPoint(Input.mousePosition);
+
+                //  transform.position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) - difference;
+                //transform.position = eventData.position;
            }
         }
 
@@ -149,6 +184,18 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     {
         bool isP1Turn = ButtonTurn.GetPlayerTurn();    // Debug.Log("DC P1 Turn:"+isTurn);
 
+                if (mainCamera != null && Time.time-lastClickTime<doubleClickDelay)
+                {
+                    // You can adjust the target orthographic size based on your desired zoom level
+                    float targetOrthographicSize = 197.71f;
+
+                    Vector3 offset = new Vector3(0f,0f,-10f);
+                    mainCamera.transform.position = this.transform.position+offset;
+                    // You can also add smoothness by using Lerp or other techniques
+                    float transitionSpeed = 1f;
+                    mainCamera.orthographicSize = Mathf.Lerp(mainCamera.orthographicSize, targetOrthographicSize,  transitionSpeed);
+                }
+                lastClickTime = Time.time;
         if (isP1Turn)
         {
             isSelected = !isSelected;
@@ -160,7 +207,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                 {
                     float distance = Vector3.Distance(p2.transform.position, transform.position);
 
-                    if (distance < 165f)
+                    if (distance < 210f)
                     {
                         UnityEngine.UI.Image p2outerborder = p2.transform.Find("OuterBorder").GetComponent<Image>();
                         p2outerborder.color = Color.blue;
@@ -197,13 +244,20 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             if (!isSelected)
             {
                 outerBorder.color = Color.black;
-               // DisplayCard2.dice1.enabled = false;
+                // DisplayCard2.dice1.enabled = false;
+                // Reset the orthographic camera's size when the card is deselected
+                if (mainCamera != null)
+                {
+                    mainCamera.orthographicSize = originalOrthographicSize;
+                    mainCamera.transform.position = originalCamPos;
+                }
+
 
                 foreach (GameObject p2 in player2)
                 {
                     float distance = Vector3.Distance(p2.transform.position, transform.position);
 
-                    if (distance < 165f)
+                    if (distance < 210f)
                     {
                         UnityEngine.UI.Image p2outerborder = p2.transform.Find("OuterBorder").GetComponent<Image>();
                         p2outerborder.color = Color.yellow; //FFFF00
@@ -283,5 +337,14 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     {
         return isSelected;
     }
-   
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+     //   Debug.Log("Hovering over:"+gameObject.name);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        
+    }
 }

@@ -100,7 +100,9 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         {
             if (dragging2 > 0)
             {
-                transform.position = Input.mousePosition;
+                // transform.position = Input.mousePosition;
+                RectTransformUtility.ScreenPointToLocalPointInRectangle(transform.parent.GetComponent<RectTransform>(), Input.mousePosition, Camera.main, out Vector2 localPos);
+                transform.localPosition = localPos;
             }
         }
 
@@ -159,7 +161,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                 {
                     float distance = Vector3.Distance(p1.transform.position, transform.position);
 
-                    if (distance < 165f)
+                    if (distance < 210f)
                     {
                         UnityEngine.UI.Image p2outerborder = p1.transform.Find("OuterBorder").GetComponent<Image>();
                         p2outerborder.color = Color.blue;
@@ -188,7 +190,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                 {
                     float distance = Vector3.Distance(p1.transform.position, transform.position);
 
-                    if (distance < 165f)
+                    if (distance < 210f)
                     {
                         UnityEngine.UI.Image p1outerborder = p1.transform.Find("OuterBorder").GetComponent<Image>();
                         p1outerborder.color = Color.black;

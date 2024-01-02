@@ -17,6 +17,8 @@ public class networking : MonoBehaviourPunCallbacks
     // Update is called once per frame
     void Update()
     {
+       // Debug.Log(mycamera.ScreenPointToRay(Input.mousePosition));
+       //mycamera.ScreenPointToRay(Input.mousePosition);
     }
 
     void Connect()
