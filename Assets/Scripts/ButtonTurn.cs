@@ -15,10 +15,29 @@ public class ButtonTurn : MonoBehaviour
     private int turnCount2;
     // private Coroutine healthtimerCoroutine;
 
+    public Camera mainCamera; // Reference to your main camera
+
+    private float originalOrthographicSize;
+    Vector3 originalCamPos;
+
     private void Start()
     {
         turnCoroutine = StartCoroutine(ChangeTurn(30.0f));
         TurnStarter(isPlayer1Turn);
+
+        if (mainCamera == null)
+        {
+            // If the mainCamera reference is not set, try to find the main camera in the scene
+            mainCamera = Camera.main;
+        }
+
+        // Store the original orthographic size for resetting
+        if (mainCamera != null)
+        {
+            originalOrthographicSize = mainCamera.orthographicSize;
+            originalCamPos = mainCamera.transform.position;
+        }
+
     }
 
     public void OnTurnButtonClick()
@@ -62,7 +81,7 @@ public class ButtonTurn : MonoBehaviour
         {
             if (isPlayer1Turn)
             {
-                turnText.text = "P1 Turn";
+                turnText.text = "PA Turn";
                 turnCount = 30;
                 turnBar.SetTurnTime(turnCount);
 
@@ -71,13 +90,19 @@ public class ButtonTurn : MonoBehaviour
             }
             else
             {
-                turnText.text = "P2 Turn";
+                turnText.text = "PB Turn";
                 turnCount2 = 30;
                 turnBar.SetTurnTime2(turnCount2);
               // StartCoroutine(Turnbar2(1.0f));
 
                 turnCount = 0;
                 turnBar.SetTurnTime(turnCount2);
+
+                if (mainCamera != null)
+                {
+                    mainCamera.orthographicSize = originalOrthographicSize;
+                    mainCamera.transform.position = originalCamPos;
+                }
             }
             Debug.Log(isPlayer1Turn);
 
