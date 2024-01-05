@@ -17,6 +17,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     public TMP_Text attackText;
     public TMP_Text healthText;
     public TMP_Text energyText;
+    public Image crdImage;
 
     public CCardShuffler shuffler;
 
@@ -65,6 +66,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             attackText.text = cardd.cardAttack.ToString();
             healthText.text = cardd.cardHealth.ToString();
             energyText.text = cardd.cardEnergy.ToString();
+            crdImage.sprite = cardd.cardImage;
         }
         else
         {

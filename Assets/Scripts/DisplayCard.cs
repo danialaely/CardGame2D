@@ -17,6 +17,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     public TMP_Text attackText;
     public TMP_Text healthText;
     public TMP_Text energyText;
+    public Image crdImage;
 
     public CardShuffler shuffler;
 
@@ -44,6 +45,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     private float lastClickTime = 0f;
     private float doubleClickDelay = 0.2f; // Adjust this value based on your desired double-tap speed
+
 
     // Vector2 difference = Vector2.zero;
 
@@ -90,6 +92,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             attackText.text = card.cardAttack.ToString();
             healthText.text = card.cardHealth.ToString();
             energyText.text = card.cardEnergy.ToString();   
+            crdImage.sprite = card.cardImage;
         }
         else
         {
