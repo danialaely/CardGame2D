@@ -92,7 +92,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             attackText.text = card.cardAttack.ToString();
             healthText.text = card.cardHealth.ToString();
             energyText.text = card.cardEnergy.ToString();   
-            crdImage.sprite = card.cardImage;
+           crdImage.sprite = card.cardImage;
         }
         else
         {
@@ -100,6 +100,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             attackText.text = " ";
             healthText.text = " ";
             energyText.text = " ";
+            crdImage.sprite = null;
         }
 
     }

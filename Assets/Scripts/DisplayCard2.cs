@@ -74,6 +74,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             attackText.text = " ";
             healthText.text = " ";
             energyText.text = " ";
+            crdImage.sprite = null;
         }
 
     }
