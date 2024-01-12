@@ -90,6 +90,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     {
         int dragging = BoardSlot.GetCurrentEnergy();
         int dragging2 = BoardSlot.GetCurrentEnergyP2();
+        bool isP1Turn = ButtonTurn.GetPlayerTurn();
 
         if (transform.parent != null && transform.parent.name == "Hand")
         {
@@ -99,7 +100,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             }
         }
 
-        if (transform.parent != null && transform.parent.name == "Hand2")
+        if (transform.parent != null && transform.parent.name == "Hand2" && !isP1Turn)
         {
             if (dragging2 > 0)
             {
@@ -152,7 +153,15 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     {
        // isSelected = !isSelected;
         bool isP1Turn = ButtonTurn.GetPlayerTurn();
-      
+
+        bool isZoom = Zoom.GetBool();
+        if (isZoom)
+        {
+            Vector3 offt1 = new Vector3(-400f, 0, 0);
+            dice1.transform.position = this.transform.position + offt1;
+            dice2.transform.position = this.transform.position - offt1;
+        }
+
         if (!isP1Turn) 
         {
             isSelected = !isSelected;

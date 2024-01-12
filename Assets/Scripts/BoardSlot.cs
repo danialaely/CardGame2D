@@ -24,6 +24,7 @@ public class BoardSlot : MonoBehaviour, IDropHandler
         DisplayCard2 cardd = eventData.pointerDrag.GetComponent<DisplayCard2>();
 
         //  if (card.transform.parent.name == "Hand"){ }
+        bool isP1Turn = ButtonTurn.GetPlayerTurn();
 
         if (card != null && transform.childCount == 0) 
         {
@@ -31,7 +32,7 @@ public class BoardSlot : MonoBehaviour, IDropHandler
 
             if (int.TryParse(energyText.text, out currentEnergy))
             {
-                if (currentEnergy >= cardEnergy)
+                if (currentEnergy >= cardEnergy && isP1Turn)
                 {
                     currentEnergy -= cardEnergy;
                     energyText.text = currentEnergy.ToString();
@@ -64,7 +65,7 @@ public class BoardSlot : MonoBehaviour, IDropHandler
 
             if (int.TryParse(energyTextP2.text, out currentEnergyP2))
             {
-                if (currentEnergyP2 >= carddEnergy)
+                if (currentEnergyP2 >= carddEnergy && !isP1Turn)
                 {
                     currentEnergyP2 -= carddEnergy;
                     energyTextP2.text = currentEnergyP2.ToString();

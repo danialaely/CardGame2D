@@ -78,8 +78,48 @@ public class CCardShuffler : MonoBehaviour
         StartCoroutine(CardsDelay(2.1f));
 
         // Play the shuffle animation
+        int handchildCount = hand.transform.childCount;
+        if (handchildCount==0) 
+        { 
         cardAnimator.SetTrigger("ShuffleTrigger");
         StartCoroutine(BackToDefault(3));
+        }
+        if (handchildCount == 7)
+        {
+            cardAnimator.SetTrigger("ShuffleTriger2");
+            StartCoroutine(BackToDefault(2));
+        }
+        if (handchildCount == 6)
+        {
+            cardAnimator.SetTrigger("ShuffleTrigger3");
+            StartCoroutine(BackToDefault(2));
+        }
+        if (handchildCount == 5)
+        {
+            cardAnimator.SetTrigger("ShuffleTrigger4");
+            StartCoroutine(BackToDefault(2));
+        }
+        if (handchildCount == 4)
+        {
+            cardAnimator.SetTrigger("ShuffleTrigger5");
+            StartCoroutine(BackToDefault(2));
+        }
+        if (handchildCount == 3)
+        {
+            cardAnimator.SetTrigger("ShuffleTrigger6");
+            StartCoroutine(BackToDefault(2));
+        }
+        if (handchildCount == 2)
+        {
+            cardAnimator.SetTrigger("ShuffleTrigger7");
+            StartCoroutine(BackToDefault(2));
+        }
+        if (handchildCount == 1)
+        {
+            cardAnimator.SetTrigger("ShuffleTrigger8");
+            StartCoroutine(BackToDefault(2));
+        }
+
         // Reset the used detail count dictionary
         usedDetailsCount.Clear();
 

@@ -39,12 +39,15 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public static bool Discard;
 
-    public Camera mainCamera; // Reference to your main camera
-    private float originalOrthographicSize;
-    Vector3 originalCamPos;
+   // public Camera mainCamera; // Reference to your main camera
+   // private float originalOrthographicSize;
+   // Vector3 originalCamPos;
 
-    private float lastClickTime = 0f;
-    private float doubleClickDelay = 0.2f; // Adjust this value based on your desired double-tap speed
+  //  Vector3 originaldice1Pos;
+  //  Vector3 originaldice2Pos;
+
+   // private float lastClickTime = 0f;
+   // private float doubleClickDelay = 0.2f; // Adjust this value based on your desired double-tap speed
 
 
     // Vector2 difference = Vector2.zero;
@@ -64,11 +67,14 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
         dice1.enabled = false;
         dice2.enabled = false;
+      //  originaldice1Pos = dice1.transform.position;
+      //  originaldice2Pos = dice2.transform.position;
+
 
         Discard = false;
 
 
-        if (mainCamera == null)
+    /*    if (mainCamera == null)
         {
             // If the mainCamera reference is not set, try to find the main camera in the scene
             mainCamera = Camera.main;
@@ -79,7 +85,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         {
             originalOrthographicSize = mainCamera.orthographicSize;
             originalCamPos = mainCamera.transform.position;
-        }
+        }*/
     }
 
     public void UpdateCardInformation()
@@ -118,8 +124,8 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     {
         int dragging = BoardSlot.GetCurrentEnergy();
         int dragging2 = BoardSlot.GetCurrentEnergyP2();
-
-        if (transform.parent!=null && transform.parent.name == "Hand") 
+        bool isP1Turn = ButtonTurn.GetPlayerTurn();
+        if (transform.parent!=null && transform.parent.name == "Hand" && isP1Turn) 
         {
            if (dragging > 0) 
            {
@@ -137,13 +143,13 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
            }
         }
 
-        if (transform.parent != null && transform.parent.name == "Hand2")
+     /*   if (transform.parent != null && transform.parent.name == "Hand2")
         {
             if (dragging2 > 0)
             {
                 transform.position = Input.mousePosition;
             }
-        }
+        }*/
 
     }
 
@@ -188,20 +194,17 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     {
         bool isP1Turn = ButtonTurn.GetPlayerTurn();    // Debug.Log("DC P1 Turn:"+isTurn);
 
-                if (mainCamera != null && Time.time-lastClickTime<doubleClickDelay)
-                {
-                    // You can adjust the target orthographic size based on your desired zoom level
-                    float targetOrthographicSize = 197.71f;
+        bool isZoom = Zoom.GetBool();
+        if (isZoom) 
+        {
+            Vector3 offt1 = new Vector3(-400f, 0, 0);
+            dice1.transform.position = this.transform.position + offt1;
+            dice2.transform.position = this.transform.position - offt1;
+        }
 
-                    Vector3 offset = new Vector3(0f,0f,-10f);
-                    mainCamera.transform.position = this.transform.position+offset;
-                    // You can also add smoothness by using Lerp or other techniques
-                    float transitionSpeed = 1f;
-                    mainCamera.orthographicSize = Mathf.Lerp(mainCamera.orthographicSize, targetOrthographicSize,  transitionSpeed);
-                }
-                lastClickTime = Time.time;
         if (isP1Turn)
         {
+                
             isSelected = !isSelected;
             if (isSelected)
             {      
@@ -250,12 +253,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                 outerBorder.color = Color.black;
                 // DisplayCard2.dice1.enabled = false;
                 // Reset the orthographic camera's size when the card is deselected
-                if (mainCamera != null)
-                {
-                    mainCamera.orthographicSize = originalOrthographicSize;
-                    mainCamera.transform.position = originalCamPos;
-                }
-
+                
 
                 foreach (GameObject p2 in player2)
                 {
@@ -265,7 +263,6 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                     {
                         UnityEngine.UI.Image p2outerborder = p2.transform.Find("OuterBorder").GetComponent<Image>();
                         p2outerborder.color = Color.yellow; //FFFF00
-
                         adjacentCards.Clear();
                     }
                 }
