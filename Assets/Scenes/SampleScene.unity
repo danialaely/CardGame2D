@@ -4139,7 +4139,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -901, y: -219}
+  m_AnchoredPosition: {x: -897, y: -219}
   m_SizeDelta: {x: -858.074, y: -262.3274}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &135992630
@@ -29855,6 +29855,8 @@ MonoBehaviour:
   turnText: {fileID: 670695127}
   turnBar: {fileID: 1152803399}
   mainCamera: {fileID: 519420031}
+  deckP1: {fileID: 241768672}
+  deckP2: {fileID: 1654882287}
 --- !u!4 &733181124
 Transform:
   m_ObjectHideFlags: 0
@@ -79354,7 +79356,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.54}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -913.6, y: -172}
+  m_AnchoredPosition: {x: -910, y: -172}
   m_SizeDelta: {x: -956.8052, y: -404.0595}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2029075385

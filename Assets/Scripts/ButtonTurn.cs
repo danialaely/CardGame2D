@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class ButtonTurn : MonoBehaviour
 {
@@ -19,6 +20,9 @@ public class ButtonTurn : MonoBehaviour
 
     private float originalOrthographicSize;
     Vector3 originalCamPos;
+
+    public Button deckP1;
+    public Button deckP2;
 
     private void Start()
     {
@@ -54,6 +58,9 @@ public class ButtonTurn : MonoBehaviour
 
             turnCount2 = 30;
             turnBar.SetTurnTime2(turnCount2);
+
+            deckP1.enabled = false;
+            deckP2.enabled = true;
         }
         else
         {
@@ -63,6 +70,9 @@ public class ButtonTurn : MonoBehaviour
 
             turnCount2 = 0;
             turnBar.SetTurnTime2(turnCount2);
+
+            deckP1.enabled = true;
+            deckP2.enabled = false;
         }
 
         // Toggle the turn
@@ -87,6 +97,9 @@ public class ButtonTurn : MonoBehaviour
 
                 turnCount2 = 0;
                 turnBar.SetTurnTime2(turnCount2);
+
+                deckP1.enabled = true;
+                deckP2.enabled = false;
             }
             else
             {
@@ -103,6 +116,9 @@ public class ButtonTurn : MonoBehaviour
                     mainCamera.orthographicSize = originalOrthographicSize;
                     mainCamera.transform.position = originalCamPos;
                 }
+
+                deckP1.enabled = false;
+                deckP2.enabled = true;
             }
             Debug.Log(isPlayer1Turn);
 

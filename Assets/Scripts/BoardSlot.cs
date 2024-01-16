@@ -34,6 +34,17 @@ public class BoardSlot : MonoBehaviour, IDropHandler
             {
                 if (currentEnergy >= cardEnergy && isP1Turn)
                 {
+                    int rowIndex = transform.GetSiblingIndex();
+                    int maxRowIndex = 97;
+
+                    int columnIndex = transform.parent.GetSiblingIndex();
+
+                    if (rowIndex >= 84 && rowIndex < maxRowIndex || (transform.parent.GetChild(rowIndex - 1).childCount > 0) || 
+                        (transform.parent.GetChild(rowIndex - 13).childCount > 0) || (transform.parent.GetChild(rowIndex - 14).childCount > 0) ||
+                        (transform.parent.GetChild(rowIndex - 15).childCount > 0) ||
+                        transform.parent.GetChild(rowIndex + 1).childCount > 0 || transform.parent.GetChild(rowIndex + 13).childCount > 0
+                        || transform.parent.GetChild(rowIndex + 14).childCount > 0 || transform.parent.GetChild(rowIndex + 15).childCount > 0) 
+                    {                                                                 // 
                     currentEnergy -= cardEnergy;
                     energyText.text = currentEnergy.ToString();
                     healthBar.SetHealth(currentEnergy); //
@@ -44,6 +55,7 @@ public class BoardSlot : MonoBehaviour, IDropHandler
                     card.transform.SetParent(transform);
                     card.transform.localPosition = Vector3.zero;
                     card.GetComponent<CanvasGroup>().blocksRaycasts = true;
+                    }
                 }
             }
             else
@@ -67,7 +79,17 @@ public class BoardSlot : MonoBehaviour, IDropHandler
             {
                 if (currentEnergyP2 >= carddEnergy && !isP1Turn)
                 {
-                    currentEnergyP2 -= carddEnergy;
+                        int rowIndex = transform.GetSiblingIndex();
+                        int maxRowIndex = 14;
+
+                        if (rowIndex >= 0 && rowIndex < maxRowIndex || (transform.parent.GetChild(rowIndex - 1).childCount > 0) ||
+                        (transform.parent.GetChild(rowIndex - 13).childCount > 0) || (transform.parent.GetChild(rowIndex - 14).childCount > 0) ||
+                        (transform.parent.GetChild(rowIndex - 15).childCount > 0) ||
+                        transform.parent.GetChild(rowIndex + 1).childCount > 0 || transform.parent.GetChild(rowIndex + 13).childCount > 0
+                        || transform.parent.GetChild(rowIndex + 14).childCount > 0 || transform.parent.GetChild(rowIndex + 15).childCount > 0) 
+                        { 
+
+                        currentEnergyP2 -= carddEnergy;
                     energyTextP2.text = currentEnergyP2.ToString();
                     healthBar.SetHealth2(currentEnergyP2); //
                     if (currentEnergyP2 == -1)
@@ -80,6 +102,7 @@ public class BoardSlot : MonoBehaviour, IDropHandler
 
                     Image carddBackImage = cardd.transform.Find("Back").GetComponent<Image>();
                     carddBackImage.enabled = false;
+                        }
                 }
             }
             else
