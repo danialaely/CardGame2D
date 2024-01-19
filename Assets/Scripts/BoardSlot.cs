@@ -16,9 +16,11 @@ public class BoardSlot : MonoBehaviour, IDropHandler
     private static int currentEnergyP2 = 0;
 
     public HealthBar healthBar;
+
+    
     // End Turn Button to move between Turns
 
-    public void OnDrop(PointerEventData eventData)
+    public void OnDrop(PointerEventData eventData)    
     {
         DisplayCard card = eventData.pointerDrag.GetComponent<DisplayCard>();
         DisplayCard2 cardd = eventData.pointerDrag.GetComponent<DisplayCard2>();
@@ -26,24 +28,28 @@ public class BoardSlot : MonoBehaviour, IDropHandler
         //  if (card.transform.parent.name == "Hand"){ }
         bool isP1Turn = ButtonTurn.GetPlayerTurn();
 
-        if (card != null && transform.childCount == 0) 
+        if (card != null && transform.childCount == 0)  //(2): CARD PLACEMENT PHASE
         {
             int cardEnergy = card.GetCardEnergy();
 
             if (int.TryParse(energyText.text, out currentEnergy))
             {
-                if (currentEnergy >= cardEnergy && isP1Turn)
+                if (currentEnergy >= cardEnergy && isP1Turn)     
                 {
                     int rowIndex = transform.GetSiblingIndex();
                     int maxRowIndex = 97;
 
-                    int columnIndex = transform.parent.GetSiblingIndex();
+                  //  int columnIndex = transform.parent.GetSiblingIndex();
 
-                    if (rowIndex >= 84 && rowIndex < maxRowIndex || (transform.parent.GetChild(rowIndex - 1).childCount > 0) || 
-                        (transform.parent.GetChild(rowIndex - 13).childCount > 0) || (transform.parent.GetChild(rowIndex - 14).childCount > 0) ||
-                        (transform.parent.GetChild(rowIndex - 15).childCount > 0) ||
-                        transform.parent.GetChild(rowIndex + 1).childCount > 0 || transform.parent.GetChild(rowIndex + 13).childCount > 0
-                        || transform.parent.GetChild(rowIndex + 14).childCount > 0 || transform.parent.GetChild(rowIndex + 15).childCount > 0) 
+                    if ((rowIndex >= 84 && rowIndex < maxRowIndex) || 
+                        (transform.parent.GetChild(rowIndex - 1).childCount > 0 && transform.parent.GetChild(rowIndex - 1).GetChild(0).tag == "Player1") || 
+                        (transform.parent.GetChild(rowIndex - 13).childCount > 0 && transform.parent.GetChild(rowIndex - 13).GetChild(0).tag == "Player1") || 
+                        (transform.parent.GetChild(rowIndex - 14).childCount > 0 && transform.parent.GetChild(rowIndex - 14).GetChild(0).tag == "Player1") ||
+                        (transform.parent.GetChild(rowIndex - 15).childCount > 0 && transform.parent.GetChild(rowIndex - 15).GetChild(0).tag == "Player1") ||
+                        (transform.parent.GetChild(rowIndex + 1).childCount > 0 && transform.parent.GetChild(rowIndex + 1).GetChild(0).tag == "Player1") || 
+                        (transform.parent.GetChild(rowIndex + 13).childCount > 0 && transform.parent.GetChild(rowIndex + 13).GetChild(0).tag == "Player1")||
+                        (transform.parent.GetChild(rowIndex + 14).childCount > 0 && transform.parent.GetChild(rowIndex + 14).GetChild(0).tag == "Player1") ||
+                        (transform.parent.GetChild(rowIndex + 15).childCount > 0 && transform.parent.GetChild(rowIndex + 15).GetChild(0).tag == "Player1")) 
                     {                                                                 // 
                     currentEnergy -= cardEnergy;
                     energyText.text = currentEnergy.ToString();
@@ -69,7 +75,7 @@ public class BoardSlot : MonoBehaviour, IDropHandler
         }
 
         //if (card.transform.parent.name == "Hand2"){ }
-       else if (cardd.gameObject.tag == "Player2")
+       else if (cardd.gameObject.tag == "Player2")   //(2):CARD PLACEMENT PHASE
         { 
         if (cardd != null && transform.childCount == 0)
         {
@@ -82,11 +88,15 @@ public class BoardSlot : MonoBehaviour, IDropHandler
                         int rowIndex = transform.GetSiblingIndex();
                         int maxRowIndex = 14;
 
-                        if (rowIndex >= 0 && rowIndex < maxRowIndex || (transform.parent.GetChild(rowIndex - 1).childCount > 0) ||
-                        (transform.parent.GetChild(rowIndex - 13).childCount > 0) || (transform.parent.GetChild(rowIndex - 14).childCount > 0) ||
-                        (transform.parent.GetChild(rowIndex - 15).childCount > 0) ||
-                        transform.parent.GetChild(rowIndex + 1).childCount > 0 || transform.parent.GetChild(rowIndex + 13).childCount > 0
-                        || transform.parent.GetChild(rowIndex + 14).childCount > 0 || transform.parent.GetChild(rowIndex + 15).childCount > 0) 
+                        if ((rowIndex >= 0 && rowIndex < maxRowIndex) || 
+                        (transform.parent.GetChild(rowIndex - 1).childCount > 0 && transform.parent.GetChild(rowIndex - 1).GetChild(0).tag=="Player2") ||
+                        (transform.parent.GetChild(rowIndex - 13).childCount > 0 && transform.parent.GetChild(rowIndex - 13).GetChild(0).tag == "Player2") || 
+                        (transform.parent.GetChild(rowIndex - 14).childCount > 0 && transform.parent.GetChild(rowIndex - 14).GetChild(0).tag == "Player2") ||
+                        (transform.parent.GetChild(rowIndex - 15).childCount > 0 && transform.parent.GetChild(rowIndex - 15).GetChild(0).tag == "Player2") ||
+                        (transform.parent.GetChild(rowIndex + 1).childCount > 0 && transform.parent.GetChild(rowIndex + 1).GetChild(0).tag == "Player2") || 
+                        (transform.parent.GetChild(rowIndex + 13).childCount > 0 && transform.parent.GetChild(rowIndex + 13).GetChild(0).tag == "Player2")|| 
+                        (transform.parent.GetChild(rowIndex + 14).childCount > 0 && transform.parent.GetChild(rowIndex + 14).GetChild(0).tag == "Player2") || 
+                        (transform.parent.GetChild(rowIndex + 15).childCount > 0 && transform.parent.GetChild(rowIndex + 15).GetChild(0).tag == "Player2") )
                         { 
 
                         currentEnergyP2 -= carddEnergy;
@@ -102,6 +112,7 @@ public class BoardSlot : MonoBehaviour, IDropHandler
 
                     Image carddBackImage = cardd.transform.Find("Back").GetComponent<Image>();
                     carddBackImage.enabled = false;
+                          //  Debug.Log("Child:"+ transform.parent.GetChild(rowIndex - 1).GetChild(0));
                         }
                 }
             }
@@ -118,7 +129,7 @@ public class BoardSlot : MonoBehaviour, IDropHandler
 
     }
         
-    public void AnotherMethod()
+    public void AnotherMethod()  // (1):CARD DRAW PHASE
     {  
         int value = currentEnergy;
         // Debug.Log("CE: " + value);
@@ -137,7 +148,7 @@ public class BoardSlot : MonoBehaviour, IDropHandler
        
     }
 
-    public void AnotherMethod2() 
+    public void AnotherMethod2()  // (1):CARD DRAW PHASE
     {
         int value = currentEnergyP2;
         // Debug.Log("CE: " + value);

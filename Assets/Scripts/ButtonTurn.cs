@@ -24,6 +24,8 @@ public class ButtonTurn : MonoBehaviour
     public Button deckP1;
     public Button deckP2;
 
+   
+
     private void Start()
     {
         turnCoroutine = StartCoroutine(ChangeTurn(30.0f));
@@ -42,6 +44,7 @@ public class ButtonTurn : MonoBehaviour
             originalCamPos = mainCamera.transform.position;
         }
 
+        
     }
 
     public void OnTurnButtonClick()
@@ -51,6 +54,7 @@ public class ButtonTurn : MonoBehaviour
 
         if (isPlayer1Turn)
         {
+            
             turnText.text = "P2 Turn";
             turnCount = 0;
             turnBar.SetTurnTime(turnCount);
@@ -91,7 +95,7 @@ public class ButtonTurn : MonoBehaviour
         {
             if (isPlayer1Turn)
             {
-                turnText.text = "PA Turn";
+                turnText.text = "P1 Turn";
                 turnCount = 30;
                 turnBar.SetTurnTime(turnCount);
 
@@ -103,7 +107,7 @@ public class ButtonTurn : MonoBehaviour
             }
             else
             {
-                turnText.text = "PB Turn";
+                turnText.text = "P2 Turn";
                 turnCount2 = 30;
                 turnBar.SetTurnTime2(turnCount2);
               // StartCoroutine(Turnbar2(1.0f));
@@ -142,7 +146,7 @@ public class ButtonTurn : MonoBehaviour
             if (turnCount >= 0)
             {
                 turnCount--;
-                Debug.Log("TurnCount:" + turnCount);
+               // Debug.Log("TurnCount:" + turnCount);
                 turnBar.SetTurnTime(turnCount);
             }
         }
@@ -156,7 +160,7 @@ public class ButtonTurn : MonoBehaviour
             if (turnCount2 >= 0)
             {
                 turnCount2--;
-                Debug.Log("TurnCount2:" + turnCount2);
+               // Debug.Log("TurnCount2:" + turnCount2);
 
                 turnBar.SetTurnTime2(turnCount2);
             }

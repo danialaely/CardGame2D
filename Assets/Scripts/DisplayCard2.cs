@@ -239,7 +239,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             }
 
            
-            if (isSelected) 
+            if (isSelected) //(3):ATTACKING PHASE
             {
                 foreach (GameObject displayCardObject in player1) 
                 {
