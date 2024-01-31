@@ -21,6 +21,8 @@ public class CardShuffler : MonoBehaviour
 
     private Dictionary<int, int> usedDetailsCount = new Dictionary<int, int>(); // Track used detail counts
 
+    public GameManager gm;
+
     private void Start()
     {
        // boardSlot = FindAnyObjectByType<BoardSlot>();
@@ -64,57 +66,57 @@ public class CardShuffler : MonoBehaviour
 
     public void ShuffleCards()
     {
-        if (shuffleButton.gameObject.name == "Shuffle") 
+        if (shuffleButton.gameObject.name == "Shuffle" && gm.currentPhase == GamePhase.Draw) 
         {
          boardSlot.AnotherMethod();
         }
 
-        if (shuffleButton.gameObject.name == "Shuffle2") 
+        if (shuffleButton.gameObject.name == "Shuffle2" && gm.currentPhase == GamePhase.Draw) 
         {
          boardSlot.AnotherMethod2();
         }
 
-
+       
         StartCoroutine(CardsDelay(2.1f));
 
         // Play the shuffle animation
         int handchildCount = hand.transform.childCount;
-        if (handchildCount==0) 
+        if (handchildCount==0 && gm.currentPhase == GamePhase.Draw) 
         {
         cardAnimator.SetTrigger("ShuffleTrigger");
         StartCoroutine(BackToDefault(3));
         }
-        if (handchildCount==7) 
+        if (handchildCount == 7 && gm.currentPhase == GamePhase.Draw) 
         {
             cardAnimator.SetTrigger("ShuffleTrigger2");
             StartCoroutine(BackToDefault(2.0f));
         }
-        if (handchildCount == 6)
+        if (handchildCount == 6 && gm.currentPhase == GamePhase.Draw)
         {
             cardAnimator.SetTrigger("ShuffleTrigger3");
             StartCoroutine(BackToDefault(2.0f));
         }
-        if (handchildCount == 5)
+        if (handchildCount == 5 && gm.currentPhase == GamePhase.Draw)
         {
             cardAnimator.SetTrigger("ShuffleTrigger4");
             StartCoroutine(BackToDefault(2.0f));
         }
-        if (handchildCount == 4)
+        if (handchildCount == 4 && gm.currentPhase == GamePhase.Draw)
         {
             cardAnimator.SetTrigger("ShuffleTrigger5");
             StartCoroutine(BackToDefault(2.0f));
         }
-        if (handchildCount == 3)
+        if (handchildCount == 3 && gm.currentPhase == GamePhase.Draw)
         {
             cardAnimator.SetTrigger("ShuffleTrigger6");
             StartCoroutine(BackToDefault(2.0f));
         }
-        if (handchildCount == 2)
+        if (handchildCount == 2 && gm.currentPhase == GamePhase.Draw)
         {
             cardAnimator.SetTrigger("ShuffleTrigger7");
             StartCoroutine(BackToDefault(2.0f));
         }
-        if (handchildCount == 1)
+        if (handchildCount == 1 && gm.currentPhase == GamePhase.Draw)
         {
             cardAnimator.SetTrigger("ShuffleTrigger8");
             StartCoroutine(BackToDefault(2.0f));
@@ -181,33 +183,33 @@ public class CardShuffler : MonoBehaviour
             Transform seventhLastCard = deck.transform.GetChild(childCount - 7); //7th card
             Transform eightLastCard = deck.transform.GetChild(childCount - 8);   //8th card
 
-            if (handchildCount == 8) 
+            if (handchildCount == 8 && gm.currentPhase == GamePhase.Draw) 
             {
                 Debug.Log("Hand Already Fill");
             }
-            if (handchildCount == 7) 
+            if (handchildCount == 7 && gm.currentPhase == GamePhase.Draw) 
             {
                 lastCard.SetParent(hand.transform);
             }
-            if(handchildCount == 6) 
+            if(handchildCount == 6 && gm.currentPhase == GamePhase.Draw) 
             {
                 lastCard.SetParent(hand.transform);
                 secondLastCard.SetParent(hand.transform);
             }
-            if (handchildCount == 5)
+            if (handchildCount == 5 && gm.currentPhase == GamePhase.Draw)
             {
                 lastCard.SetParent(hand.transform);
                 secondLastCard.SetParent(hand.transform);
                 thirdLastCard.SetParent(hand.transform);
             }
-            if (handchildCount == 4)
+            if (handchildCount == 4 && gm.currentPhase == GamePhase.Draw)
             {
                 lastCard.SetParent(hand.transform);
                 secondLastCard.SetParent(hand.transform);
                 thirdLastCard.SetParent(hand.transform);
                 fourthLastCard.SetParent(hand.transform);
             }
-            if (handchildCount == 3)
+            if (handchildCount == 3 && gm.currentPhase == GamePhase.Draw)
             {
                 lastCard.SetParent(hand.transform);
                 secondLastCard.SetParent(hand.transform);
@@ -215,7 +217,7 @@ public class CardShuffler : MonoBehaviour
                 fourthLastCard.SetParent(hand.transform);
                 fifthLastCard.SetParent(hand.transform);
             }
-            if (handchildCount == 2)
+            if (handchildCount == 2 && gm.currentPhase == GamePhase.Draw)
             {
                 lastCard.SetParent(hand.transform);
                 secondLastCard.SetParent(hand.transform);
@@ -224,7 +226,7 @@ public class CardShuffler : MonoBehaviour
                 fifthLastCard.SetParent(hand.transform);
                 sixthLastCard.SetParent(hand.transform);
             }
-            if (handchildCount == 1)
+            if (handchildCount == 1 && gm.currentPhase == GamePhase.Draw)
             {
                 lastCard.SetParent(hand.transform);
                 secondLastCard.SetParent(hand.transform);
@@ -234,7 +236,7 @@ public class CardShuffler : MonoBehaviour
                 sixthLastCard.SetParent(hand.transform);
                 seventhLastCard.SetParent(hand.transform);
             }
-            if (handchildCount == 0) 
+            if (handchildCount == 0 && gm.currentPhase == GamePhase.Draw) 
             {
             // Change the parent of the last card to the Hand
             lastCard.SetParent(hand.transform);

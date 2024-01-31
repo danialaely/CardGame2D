@@ -17,7 +17,7 @@ public class BoardSlot : MonoBehaviour, IDropHandler
 
     public HealthBar healthBar;
 
-    
+    public GameManager gmmm;
     // End Turn Button to move between Turns
 
     public void OnDrop(PointerEventData eventData)    
@@ -39,8 +39,9 @@ public class BoardSlot : MonoBehaviour, IDropHandler
                     int rowIndex = transform.GetSiblingIndex();
                     int maxRowIndex = 97;
 
-                  //  int columnIndex = transform.parent.GetSiblingIndex();
-
+                    //  int columnIndex = transform.parent.GetSiblingIndex();
+                    if (card.transform.parent.name == "Hand" && gmmm.currentPhase== GamePhase.Setup) 
+                    { 
                     if ((rowIndex >= 84 && rowIndex < maxRowIndex) || 
                         (transform.parent.GetChild(rowIndex - 1).childCount > 0 && transform.parent.GetChild(rowIndex - 1).GetChild(0).tag == "Player1") || 
                         (transform.parent.GetChild(rowIndex - 13).childCount > 0 && transform.parent.GetChild(rowIndex - 13).GetChild(0).tag == "Player1") || 
@@ -49,9 +50,9 @@ public class BoardSlot : MonoBehaviour, IDropHandler
                         (transform.parent.GetChild(rowIndex + 1).childCount > 0 && transform.parent.GetChild(rowIndex + 1).GetChild(0).tag == "Player1") || 
                         (transform.parent.GetChild(rowIndex + 13).childCount > 0 && transform.parent.GetChild(rowIndex + 13).GetChild(0).tag == "Player1")||
                         (transform.parent.GetChild(rowIndex + 14).childCount > 0 && transform.parent.GetChild(rowIndex + 14).GetChild(0).tag == "Player1") ||
-                        (transform.parent.GetChild(rowIndex + 15).childCount > 0 && transform.parent.GetChild(rowIndex + 15).GetChild(0).tag == "Player1")) 
-                    {                                                                 // 
-                    currentEnergy -= cardEnergy;
+                        (transform.parent.GetChild(rowIndex + 15).childCount > 0 && transform.parent.GetChild(rowIndex + 15).GetChild(0).tag == "Player1"))
+                    {                                                                 // card.transform.parent.name == "Hand"
+                        currentEnergy -= cardEnergy;
                     energyText.text = currentEnergy.ToString();
                     healthBar.SetHealth(currentEnergy); //
                     if (currentEnergy == -1)
@@ -61,6 +62,32 @@ public class BoardSlot : MonoBehaviour, IDropHandler
                     card.transform.SetParent(transform);
                     card.transform.localPosition = Vector3.zero;
                     card.GetComponent<CanvasGroup>().blocksRaycasts = true;
+                    }
+                    }
+
+                    if (card.transform.parent.tag == "BSlot" && gmmm.currentPhase == GamePhase.Move)
+                    {
+                        if ((rowIndex >= 84 && rowIndex < maxRowIndex) ||
+                            (transform.parent.GetChild(rowIndex - 1).childCount > 0 && transform.parent.GetChild(rowIndex - 1).GetChild(0).tag == "Player1") ||
+                            (transform.parent.GetChild(rowIndex - 13).childCount > 0 && transform.parent.GetChild(rowIndex - 13).GetChild(0).tag == "Player1") ||
+                            (transform.parent.GetChild(rowIndex - 14).childCount > 0 && transform.parent.GetChild(rowIndex - 14).GetChild(0).tag == "Player1") ||
+                            (transform.parent.GetChild(rowIndex - 15).childCount > 0 && transform.parent.GetChild(rowIndex - 15).GetChild(0).tag == "Player1") ||
+                            (transform.parent.GetChild(rowIndex + 1).childCount > 0 && transform.parent.GetChild(rowIndex + 1).GetChild(0).tag == "Player1") ||
+                            (transform.parent.GetChild(rowIndex + 13).childCount > 0 && transform.parent.GetChild(rowIndex + 13).GetChild(0).tag == "Player1") ||
+                            (transform.parent.GetChild(rowIndex + 14).childCount > 0 && transform.parent.GetChild(rowIndex + 14).GetChild(0).tag == "Player1") ||
+                            (transform.parent.GetChild(rowIndex + 15).childCount > 0 && transform.parent.GetChild(rowIndex + 15).GetChild(0).tag == "Player1"))
+                        {                                                                 // card.transform.parent.name == "Hand"
+                            currentEnergy -= cardEnergy;
+                            energyText.text = currentEnergy.ToString();
+                            healthBar.SetHealth(currentEnergy); //
+                            if (currentEnergy == -1)
+                            {
+                                energyText.text = "0";
+                            }
+                            card.transform.SetParent(transform);
+                            card.transform.localPosition = Vector3.zero;
+                            card.GetComponent<CanvasGroup>().blocksRaycasts = true;
+                        }
                     }
                 }
             }
@@ -88,6 +115,8 @@ public class BoardSlot : MonoBehaviour, IDropHandler
                         int rowIndex = transform.GetSiblingIndex();
                         int maxRowIndex = 14;
 
+                        if (cardd.transform.parent.name == "Hand2" && gmmm.currentPhase == GamePhase.Setup) 
+                        {
                         if ((rowIndex >= 0 && rowIndex < maxRowIndex) || 
                         (transform.parent.GetChild(rowIndex - 1).childCount > 0 && transform.parent.GetChild(rowIndex - 1).GetChild(0).tag=="Player2") ||
                         (transform.parent.GetChild(rowIndex - 13).childCount > 0 && transform.parent.GetChild(rowIndex - 13).GetChild(0).tag == "Player2") || 
@@ -114,7 +143,39 @@ public class BoardSlot : MonoBehaviour, IDropHandler
                     carddBackImage.enabled = false;
                           //  Debug.Log("Child:"+ transform.parent.GetChild(rowIndex - 1).GetChild(0));
                         }
-                }
+                        }
+
+                        if (cardd.transform.parent.tag == "BSlot" && gmmm.currentPhase == GamePhase.Move)
+                        {
+                            if ((rowIndex >= 0 && rowIndex < maxRowIndex) ||
+                            (transform.parent.GetChild(rowIndex - 1).childCount > 0 && transform.parent.GetChild(rowIndex - 1).GetChild(0).tag == "Player2") ||
+                            (transform.parent.GetChild(rowIndex - 13).childCount > 0 && transform.parent.GetChild(rowIndex - 13).GetChild(0).tag == "Player2") ||
+                            (transform.parent.GetChild(rowIndex - 14).childCount > 0 && transform.parent.GetChild(rowIndex - 14).GetChild(0).tag == "Player2") ||
+                            (transform.parent.GetChild(rowIndex - 15).childCount > 0 && transform.parent.GetChild(rowIndex - 15).GetChild(0).tag == "Player2") ||
+                            (transform.parent.GetChild(rowIndex + 1).childCount > 0 && transform.parent.GetChild(rowIndex + 1).GetChild(0).tag == "Player2") ||
+                            (transform.parent.GetChild(rowIndex + 13).childCount > 0 && transform.parent.GetChild(rowIndex + 13).GetChild(0).tag == "Player2") ||
+                            (transform.parent.GetChild(rowIndex + 14).childCount > 0 && transform.parent.GetChild(rowIndex + 14).GetChild(0).tag == "Player2") ||
+                            (transform.parent.GetChild(rowIndex + 15).childCount > 0 && transform.parent.GetChild(rowIndex + 15).GetChild(0).tag == "Player2"))
+                            {
+
+                                currentEnergyP2 -= carddEnergy;
+                                energyTextP2.text = currentEnergyP2.ToString();
+                                healthBar.SetHealth2(currentEnergyP2); //
+                                if (currentEnergyP2 == -1)
+                                {
+                                    energyTextP2.text = "0";
+                                }
+                                cardd.transform.SetParent(transform);
+                                cardd.transform.localPosition = Vector3.zero;
+                                cardd.GetComponent<CanvasGroup>().blocksRaycasts = true;
+
+                                Image carddBackImage = cardd.transform.Find("Back").GetComponent<Image>();
+                                carddBackImage.enabled = false;
+                                //  Debug.Log("Child:"+ transform.parent.GetChild(rowIndex - 1).GetChild(0));
+                            }
+                        }
+
+                    }
             }
             else
             {

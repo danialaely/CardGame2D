@@ -24,7 +24,7 @@ public class ButtonTurn : MonoBehaviour
     public Button deckP1;
     public Button deckP2;
 
-   
+    public GameManager gmm;
 
     private void Start()
     {
@@ -54,8 +54,8 @@ public class ButtonTurn : MonoBehaviour
 
         if (isPlayer1Turn)
         {
-            
-            turnText.text = "P2 Turn";
+            gmm.ChangePhase(GamePhase.Draw);
+            turnText.text = "P2 Turn";  //Button 
             turnCount = 0;
             turnBar.SetTurnTime(turnCount);
             //StartCoroutine(Turnbar2(1.0f));
@@ -68,6 +68,7 @@ public class ButtonTurn : MonoBehaviour
         }
         else
         {
+            gmm.ChangePhase(GamePhase.Draw);
             turnText.text = "P1 Turn";
             turnCount = 30;
             turnBar.SetTurnTime(turnCount);
@@ -95,6 +96,7 @@ public class ButtonTurn : MonoBehaviour
         {
             if (isPlayer1Turn)
             {
+                gmm.ChangePhase(GamePhase.Draw);
                 turnText.text = "P1 Turn";
                 turnCount = 30;
                 turnBar.SetTurnTime(turnCount);
@@ -107,6 +109,7 @@ public class ButtonTurn : MonoBehaviour
             }
             else
             {
+                gmm.ChangePhase(GamePhase.Draw);
                 turnText.text = "P2 Turn";
                 turnCount2 = 30;
                 turnBar.SetTurnTime2(turnCount2);

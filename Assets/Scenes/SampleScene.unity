@@ -595,6 +595,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &39306565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -696,6 +697,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &57898685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -787,6 +789,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &60567580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -953,6 +956,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &100236538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1044,6 +1048,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &102989061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2706,6 +2711,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &113643993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2797,6 +2803,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &119561909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2963,6 +2970,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &122193316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3885,6 +3893,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &127107191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3976,6 +3985,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &130401741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4067,6 +4077,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &130440249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7015,6 +7026,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &168245003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7122,6 +7134,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &181031850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7288,6 +7301,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &189214131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7384,6 +7398,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &193746739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7555,6 +7570,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &198877511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8639,6 +8655,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &225117660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8768,6 +8785,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!224 &233005696 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7780213861218700707, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -9802,6 +9820,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &266973776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9973,6 +9992,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &284539789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10064,6 +10084,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &291948973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12002,6 +12023,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &354081549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18494,6 +18516,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &438077859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18590,6 +18613,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &441139043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19525,6 +19549,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &455431879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19691,6 +19716,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &463843401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19782,6 +19808,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &468881826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19873,6 +19900,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &472959489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21170,6 +21198,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &502474421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22216,6 +22245,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &530447688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22656,6 +22686,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549655540}
   m_CullTransparentMesh: 1
+--- !u!1 &552501281
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 552501283}
+  - component: {fileID: 552501282}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &552501282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552501281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7338b7658c3808d408a59de0e9d8d16c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPhase: 0
+  phaseText: {fileID: 2063336957}
+--- !u!4 &552501283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552501281}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 658.0772, y: 262.22455, z: -16.082275}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &563702602
 GameObject:
   m_ObjectHideFlags: 0
@@ -22709,6 +22785,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &563702605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22875,6 +22952,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &565463156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25675,6 +25753,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &637919610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25917,6 +25996,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &653829051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26008,6 +26088,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &668241838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26383,6 +26464,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &688496788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26474,6 +26556,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &694360004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28100,6 +28183,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &707340746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28959,6 +29043,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &717847700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29857,6 +29942,7 @@ MonoBehaviour:
   mainCamera: {fileID: 519420031}
   deckP1: {fileID: 241768672}
   deckP2: {fileID: 1654882287}
+  gmm: {fileID: 552501282}
 --- !u!4 &733181124
 Transform:
   m_ObjectHideFlags: 0
@@ -29925,6 +30011,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &736086924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30783,6 +30870,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &753140214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33828,6 +33916,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &813679034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34704,6 +34793,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &819507700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36283,6 +36373,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &876342427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37217,6 +37308,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &882859675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39126,6 +39218,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &912229844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40130,6 +40223,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &940845500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40226,6 +40320,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &953312919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40472,6 +40567,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &968596928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42769,6 +42865,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1021549425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44483,6 +44580,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1035907967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44927,6 +45025,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1069008565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45018,6 +45117,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1078153485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45109,6 +45209,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1079359007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45275,6 +45376,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1099228281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45666,6 +45768,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1148602675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45946,6 +46049,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1153791552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46037,6 +46141,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1169695041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48161,6 +48266,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1189059587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49413,6 +49519,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1230452650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49809,6 +49916,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1242935611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49905,6 +50013,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1249914870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50892,6 +51001,7 @@ MonoBehaviour:
   hand: {fileID: 1670852235}
   boardSlot: {fileID: 266973775}
   dc: {fileID: 887216696}
+  gm: {fileID: 552501282}
 --- !u!4 &1276202207
 Transform:
   m_ObjectHideFlags: 0
@@ -50960,6 +51070,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1283249261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53765,6 +53876,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1331238739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53856,6 +53968,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1332898934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53947,6 +54060,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1334377005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54172,6 +54286,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1345808403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54268,6 +54383,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1358080866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54431,6 +54547,7 @@ RectTransform:
   - {fileID: 1554250031}
   - {fileID: 720133719}
   - {fileID: 1399619316}
+  - {fileID: 2063336956}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 19.978}
   m_AnchorMin: {x: 0, y: 0}
@@ -55421,6 +55538,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1381939188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55667,6 +55785,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1392748621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55817,7 +55936,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 690.0274, y: -681.5}
+  m_AnchoredPosition: {x: 909, y: 33}
   m_SizeDelta: {x: 118.3247, y: 110.5493}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1399619317
@@ -55863,7 +55982,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1399619318}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 552501282}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnTurnButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1399619318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59509,6 +59640,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1473451732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59600,6 +59732,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1473679567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61392,6 +61525,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1504715787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67808,6 +67942,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1598250316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68049,6 +68184,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1614685319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68140,6 +68276,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1618089239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68331,6 +68468,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1623317757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68422,6 +68560,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1630846298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69556,6 +69695,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1676150281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69647,6 +69787,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1680248052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69738,6 +69879,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1682902209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69969,6 +70111,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1694180727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70060,6 +70203,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1711530025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70919,6 +71063,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1732443144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71784,6 +71929,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1753139121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72164,6 +72310,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1814743662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73967,6 +74114,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1874992424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75131,6 +75279,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1925609975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75227,6 +75376,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1930899850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76357,6 +76507,7 @@ MonoBehaviour:
   hand: {fileID: 1663636629}
   boardSlot: {fileID: 1169695040}
   dc: {fileID: 777553444}
+  gm: {fileID: 552501282}
 --- !u!1 &1957102883
 GameObject:
   m_ObjectHideFlags: 0
@@ -78240,6 +78391,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &1979886528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78426,6 +78578,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &2000333825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78517,6 +78670,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &2023128032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79371,6 +79525,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &2025179339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79462,6 +79617,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &2026799739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80029,6 +80185,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &2040062024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80120,6 +80277,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &2040138811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81935,6 +82093,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &2060174692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82026,6 +82185,7 @@ MonoBehaviour:
   energyText: {fileID: 1471048036}
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
+  gmmm: {fileID: 552501282}
 --- !u!114 &2061204763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82063,6 +82223,140 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2061204760}
+  m_CullTransparentMesh: 1
+--- !u!1 &2063336955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2063336956}
+  - component: {fileID: 2063336958}
+  - component: {fileID: 2063336957}
+  m_Layer: 5
+  m_Name: PhaseText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2063336956
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063336955}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1364902188}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1152.4727, y: 39.400024}
+  m_SizeDelta: {x: 329.2784, y: 81.6353}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2063336957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063336955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: New Text
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 73.1
+  m_fontSizeBase: 73.1
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &2063336958
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063336955}
   m_CullTransparentMesh: 1
 --- !u!1 &2064399593
 GameObject:
@@ -84634,3 +84928,4 @@ SceneRoots:
   - {fileID: 733181124}
   - {fileID: 894546952}
   - {fileID: 313359075}
+  - {fileID: 552501283}
