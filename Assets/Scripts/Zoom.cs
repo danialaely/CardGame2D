@@ -9,7 +9,7 @@ public class Zoom : MonoBehaviour
     private float originalOrthographicSize;
     private Vector3 originalCamPos;
 
-    public float maxDoubleTapTime = 0.5f; // Maximum time allowed between taps
+    public float maxDoubleTapTime = 0.3f; // Maximum time allowed between taps
     private float lastTapTime; // Time of the last tap
     private static bool isBoolVariableTrue = false; // Initial value of the boolean variable
 
@@ -17,6 +17,11 @@ public class Zoom : MonoBehaviour
     public Image dice2;
      Vector3 originaldice1Pos;
      Vector3 originaldice2Pos;
+
+    Vector3 zoomPos;
+
+    public AudioSource src;
+    public AudioClip shuffleClip;
 
     private void Start()
     {
@@ -39,6 +44,8 @@ public class Zoom : MonoBehaviour
 
     void Update()
     {
+       
+       // mainCamera.orthographicSize = Mathf.Lerp(mainCamera.orthographicSize, 400f, 0.0123f);
         // Check for a tap or click
         if (Input.GetMouseButtonDown(0)) // Assuming left mouse button for simplicity
         {
@@ -51,7 +58,6 @@ public class Zoom : MonoBehaviour
                 // Toggle the boolean variable
                 isBoolVariableTrue = !isBoolVariableTrue;
 
-                // Perform actions based on the boolean variable
                 if (isBoolVariableTrue)
                 {
                     Debug.Log("Boolean variable is true. Performing zoom in.");
@@ -60,9 +66,6 @@ public class Zoom : MonoBehaviour
                     Vector3 touchPos = Input.mousePosition;
                     touchPos.z = -10f; // Set a fixed distance from the camera
 
-                /*    Vector3 touchPod = Input.mousePosition;
-                    touchPod.z = 400f;
-                    touchPod.x += -90f; */
 
                     Vector3 touchPoz = Input.mousePosition;
                     touchPoz.z = 400f;
@@ -70,40 +73,75 @@ public class Zoom : MonoBehaviour
 
                     // Convert screen space to world space
                     Vector3 worldPos = mainCamera.ScreenToWorldPoint(touchPos);
-                   // Vector3 dicePos = mainCamera.ScreenToWorldPoint(touchPod);
-                   // Vector3 dicePos2 = mainCamera.ScreenToWorldPoint(touchPoz);
+
 
                     // Set the target orthographic size
-                    float targetOrthographicSize = 411f;
-
-                  //   Vector3 offt1 = new Vector3(-400f, 0, 0);
-                  //  dice1.transform.position = Input.mousePosition+offt1;
+                   // float targetOrthographicSize = 411f;
 
                     // Smoothly interpolate to the target orthographic size and position
-                    float transitionSpeed = 1f;
-                    mainCamera.orthographicSize = Mathf.Lerp(mainCamera.orthographicSize, targetOrthographicSize, transitionSpeed);
-                    mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, worldPos, transitionSpeed);
-                   // dice1.transform.position = Vector3.Lerp(dice1.transform.position,dicePos,transitionSpeed);
-                   // dice2.transform.position = Vector3.Lerp(dice2.transform.position, dicePos2, transitionSpeed);
-                }
-                else
-                {
-                    Debug.Log("Boolean variable is false. Performing reset.");
+                    float transitionSpeed = 0.5f;
 
-                    // Reset the camera to its original state
-                    mainCamera.orthographicSize = originalOrthographicSize;
-                    mainCamera.transform.position = originalCamPos;
-                    dice1.transform.position = originaldice1Pos;
-                    dice2.transform.position = originaldice2Pos;
+                    //mainCamera.orthographicSize = Mathf.Lerp(mainCamera.orthographicSize, targetOrthographicSize, transitionSpeed);
+                   zoomPos = Vector3.Lerp(mainCamera.transform.position, worldPos, transitionSpeed);
+
                 }
             }
 
             // Update the last tap time
             lastTapTime = Time.time;
         }
+
+        // Perform actions based on the boolean variable
+        if (isBoolVariableTrue)
+        {
+            Debug.Log("Boolean variable is true. Performing zoom in.");
+
+            // Set the target orthographic size
+            float targetOrthographicSize = 411f;
+
+            // Smoothly interpolate to the target orthographic size and position
+            float transitionSpeed = 0.0225f;
+
+            mainCamera.orthographicSize = Mathf.Lerp(mainCamera.orthographicSize, targetOrthographicSize, transitionSpeed);
+            if (mainCamera.transform.position != zoomPos) 
+            {
+                //mainCamera.transform.position = zoomPos;
+                mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, zoomPos, 8f);
+            }
+        }
+        else
+        {
+            Debug.Log("Boolean variable is false. Performing reset.");
+
+            // Reset the camera to its original state
+            if (mainCamera.orthographicSize <= 700f)
+            {
+                float targetOrthographicSize = 765.3f;
+                float transitionSpeed = 0.0225f;
+                mainCamera.orthographicSize = Mathf.Lerp(mainCamera.orthographicSize, targetOrthographicSize, transitionSpeed);
+                dice1.transform.position = originaldice1Pos;
+                dice2.transform.position = originaldice2Pos;
+            }
+            else 
+            { 
+            mainCamera.orthographicSize = originalOrthographicSize;
+            mainCamera.transform.position = originalCamPos;
+            dice1.transform.position = originaldice1Pos;
+            dice2.transform.position = originaldice2Pos;
+            }
+        }
     }
+
+    
+
     public static bool GetBool() 
     {
         return isBoolVariableTrue;
+    }
+
+    public void DeckSound() 
+    {
+        src.clip = shuffleClip;
+        src.Play();
     }
 }

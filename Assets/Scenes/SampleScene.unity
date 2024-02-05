@@ -596,6 +596,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &39306565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -698,6 +700,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &57898685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -790,6 +794,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &60567580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -957,6 +963,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &100236538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1049,6 +1057,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &102989061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2712,6 +2722,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &113643993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2804,6 +2816,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &119561909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2971,6 +2985,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &122193316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3894,6 +3910,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &127107191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3986,6 +4004,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &130401741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4078,6 +4098,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &130440249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7027,6 +7049,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &168245003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7135,6 +7159,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &181031850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7302,6 +7328,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &189214131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7399,6 +7427,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &193746739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7571,6 +7601,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &198877511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8656,6 +8688,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &225117660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8786,6 +8820,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!224 &233005696 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7780213861218700707, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -9654,6 +9690,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 313359074}
+        m_TargetAssemblyTypeName: Zoom, Assembly-CSharp
+        m_MethodName: DeckSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &241768673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9821,6 +9869,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &266973776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9993,6 +10043,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &284539789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10085,6 +10137,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &291948973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10229,9 +10283,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
-  maxDoubleTapTime: 0.5
+  maxDoubleTapTime: 0.3
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  src: {fileID: 1149496450}
+  shuffleClip: {fileID: 8300000, guid: 703d1113b8a423840a86facf165fa451, type: 3}
 --- !u!4 &313359075
 Transform:
   m_ObjectHideFlags: 0
@@ -12024,6 +12080,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &354081549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18517,6 +18575,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &438077859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18614,6 +18674,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &441139043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19550,6 +19612,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &455431879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19717,6 +19781,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &463843401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19809,6 +19875,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &468881826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19901,6 +19969,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &472959489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21199,6 +21269,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &502474421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22246,6 +22318,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &530447688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22786,6 +22860,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &563702605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22953,6 +23029,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &565463156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25754,6 +25832,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &637919610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25997,6 +26077,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &653829051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26089,6 +26171,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &668241838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26465,6 +26549,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &688496788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26557,6 +26643,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &694360004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28184,6 +28272,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &707340746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29044,6 +29134,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &717847700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29833,6 +29925,81 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &728509109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 728509110}
+  - component: {fileID: 728509112}
+  - component: {fileID: 728509111}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &728509110
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728509109}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1399619316}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -6.2329025, y: -1.4459}
+  m_SizeDelta: {x: 224.3506, y: 46.7651}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &728509111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728509109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 025c1a4db581d924284003c07c3e19a5, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &728509112
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728509109}
+  m_CullTransparentMesh: 1
 --- !u!1 &730446390
 GameObject:
   m_ObjectHideFlags: 0
@@ -30012,6 +30179,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &736086924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30871,6 +31040,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &753140214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33917,6 +34088,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &813679034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34794,6 +34967,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &819507700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36374,6 +36549,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &876342427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37309,6 +37486,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &882859675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39219,6 +39398,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &912229844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40224,6 +40405,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &940845500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40321,6 +40504,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &953312919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40568,6 +40753,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &968596928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42866,6 +43053,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1021549425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44581,6 +44770,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1035907967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45026,6 +45217,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1069008565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45118,6 +45311,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1078153485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45210,6 +45405,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1079359007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45377,6 +45574,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1099228281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45769,6 +45968,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1148602675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45807,6 +46008,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1148602672}
   m_CullTransparentMesh: 1
+--- !u!1 &1149496449
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1149496451}
+  - component: {fileID: 1149496450}
+  m_Layer: 0
+  m_Name: Src
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1149496450
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149496449}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1149496451
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149496449}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1494.3087, y: 291.25058, z: -28.88388}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1150557650
 GameObject:
   m_ObjectHideFlags: 0
@@ -46050,6 +46379,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1153791552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46142,6 +46473,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1169695041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48267,6 +48600,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1189059587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49520,6 +49855,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1230452650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49917,6 +50254,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1242935611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50014,6 +50353,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1249914870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51071,6 +51412,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1283249261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53877,6 +54220,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1331238739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53969,6 +54314,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1332898934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54061,6 +54408,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1334377005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54287,6 +54636,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1345808403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54384,6 +54735,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1358080866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55539,6 +55892,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1381939188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55786,6 +56141,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1392748621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55932,12 +56289,13 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1806913908}
+  - {fileID: 728509110}
   m_Father: {fileID: 1364902188}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 909, y: 33}
-  m_SizeDelta: {x: 118.3247, y: 110.5493}
+  m_AnchoredPosition: {x: 978, y: 36}
+  m_SizeDelta: {x: 329.27, y: 110.5493}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1399619317
 MonoBehaviour:
@@ -56015,7 +56373,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a0ab6024facb35a46b013c386914d6f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fbba30ee25cc1d24490b6ad255a7b135, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -59641,6 +59999,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1473451732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59733,6 +60093,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1473679567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61526,6 +61888,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1504715787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67943,6 +68307,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1598250316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68185,6 +68551,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1614685319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68277,6 +68645,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1618089239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68469,6 +68839,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1623317757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68561,6 +68933,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1630846298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68690,6 +69064,18 @@ MonoBehaviour:
       - m_Target: {fileID: 206386808268493630}
         m_TargetAssemblyTypeName: DisplayCard, Assembly-CSharp
         m_MethodName: UpdateCardInformation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 313359074}
+        m_TargetAssemblyTypeName: Zoom, Assembly-CSharp
+        m_MethodName: DeckSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -69696,6 +70082,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1676150281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69788,6 +70176,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1680248052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69880,6 +70270,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1682902209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70112,6 +70504,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1694180727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70204,6 +70598,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1711530025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71064,6 +71460,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1732443144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71930,6 +72328,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1753139121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72189,8 +72589,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -72207,8 +72607,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 46.9
+  m_fontSizeBase: 46.9
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -72311,6 +72711,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1814743662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73134,7 +73536,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1842474264
 RectTransform:
   m_ObjectHideFlags: 0
@@ -73151,8 +73553,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -94.27576, y: -19.055206}
-  m_SizeDelta: {x: 1584.0249, y: 1185.8013}
+  m_AnchoredPosition: {x: 6.9978027, y: 25.541702}
+  m_SizeDelta: {x: 1585.1475, y: 996.926}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1842474265
 MonoBehaviour:
@@ -74115,6 +74517,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1874992424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75280,6 +75684,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1925609975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75377,6 +75783,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1930899850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78392,6 +78800,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &1979886528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78579,6 +78989,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &2000333825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78671,6 +79083,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &2023128032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79526,6 +79940,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &2025179339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79618,6 +80034,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &2026799739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80186,6 +80604,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &2040062024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80278,6 +80698,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &2040138811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82094,6 +82516,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &2060174692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82186,6 +82610,8 @@ MonoBehaviour:
   energyTextP2: {fileID: 1343826822}
   healthBar: {fileID: 1152803399}
   gmmm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
 --- !u!114 &2061204763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82258,7 +82684,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1152.4727, y: 39.400024}
+  m_AnchoredPosition: {x: 978, y: 134}
   m_SizeDelta: {x: 329.2784, y: 81.6353}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2063336957
@@ -82295,10 +82721,10 @@ MonoBehaviour:
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+    topLeft: {r: 1, g: 0.96929336, b: 0.6084906, a: 1}
+    topRight: {r: 0.5613208, g: 1, b: 0.89210457, a: 1}
+    bottomLeft: {r: 1, g: 0.8912488, b: 0.4575472, a: 1}
+    bottomRight: {r: 0.96653944, g: 1, b: 0.5424528, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -82308,14 +82734,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 73.1
-  m_fontSizeBase: 73.1
+  m_fontSize: 64.84
+  m_fontSizeBase: 64.84
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -84929,3 +85355,4 @@ SceneRoots:
   - {fileID: 894546952}
   - {fileID: 313359075}
   - {fileID: 552501283}
+  - {fileID: 1149496451}

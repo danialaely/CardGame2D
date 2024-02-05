@@ -20,6 +20,9 @@ public class BoardSlot : MonoBehaviour, IDropHandler
     public GameManager gmmm;
     // End Turn Button to move between Turns
 
+    public AudioSource src;
+    public AudioClip cardPlacementClip;
+
     public void OnDrop(PointerEventData eventData)    
     {
         DisplayCard card = eventData.pointerDrag.GetComponent<DisplayCard>();
@@ -62,6 +65,7 @@ public class BoardSlot : MonoBehaviour, IDropHandler
                     card.transform.SetParent(transform);
                     card.transform.localPosition = Vector3.zero;
                     card.GetComponent<CanvasGroup>().blocksRaycasts = true;
+                            GetPlacementSound();
                     }
                     }
 
@@ -87,6 +91,7 @@ public class BoardSlot : MonoBehaviour, IDropHandler
                             card.transform.SetParent(transform);
                             card.transform.localPosition = Vector3.zero;
                             card.GetComponent<CanvasGroup>().blocksRaycasts = true;
+                            GetPlacementSound();
                         }
                     }
                 }
@@ -141,8 +146,9 @@ public class BoardSlot : MonoBehaviour, IDropHandler
 
                     Image carddBackImage = cardd.transform.Find("Back").GetComponent<Image>();
                     carddBackImage.enabled = false;
-                          //  Debug.Log("Child:"+ transform.parent.GetChild(rowIndex - 1).GetChild(0));
-                        }
+                                GetPlacementSound();
+                                //  Debug.Log("Child:"+ transform.parent.GetChild(rowIndex - 1).GetChild(0));
+                            }
                         }
 
                         if (cardd.transform.parent.tag == "BSlot" && gmmm.currentPhase == GamePhase.Move)
@@ -171,6 +177,8 @@ public class BoardSlot : MonoBehaviour, IDropHandler
 
                                 Image carddBackImage = cardd.transform.Find("Back").GetComponent<Image>();
                                 carddBackImage.enabled = false;
+
+                                GetPlacementSound();
                                 //  Debug.Log("Child:"+ transform.parent.GetChild(rowIndex - 1).GetChild(0));
                             }
                         }
@@ -235,6 +243,12 @@ public class BoardSlot : MonoBehaviour, IDropHandler
     public static int GetCurrentEnergyP2() 
     {
         return currentEnergyP2;
+    }
+
+    public void GetPlacementSound() 
+    {
+        src.clip = cardPlacementClip;
+        src.Play();
     }
 
 }
