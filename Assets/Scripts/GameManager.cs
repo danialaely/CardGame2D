@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     public GamePhase currentPhase;
     public TMP_Text  phaseText;
 
+    public AudioSource src;
+    public AudioClip errorClip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +26,12 @@ public class GameManager : MonoBehaviour
         Debug.Log("Game Phase:"+currentPhase);
         phaseText.text = currentPhase.ToString();
         // Additional logic for transitioning between phases, if needed
+    }
+
+    public void ErrorSound() 
+    {
+        src.clip = errorClip;
+        src.Play();
     }
 
     public void OnTurnButtonClick()

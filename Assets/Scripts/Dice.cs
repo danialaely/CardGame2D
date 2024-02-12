@@ -27,6 +27,10 @@ public class Dice : MonoBehaviour
     public Animator discaranimator;
     public Animator animator2;
 
+    public AudioSource src;
+    public AudioClip diceClip;
+    public AudioClip discardedClip;
+
     // Use this for initialization
     private void Start()
     {
@@ -45,6 +49,7 @@ public class Dice : MonoBehaviour
     // If you left click over the dice then RollTheDice coroutine is started
     public void OnMouseDown()
     {
+        DiceSound();
         StartCoroutine(RollAndDiscard());
     }
 
@@ -149,6 +154,7 @@ public class Dice : MonoBehaviour
                         
                         Transform discarcard = defenderCard.transform;
                         discarcard.SetParent(discardpile.transform);
+                        DiscardSound();
                     }
                 }
                 // discaranimator.SetBool("isDiscard", false);  make IEnumerator
@@ -171,6 +177,7 @@ public class Dice : MonoBehaviour
                         animator2.SetBool("isDiscarded",true);
                         Transform discardCard = defcard.transform;
                         discardCard.SetParent(discardpile2.transform);
+                        DiscardSound();
                     }
                 }
                 StartCoroutine(DiscardAnim2(2.0f));
@@ -183,6 +190,18 @@ public class Dice : MonoBehaviour
         }
 
        
+    }
+
+    public void DiceSound() 
+    {
+        src.clip = diceClip;
+        src.Play();
+    }
+
+    public void DiscardSound()
+    {
+        src.clip = discardedClip;
+        src.Play();
     }
 
     private IEnumerator DiscardAnim(float delay) 

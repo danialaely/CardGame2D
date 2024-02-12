@@ -250,8 +250,11 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                         Debug.Log("Player1 Card's Attack:"+dp.GetCardAttack());
                         dice1.enabled = true;
                         dice2.enabled = true;
+
+                        shuffler.AttackSound();
                         if (this.GetCardAttack() < dp.GetCardAttack()) 
                         {
+                            //shuffler.DiscardSound();
                             DisCard = true; 
                         }
                       

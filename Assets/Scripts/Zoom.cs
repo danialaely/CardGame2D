@@ -23,12 +23,13 @@ public class Zoom : MonoBehaviour
 
     public AudioSource src;
     public AudioClip shuffleClip;
+    public AudioClip errorClip;
 
     public GameManager gm;
 
     private Vector3 Origin;
     private Vector3 Difference;
-    private Vector3 ResetCamera;
+    //private Vector3 ResetCamera;
 
     private bool drag = false;
 
@@ -55,6 +56,12 @@ public class Zoom : MonoBehaviour
         }
     }
 
+    private IEnumerator Fluctuate(float delay) 
+    {
+        yield return new WaitForSeconds(delay);
+        stickToPos = !stickToPos;
+    }
+
     void Update()
     {
        
@@ -70,6 +77,9 @@ public class Zoom : MonoBehaviour
 
                 // Toggle the boolean variable
                 isBoolVariableTrue = !isBoolVariableTrue;
+                // stickToPos = !stickToPos;
+                StartCoroutine(Fluctuate(2f));
+                Debug.Log("SticToPos:"+stickToPos);
 
                 if (isBoolVariableTrue)
                 {
@@ -136,12 +146,33 @@ public class Zoom : MonoBehaviour
                 else 
                 {
                     drag = false;
+                if (mainCamera.transform.position.x < -200f)
+                {
+                    mainCamera.transform.position += new Vector3(5f, 0, 0);
                 }
+                if (mainCamera.transform.position.x > 1230f) 
+                {
+                    mainCamera.transform.position += new Vector3(-5f, 0, 0);
+                }
+
+                if (mainCamera.transform.position.y > 690f) 
+                {
+                    mainCamera.transform.position += new Vector3(0,-5f,0);
+                }
+                if (mainCamera.transform.position.y < -170f) 
+                {
+                    mainCamera.transform.position += new Vector3(0, 5f, 0);
+                }
+            }
 
                 if (drag==true) 
                 {
+                if (mainCamera.transform.position.x > -200f && mainCamera.transform.position.x < 1230f && mainCamera.transform.position.y < 690f && mainCamera.transform.position.y > -170f) 
+                {
                     Camera.main.transform.position = Origin - Difference;
-                    stickToPos = true;
+                }
+
+                    //stickToPos = true;
                 }
             
         }
@@ -150,7 +181,7 @@ public class Zoom : MonoBehaviour
             Debug.Log("Boolean variable is false. Performing reset.");
 
             // Reset the camera to its original state
-            if (mainCamera.orthographicSize <= 764f)
+            if (mainCamera.orthographicSize <= 765f)
             {
                 float targetOrthographicSize = 765.3f;
                 float transitionSpeed = 0.0925f;
@@ -182,6 +213,11 @@ public class Zoom : MonoBehaviour
         {
         src.clip = shuffleClip;
         src.Play();
+        }
+        if (gm.currentPhase == GamePhase.Setup || gm.currentPhase == GamePhase.Move) 
+        {
+            src.clip = errorClip;
+            src.Play();
         }
     }
 

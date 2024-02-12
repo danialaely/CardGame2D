@@ -23,6 +23,9 @@ public class CCardShuffler : MonoBehaviour
 
     public GameManager gm;
 
+    public AudioSource src;
+    public AudioClip swordClip;
+
     private void Start()
     {
         // boardSlot = FindAnyObjectByType<BoardSlot>();
@@ -163,6 +166,11 @@ public class CCardShuffler : MonoBehaviour
         cardAnimator.SetTrigger("BackTrigger");
     }
 
+    public void AttackSound()
+    {
+        src.clip = swordClip;
+        src.Play();
+    }
 
     private IEnumerator CardsDelay(float delay)
     {

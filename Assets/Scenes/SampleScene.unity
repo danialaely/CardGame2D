@@ -10288,6 +10288,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   src: {fileID: 1149496450}
   shuffleClip: {fileID: 8300000, guid: 703d1113b8a423840a86facf165fa451, type: 3}
+  errorClip: {fileID: 8300000, guid: faf98274f97967e48b82f84211ab0639, type: 3}
   gm: {fileID: 552501282}
 --- !u!4 &313359075
 Transform:
@@ -22792,6 +22793,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPhase: 0
   phaseText: {fileID: 2063336957}
+  src: {fileID: 1149496450}
+  errorClip: {fileID: 8300000, guid: faf98274f97967e48b82f84211ab0639, type: 3}
 --- !u!4 &552501283
 Transform:
   m_ObjectHideFlags: 0
@@ -51344,6 +51347,8 @@ MonoBehaviour:
   boardSlot: {fileID: 266973775}
   dc: {fileID: 887216696}
   gm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  swordClip: {fileID: 8300000, guid: 28c6e611bb113934696ae705a70b1d8c, type: 3}
 --- !u!4 &1276202207
 Transform:
   m_ObjectHideFlags: 0
@@ -76917,6 +76922,8 @@ MonoBehaviour:
   boardSlot: {fileID: 1169695040}
   dc: {fileID: 777553444}
   gm: {fileID: 552501282}
+  src: {fileID: 1149496450}
+  swordClip: {fileID: 8300000, guid: 28c6e611bb113934696ae705a70b1d8c, type: 3}
 --- !u!1 &1957102883
 GameObject:
   m_ObjectHideFlags: 0
@@ -80348,6 +80355,9 @@ MonoBehaviour:
   discardpile2: {fileID: 1619184556}
   discaranimator: {fileID: 1554250032}
   animator2: {fileID: 720133720}
+  src: {fileID: 1149496450}
+  diceClip: {fileID: 8300000, guid: 64e9825261699964592dd11461ce9604, type: 3}
+  discardedClip: {fileID: 8300000, guid: 9a38467fa6c59454b81eb2cd9e05ac1d, type: 3}
 --- !u!224 &2035970872 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7780213861218700707, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -80412,6 +80422,9 @@ MonoBehaviour:
   discardpile2: {fileID: 1619184556}
   discaranimator: {fileID: 1554250032}
   animator2: {fileID: 720133720}
+  src: {fileID: 1149496450}
+  diceClip: {fileID: 8300000, guid: 64e9825261699964592dd11461ce9604, type: 3}
+  discardedClip: {fileID: 8300000, guid: 9a38467fa6c59454b81eb2cd9e05ac1d, type: 3}
 --- !u!114 &2039420418
 MonoBehaviour:
   m_ObjectHideFlags: 0

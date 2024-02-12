@@ -37,12 +37,17 @@ public class BoardSlot : MonoBehaviour, IDropHandler
 
             if (int.TryParse(energyText.text, out currentEnergy))
             {
-                if (currentEnergy >= cardEnergy && isP1Turn)     
+                if (currentEnergy >= cardEnergy && isP1Turn)
                 {
                     int rowIndex = transform.GetSiblingIndex();
                     int maxRowIndex = 97;
 
                     //  int columnIndex = transform.parent.GetSiblingIndex();
+                    if (card.transform.parent.name == "Hand" && gmmm.currentPhase == GamePhase.Draw) 
+                    {
+                        gmmm.ErrorSound();
+                    }
+
                     if (card.transform.parent.name == "Hand" && gmmm.currentPhase== GamePhase.Setup) 
                     { 
                     if ((rowIndex >= 84 && rowIndex < maxRowIndex) || 
@@ -67,6 +72,16 @@ public class BoardSlot : MonoBehaviour, IDropHandler
                     card.GetComponent<CanvasGroup>().blocksRaycasts = true;
                             GetPlacementSound();
                     }
+                    }
+
+                    if (card.transform.parent.name == "Hand" && gmmm.currentPhase == GamePhase.Move)
+                    {
+                        gmmm.ErrorSound();
+                    }
+
+                    if (card.transform.parent.tag == "BSlot" && gmmm.currentPhase == GamePhase.Draw) 
+                    {
+                        gmmm.ErrorSound();
                     }
 
                     if (card.transform.parent.tag == "BSlot" && gmmm.currentPhase == GamePhase.Move)
@@ -119,6 +134,21 @@ public class BoardSlot : MonoBehaviour, IDropHandler
                 {
                         int rowIndex = transform.GetSiblingIndex();
                         int maxRowIndex = 14;
+
+                        if (cardd.transform.parent.name == "Hand2" && gmmm.currentPhase == GamePhase.Draw)
+                        {
+                            gmmm.ErrorSound();
+                        }
+
+                        if (cardd.transform.parent.name == "Hand2" && gmmm.currentPhase == GamePhase.Move)
+                        {
+                            gmmm.ErrorSound();
+                        }
+
+                        if (cardd.transform.parent.tag == "BSlot" && gmmm.currentPhase == GamePhase.Draw)
+                        {
+                            gmmm.ErrorSound();
+                        }
 
                         if (cardd.transform.parent.name == "Hand2" && gmmm.currentPhase == GamePhase.Setup) 
                         {
