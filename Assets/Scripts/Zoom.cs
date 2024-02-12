@@ -19,14 +19,27 @@ public class Zoom : MonoBehaviour
      Vector3 originaldice2Pos;
 
     Vector3 zoomPos;
+   // Vector3 zoomOut;
 
     public AudioSource src;
     public AudioClip shuffleClip;
+
+    public GameManager gm;
+
+    private Vector3 Origin;
+    private Vector3 Difference;
+    private Vector3 ResetCamera;
+
+    private bool drag = false;
+
+    private bool stickToPos;
 
     private void Start()
     {
         originaldice1Pos = dice1.transform.position;
         originaldice2Pos = dice2.transform.position;
+
+        stickToPos = false;
 
         if (mainCamera == null)
         {
@@ -100,25 +113,49 @@ public class Zoom : MonoBehaviour
             float targetOrthographicSize = 411f;
 
             // Smoothly interpolate to the target orthographic size and position
-            float transitionSpeed = 0.0225f;
+            float transitionSpeed = 0.0925f;
 
             mainCamera.orthographicSize = Mathf.Lerp(mainCamera.orthographicSize, targetOrthographicSize, transitionSpeed);
-            if (mainCamera.transform.position != zoomPos) 
+
+            if (Input.GetMouseButton(0) ==false && stickToPos==false) 
             {
-                //mainCamera.transform.position = zoomPos;
+                //IF I HAVE NOT DRAGGED UP TILL NOW THEN ONLY IT WILL HAPPEN OTHERWISE IT WON'T EXECUTE 
                 mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, zoomPos, 8f);
             }
+            
+                //HERE
+                if (Input.GetMouseButton(0))
+                {
+                    Difference = (Camera.main.ScreenToWorldPoint(Input.mousePosition)) - mainCamera.transform.position;
+                    if (drag == false)
+                    {
+                        drag = true;
+                        Origin = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    }
+                }
+                else 
+                {
+                    drag = false;
+                }
+
+                if (drag==true) 
+                {
+                    Camera.main.transform.position = Origin - Difference;
+                    stickToPos = true;
+                }
+            
         }
         else
         {
             Debug.Log("Boolean variable is false. Performing reset.");
 
             // Reset the camera to its original state
-            if (mainCamera.orthographicSize <= 700f)
+            if (mainCamera.orthographicSize <= 764f)
             {
                 float targetOrthographicSize = 765.3f;
-                float transitionSpeed = 0.0225f;
+                float transitionSpeed = 0.0925f;
                 mainCamera.orthographicSize = Mathf.Lerp(mainCamera.orthographicSize, targetOrthographicSize, transitionSpeed);
+                mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position,originalCamPos,8f);
                 dice1.transform.position = originaldice1Pos;
                 dice2.transform.position = originaldice2Pos;
             }
@@ -141,7 +178,11 @@ public class Zoom : MonoBehaviour
 
     public void DeckSound() 
     {
+        if (gm.currentPhase == GamePhase.Draw) 
+        {
         src.clip = shuffleClip;
         src.Play();
+        }
     }
+
 }
