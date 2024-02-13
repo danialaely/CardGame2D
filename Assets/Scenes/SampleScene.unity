@@ -598,6 +598,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &39306565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -702,6 +703,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &57898685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -796,6 +798,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &60567580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -965,6 +968,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &100236538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1059,6 +1063,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &102989061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1833,6 +1838,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &103581799
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2621,6 +2627,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &110413691
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2724,6 +2731,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &113643993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2818,6 +2826,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &119561909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2987,6 +2996,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &122193316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3809,6 +3819,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &126919881
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3912,6 +3923,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &127107191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4006,6 +4018,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &130401741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4100,6 +4113,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &130440249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4937,6 +4951,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &137169813
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -6873,6 +6888,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &162252936
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -7051,6 +7067,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &168245003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7161,6 +7178,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &181031850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7330,6 +7348,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &189214131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7429,6 +7448,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &193746739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7603,6 +7623,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &198877511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8587,6 +8608,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &221550786
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -8690,6 +8712,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &225117660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8822,6 +8845,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!224 &233005696 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7780213861218700707, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -9871,6 +9895,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &266973776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10045,6 +10070,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &284539789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10139,6 +10165,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &291948973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11826,6 +11853,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &327460117
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -12084,6 +12112,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &354081549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13008,6 +13037,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &369664182
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -15387,6 +15417,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &404767728
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -16225,6 +16256,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &413228685
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -17008,6 +17040,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &422209859
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -18476,6 +18509,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &437691606
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -18579,6 +18613,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &438077859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18678,6 +18713,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &441139043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19616,6 +19652,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &455431879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19785,6 +19822,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &463843401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19879,6 +19917,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &468881826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19973,6 +20012,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &472959489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21273,6 +21313,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &502474421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22219,6 +22260,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &521585664
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -22322,6 +22364,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &530447688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22866,6 +22909,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &563702605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23035,6 +23079,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &565463156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25838,6 +25883,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &637919610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26083,6 +26129,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &653829051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26177,6 +26224,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &668241838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26555,6 +26603,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &688496788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26649,6 +26698,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &694360004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27403,6 +27453,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &696725877
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -28170,6 +28221,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &697075517
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -28278,6 +28330,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &707340746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29140,6 +29193,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &717847700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30185,6 +30239,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &736086924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30943,6 +30998,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &736103385
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -31046,6 +31102,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &753140214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34094,6 +34151,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &813679034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34973,6 +35031,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &819507700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36555,6 +36614,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &876342427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37492,6 +37552,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &882859675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38352,6 +38413,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &887216699
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -39301,6 +39363,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &903307105
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -39404,6 +39467,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &912229844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40158,6 +40222,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &915578736
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -40411,6 +40476,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &940845500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40510,6 +40576,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &953312919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40759,6 +40826,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &968596928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43059,6 +43127,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1021549425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43980,6 +44049,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &1033557562
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -44776,6 +44846,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1035907967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45223,6 +45294,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1069008565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45317,6 +45389,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1078153485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45411,6 +45484,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1079359007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45580,6 +45654,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1099228281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45974,6 +46049,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1148602675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46385,6 +46461,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1153791552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46479,6 +46556,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1169695041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48006,6 +48084,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &1174721819
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -48606,6 +48685,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1189059587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49603,6 +49683,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &1214885554
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -49861,6 +49942,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1230452650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50260,6 +50342,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1242935611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50359,6 +50442,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1249914870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51218,6 +51302,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &1275417427
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -51420,6 +51505,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1283249261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52664,6 +52750,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &1322447476
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -54228,6 +54315,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1331238739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54322,6 +54410,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1332898934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54416,6 +54505,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1334377005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54644,6 +54734,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1345808403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54743,6 +54834,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1358080866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55642,6 +55734,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &1365877952
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -55900,6 +55993,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1381939188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56149,6 +56243,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1392748621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58767,6 +58862,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &1433556482
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -60007,6 +60103,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1473451732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60101,6 +60198,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1473679567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60855,6 +60953,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &1477093894
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -61896,6 +61995,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1504715787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64189,6 +64289,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &1527229171
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -64997,6 +65098,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &1529615366
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -66603,6 +66705,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &1554088472
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -66984,6 +67087,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &1559227098
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -68315,6 +68419,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1598250316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68559,6 +68664,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1614685319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68653,6 +68759,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1618089239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68847,6 +68954,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1623317757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68941,6 +69049,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1630846298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70090,6 +70199,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1676150281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70184,6 +70294,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1680248052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70278,6 +70389,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1682902209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70512,6 +70624,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1694180727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70606,6 +70719,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1711530025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71468,6 +71582,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1732443144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72233,6 +72348,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &1744196529
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -72336,6 +72452,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1753139121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72719,6 +72836,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1814743662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74525,6 +74643,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1874992424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75359,6 +75478,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &1896393044
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -75692,6 +75812,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1925609975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75791,6 +75912,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1930899850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76778,6 +76900,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &1944174847
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -77790,6 +77913,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &1974909842
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -78707,6 +78831,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &1979539352
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -78810,6 +78935,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1979886528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78999,6 +79125,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &2000333825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79093,6 +79220,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &2023128032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79847,6 +79975,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &2024895048
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -79950,6 +80079,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &2025179339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80044,6 +80174,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &2026799739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80620,6 +80751,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &2040062024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80714,6 +80846,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &2040138811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81543,6 +81676,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &2045142965
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -82384,6 +82518,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &2059892644
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -82532,6 +82667,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &2060174692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82626,6 +82762,7 @@ MonoBehaviour:
   gmmm: {fileID: 552501282}
   src: {fileID: 1149496450}
   cardPlacementClip: {fileID: 8300000, guid: 91512788365861b41a85dcebceb735a1, type: 3}
+  highlightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &2061204763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85309,6 +85446,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!225 &206386808268493637
 CanvasGroup:
   m_ObjectHideFlags: 0

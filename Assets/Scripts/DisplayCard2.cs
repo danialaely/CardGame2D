@@ -39,6 +39,8 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     private static bool DisCard;
 
+    public List<BoardSlot> BoSlots; //Reference to all BoardSlots
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +52,9 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         // Populate allDisplayCards with all instances of DisplayCard
         allDisplayCards = new List<DisplayCard2>(FindObjectsOfType<DisplayCard2>());
         outerBorder = this.transform.Find("OuterBorder").GetComponent<Image>();
+
+        BoSlots = new List<BoardSlot>(FindObjectsOfType<BoardSlot>());
+
         dice1.enabled = false;
         dice2.enabled = false;
 
@@ -84,6 +89,27 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         initialPosition = transform.position;
         canvasGroup.alpha = 0.6f;
         canvasGroup.blocksRaycasts = false;
+
+        foreach (BoardSlot bslot in BoSlots)
+        {
+            for (int i = 0; i < bslot.transform.parent.childCount; i++)
+            {
+                if ((i <= 13) ||
+                    (i + 13 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 13).childCount > 0 && bslot.transform.parent.GetChild(i + 13).GetChild(0).tag == "Player2") ||
+                    (i + 14 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 14).childCount > 0 && bslot.transform.parent.GetChild(i + 14).GetChild(0).tag == "Player2") ||
+                    (i + 15 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 15).childCount > 0 && bslot.transform.parent.GetChild(i + 15).GetChild(0).tag == "Player2") ||
+                    (i + 1 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 1).childCount > 0 && bslot.transform.parent.GetChild(i + 1).GetChild(0).tag == "Player2") ||
+                    (i - 13 >= 0 && bslot.transform.parent.GetChild(i - 13).childCount > 0 && bslot.transform.parent.GetChild(i - 13).GetChild(0).tag == "Player2") ||
+                    (i - 14 >= 0 && bslot.transform.parent.GetChild(i - 14).childCount > 0 && bslot.transform.parent.GetChild(i - 14).GetChild(0).tag == "Player2") ||
+                    (i - 15 >= 0 && bslot.transform.parent.GetChild(i - 15).childCount > 0 && bslot.transform.parent.GetChild(i - 15).GetChild(0).tag == "Player2") ||
+                    (i - 1 >= 0 && bslot.transform.parent.GetChild(i - 1).childCount > 0 && bslot.transform.parent.GetChild(i - 1).GetChild(0).tag == "Player2"))
+                {
+                    Transform slot = bslot.transform.parent.GetChild(i);
+                    slot.GetComponent<Image>().color = Color.green;
+                }
+            }
+        }
+
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -118,6 +144,15 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
+
+        foreach (BoardSlot bslot in BoSlots)
+        {
+            for (int i = 0; i < bslot.transform.parent.childCount; i++)
+            {
+                Transform slot = bslot.transform.parent.GetChild(i);
+                slot.GetComponent<Image>().color = Color.white;
+            }
+        }
 
         // If the card is not dropped on a slot, return it to the initial position.
         if (transform.parent == null || transform.parent.CompareTag("Hand"))

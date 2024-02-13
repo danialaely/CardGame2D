@@ -23,6 +23,9 @@ public class BoardSlot : MonoBehaviour, IDropHandler
     public AudioSource src;
     public AudioClip cardPlacementClip;
 
+    public Color highlightColor;
+    private Color originalColor;
+
     public void OnDrop(PointerEventData eventData)    
     {
         DisplayCard card = eventData.pointerDrag.GetComponent<DisplayCard>();
@@ -30,6 +33,8 @@ public class BoardSlot : MonoBehaviour, IDropHandler
 
         //  if (card.transform.parent.name == "Hand"){ }
         bool isP1Turn = ButtonTurn.GetPlayerTurn();
+
+       // originalColor = GetComponent<Image>().color;
 
         if (card != null && transform.childCount == 0)  //(2): CARD PLACEMENT PHASE
         {
@@ -41,7 +46,7 @@ public class BoardSlot : MonoBehaviour, IDropHandler
                 {
                     int rowIndex = transform.GetSiblingIndex();
                     int maxRowIndex = 97;
-
+                    
                     //  int columnIndex = transform.parent.GetSiblingIndex();
                     if (card.transform.parent.name == "Hand" && gmmm.currentPhase == GamePhase.Draw) 
                     {
@@ -71,7 +76,9 @@ public class BoardSlot : MonoBehaviour, IDropHandler
                     card.transform.localPosition = Vector3.zero;
                     card.GetComponent<CanvasGroup>().blocksRaycasts = true;
                             GetPlacementSound();
-                    }
+                            //GetComponent<Image>().color = highlightColor;
+                          //  HighlightValidSlots();
+                        }
                     }
 
                     if (card.transform.parent.name == "Hand" && gmmm.currentPhase == GamePhase.Move)
@@ -225,9 +232,11 @@ public class BoardSlot : MonoBehaviour, IDropHandler
 
         } }
 
-
+       // GetComponent<Image>().color = originalColor;
     }
-        
+
+    
+
     public void AnotherMethod()  // (1):CARD DRAW PHASE
     {  
         int value = currentEnergy;

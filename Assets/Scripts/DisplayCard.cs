@@ -39,18 +39,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public static bool Discard;
 
-   // public Camera mainCamera; // Reference to your main camera
-   // private float originalOrthographicSize;
-   // Vector3 originalCamPos;
-
-  //  Vector3 originaldice1Pos;
-  //  Vector3 originaldice2Pos;
-
-   // private float lastClickTime = 0f;
-   // private float doubleClickDelay = 0.2f; // Adjust this value based on your desired double-tap speed
-
-
-    // Vector2 difference = Vector2.zero;
+    public List<BoardSlot> BoSlots; //Reference to all BoardSlots
 
     // Start is called before the first frame update
     void Start()
@@ -65,27 +54,13 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         allDisplayCards = new List<DisplayCard>(FindObjectsOfType<DisplayCard>());
         outerBorder = this.transform.Find("OuterBorder").GetComponent<Image>();
 
+        BoSlots = new List<BoardSlot>(FindObjectsOfType<BoardSlot>());
+
         dice1.enabled = false;
         dice2.enabled = false;
-      //  originaldice1Pos = dice1.transform.position;
-      //  originaldice2Pos = dice2.transform.position;
-
 
         Discard = false;
 
-
-    /*    if (mainCamera == null)
-        {
-            // If the mainCamera reference is not set, try to find the main camera in the scene
-            mainCamera = Camera.main;
-        }
-
-        // Store the original orthographic size for resetting
-        if (mainCamera != null)
-        {
-            originalOrthographicSize = mainCamera.orthographicSize;
-            originalCamPos = mainCamera.transform.position;
-        }*/
     }
 
     public void UpdateCardInformation()
@@ -117,7 +92,25 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         canvasGroup.alpha = 0.6f;
         canvasGroup.blocksRaycasts = false;
 
-       // difference = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition)-(Vector2)transform.position;
+        foreach (BoardSlot bslot in BoSlots)
+        {
+            for (int i = 0; i < bslot.transform.parent.childCount; i++)
+            {
+                if ((i >= 84) ||
+                    (i + 13 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 13).childCount > 0 && bslot.transform.parent.GetChild(i + 13).GetChild(0).tag == "Player1") ||
+                    (i + 14 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 14).childCount > 0 && bslot.transform.parent.GetChild(i + 14).GetChild(0).tag == "Player1") ||
+                    (i + 15 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 15).childCount > 0 && bslot.transform.parent.GetChild(i + 15).GetChild(0).tag == "Player1") ||
+                    (i + 1 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 1).childCount > 0 && bslot.transform.parent.GetChild(i + 1).GetChild(0).tag == "Player1") ||
+                    (i - 13 >= 0 && bslot.transform.parent.GetChild(i - 13).childCount > 0 && bslot.transform.parent.GetChild(i - 13).GetChild(0).tag == "Player1") ||
+                    (i - 14 >= 0 && bslot.transform.parent.GetChild(i - 14).childCount > 0 && bslot.transform.parent.GetChild(i - 14).GetChild(0).tag == "Player1") ||
+                    (i - 15 >= 0 && bslot.transform.parent.GetChild(i - 15).childCount > 0 && bslot.transform.parent.GetChild(i - 15).GetChild(0).tag == "Player1") ||
+                    (i - 1 >= 0 && bslot.transform.parent.GetChild(i - 1).childCount > 0 && bslot.transform.parent.GetChild(i - 1).GetChild(0).tag == "Player1"))
+                {
+                    Transform slot = bslot.transform.parent.GetChild(i);
+                    slot.GetComponent<Image>().color = Color.green;
+                }
+            }
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -134,22 +127,8 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                  RectTransformUtility.ScreenPointToLocalPointInRectangle(transform.parent.GetComponent<RectTransform>(),Input.mousePosition, Camera.main,out Vector2 localPos);
                  transform.localPosition = localPos;
 
-                //transform.position =  Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-                //transform.position = Camera.main.WorldToScreenPoint(Input.mousePosition);
-
-                //  transform.position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition) - difference;
-                //transform.position = eventData.position;
            }
         }
-
-     /*   if (transform.parent != null && transform.parent.name == "Hand2")
-        {
-            if (dragging2 > 0)
-            {
-                transform.position = Input.mousePosition;
-            }
-        }*/
 
     }
 
@@ -159,6 +138,15 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
+
+        foreach (BoardSlot bslot in BoSlots)
+        {
+            for (int i = 0; i < bslot.transform.parent.childCount; i++)
+            {
+                Transform slot = bslot.transform.parent.GetChild(i);
+                slot.GetComponent<Image>().color = Color.white;
+            }
+        }
 
         // If the card is not dropped on a slot, return it to the initial position.
         if (transform.parent == null || transform.parent.CompareTag("Hand"))
@@ -233,17 +221,6 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                         otherCard.adjacentCards.Clear();
                         otherCard.outerBorder.color = Color.black;
 
-                    /*    foreach (GameObject ptwo in player2)
-                        {
-                            float dist = Vector3.Distance(ptwo.transform.position,otherCard.transform.position);
-
-                            if (dist<165f) 
-                            {
-                                UnityEngine.UI.Image ptwoouterborder = ptwo.transform.Find("OuterBorder").GetComponent<Image>();
-                                ptwoouterborder.color = Color.yellow;
-                            }
-
-                        }*/
                     }
                 }
 
