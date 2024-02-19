@@ -5720,6 +5720,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1 &143023075
 GameObject:
   m_ObjectHideFlags: 0
@@ -9619,6 +9620,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1 &241768670
 GameObject:
   m_ObjectHideFlags: 0
@@ -11053,6 +11055,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!224 &324937119 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7780213861218700707, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -13928,6 +13931,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1001 &389270311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14621,6 +14625,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1 &394233606
 GameObject:
   m_ObjectHideFlags: 0
@@ -17793,6 +17798,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1001 &437691596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19520,6 +19526,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1 &450956339
 GameObject:
   m_ObjectHideFlags: 0
@@ -20756,6 +20763,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1 &482816135
 GameObject:
   m_ObjectHideFlags: 0
@@ -24191,6 +24199,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!224 &595851186 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7780213861218700707, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -24899,6 +24908,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1 &608664297
 GameObject:
   m_ObjectHideFlags: 0
@@ -25817,6 +25827,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!224 &628577328 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7780213861218700707, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -29062,6 +29073,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1 &714981811
 GameObject:
   m_ObjectHideFlags: 0
@@ -29925,6 +29937,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1 &720133718
 GameObject:
   m_ObjectHideFlags: 0
@@ -31175,7 +31188,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00024414062, y: 0.23139954}
+  m_AnchoredPosition: {x: -0.00024414062, y: 0.23138428}
   m_SizeDelta: {x: -0.9374, y: 3.6545}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &753431807
@@ -32059,6 +32072,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1 &769869591
 GameObject:
   m_ObjectHideFlags: 0
@@ -32839,6 +32853,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1 &781658993
 GameObject:
   m_ObjectHideFlags: 0
@@ -33635,6 +33650,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1 &783239505
 GameObject:
   m_ObjectHideFlags: 0
@@ -34900,6 +34916,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1 &819229741
 GameObject:
   m_ObjectHideFlags: 0
@@ -35854,6 +35871,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!114 &868899180 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3125808900119779088, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -36558,6 +36576,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1 &876342424
 GameObject:
   m_ObjectHideFlags: 0
@@ -37421,6 +37440,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1 &881200540
 GameObject:
   m_ObjectHideFlags: 0
@@ -42051,6 +42071,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!224 &996430261 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7780213861218700707, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -42841,6 +42862,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1 &1010079766
 GameObject:
   m_ObjectHideFlags: 0
@@ -44790,6 +44812,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1 &1035907964
 GameObject:
   m_ObjectHideFlags: 0
@@ -47363,6 +47386,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!224 &1174683860 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7780213861218700707, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -52324,6 +52348,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1 &1306628627
 GameObject:
   m_ObjectHideFlags: 0
@@ -53566,6 +53591,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1001 &1330623454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54259,6 +54285,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1 &1331238736
 GameObject:
   m_ObjectHideFlags: 0
@@ -57226,6 +57253,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!114 &1402345917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58126,6 +58154,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1001 &1433556468
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59753,6 +59782,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1 &1445981845
 GameObject:
   m_ObjectHideFlags: 0
@@ -61769,6 +61799,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!224 &1479817232 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7780213861218700707, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -62877,6 +62908,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1001 &1518532923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63570,6 +63602,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1001 &1527229157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65839,6 +65872,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1 &1542940142
 GameObject:
   m_ObjectHideFlags: 0
@@ -68363,6 +68397,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1 &1598250313
 GameObject:
   m_ObjectHideFlags: 0
@@ -70043,6 +70078,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1 &1670852235
 GameObject:
   m_ObjectHideFlags: 0
@@ -71451,6 +71487,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1 &1721011903
 GameObject:
   m_ObjectHideFlags: 0
@@ -73643,6 +73680,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1 &1842474263
 GameObject:
   m_ObjectHideFlags: 0
@@ -74507,6 +74545,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!224 &1865051894 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7780213861218700707, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -84556,6 +84595,7 @@ MonoBehaviour:
   allDisplayCards: []
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
+  BoSlots: []
 --- !u!1 &2133582610
 GameObject:
   m_ObjectHideFlags: 0
