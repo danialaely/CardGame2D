@@ -26,6 +26,8 @@ public class CardShuffler : MonoBehaviour
     public AudioSource src;
     public AudioClip swordClip;
 
+    public Zoom zm;
+
     private void Start()
     {
        // boardSlot = FindAnyObjectByType<BoardSlot>();
@@ -79,49 +81,57 @@ public class CardShuffler : MonoBehaviour
          boardSlot.AnotherMethod2();
         }
 
-       
         StartCoroutine(CardsDelay(2.1f));
 
         // Play the shuffle animation
         int handchildCount = hand.transform.childCount;
+
         if (handchildCount==0 && gm.currentPhase == GamePhase.Draw) 
         {
         cardAnimator.SetTrigger("ShuffleTrigger");
+          zm.DeckSound();
         StartCoroutine(BackToDefault(3));
         }
         if (handchildCount == 7 && gm.currentPhase == GamePhase.Draw) 
         {
             cardAnimator.SetTrigger("ShuffleTrigger2");
+            zm.DeckSound();
             StartCoroutine(BackToDefault(2.0f));
         }
         if (handchildCount == 6 && gm.currentPhase == GamePhase.Draw)
         {
             cardAnimator.SetTrigger("ShuffleTrigger3");
+            zm.DeckSound();
             StartCoroutine(BackToDefault(2.0f));
         }
         if (handchildCount == 5 && gm.currentPhase == GamePhase.Draw)
         {
             cardAnimator.SetTrigger("ShuffleTrigger4");
+            zm.DeckSound();
             StartCoroutine(BackToDefault(2.0f));
         }
         if (handchildCount == 4 && gm.currentPhase == GamePhase.Draw)
         {
             cardAnimator.SetTrigger("ShuffleTrigger5");
+            zm.DeckSound();
             StartCoroutine(BackToDefault(2.0f));
         }
         if (handchildCount == 3 && gm.currentPhase == GamePhase.Draw)
         {
             cardAnimator.SetTrigger("ShuffleTrigger6");
+            zm.DeckSound();
             StartCoroutine(BackToDefault(2.0f));
         }
         if (handchildCount == 2 && gm.currentPhase == GamePhase.Draw)
         {
             cardAnimator.SetTrigger("ShuffleTrigger7");
+            zm.DeckSound();
             StartCoroutine(BackToDefault(2.0f));
         }
         if (handchildCount == 1 && gm.currentPhase == GamePhase.Draw)
         {
             cardAnimator.SetTrigger("ShuffleTrigger8");
+            zm.DeckSound();
             StartCoroutine(BackToDefault(2.0f));
         }
         // Reset the used detail count dictionary

@@ -8,6 +8,7 @@ TagManager:
   - BSlot
   - Player2
   - Player1
+  - aaaa
   layers:
   - Default
   - TransparentFX
