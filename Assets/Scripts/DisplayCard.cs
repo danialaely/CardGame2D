@@ -39,6 +39,9 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public static bool Discard;
 
+    public static int P1Power;
+    public static int P2Power;
+
     public List<BoardSlot> BoSlots; //Reference to all BoardSlots
 
     public GameManager gm;
@@ -296,11 +299,13 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                         dice2.enabled = true;
 
                         shuffler.AttackSound();
-                        if (this.GetCardAttack() < dp.GetCardAttack()) 
+
+                        P1Power = this.GetCardAttack();
+                        P2Power = dp.GetCardAttack();
+                       /* if (this.GetCardAttack() < dp.GetCardAttack()) 
                         {
-                           
                             Discard = true;
-                        }
+                        }*/
                     }
                 }
             }
@@ -330,6 +335,16 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     public bool GetSelected() 
     {
         return isSelected;
+    }
+
+    public int Getp1Power() 
+    {
+        return P1Power;
+    }
+
+    public int Getp2Power() 
+    {
+        return P2Power;
     }
 
     public void OnPointerEnter(PointerEventData eventData)

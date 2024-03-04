@@ -43,6 +43,9 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public GameManager gm;
 
+    public static int P1Power;
+    public static int P2Power;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -301,11 +304,14 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                         dice2.enabled = true;
 
                         shuffler.AttackSound();
-                        if (this.GetCardAttack() < dp.GetCardAttack()) 
+
+                        P1Power = dp.GetCardAttack();
+                        P2Power = this.GetCardAttack();
+                      /*  if (this.GetCardAttack() < dp.GetCardAttack()) 
                         {
                             //shuffler.DiscardSound();
                             DisCard = true; 
-                        }
+                        }*/
                       
                     }
                 }
@@ -331,6 +337,16 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     public bool GetDiscard() 
     {
         return DisCard;
+    }
+
+    public int GetP1Power() 
+    {
+        return P1Power;
+    }
+
+    public int GetP2Power() 
+    {
+        return P2Power;
     }
 
 }

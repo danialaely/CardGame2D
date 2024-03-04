@@ -135,9 +135,8 @@ public class Dice : MonoBehaviour
 
     public void Discarded() 
     {
-        if (GetDice() > GetDice2()) 
-        {
-            Debug.Log(" Dice Attack True");
+        //if (GetDice() > GetDice2()) {Debug.Log(" Dice Attack True");}
+
                 bool isP1Turn = ButtonTurn.GetPlayerTurn();
             if (isP1Turn)
             {//DisplayCard2
@@ -145,9 +144,13 @@ public class Dice : MonoBehaviour
                 foreach (DisplayCard2 defenderCard in allDpCards)
                 {
                     Debug.Log("Selected:"+defenderCard.isSelected);
-                    if (defenderCard.isSelected  && defenderCard.GetDiscard())
+                    if (defenderCard.isSelected)
                     {
-                        Debug.Log("Discard Value:"+ defenderCard.GetDiscard());
+                    if ((GetDice()+defenderCard.GetP1Power()) > ((GetDice2())+defenderCard.GetP2Power())) 
+                    {
+                        Debug.Log("ATTACKER Dice:"+GetDice()+"+"+"Attack:"+defenderCard.GetP1Power()+"="+ (GetDice() + defenderCard.GetP1Power()));
+                        Debug.Log("DEFENSE Dice:" + GetDice2() + "+" + "Attack:" + defenderCard.GetP2Power() + "=" + (GetDice2() + defenderCard.GetP2Power()));
+                        //  Debug.Log("Discard Value:"+ defenderCard.GetDiscard());
                         //Destroy(defenderCard.gameObject);
                         //defenderCard.transform.position += new Vector3(600f,-300f,0f);
                         discaranimator.SetBool("isDiscard",true);
@@ -155,6 +158,7 @@ public class Dice : MonoBehaviour
                         Transform discarcard = defenderCard.transform;
                         discarcard.SetParent(discardpile.transform);
                         DiscardSound();
+                    }
                     }
                 }
                 // discaranimator.SetBool("isDiscard", false);  make IEnumerator
@@ -170,8 +174,12 @@ public class Dice : MonoBehaviour
                 //DisplayCard
                 foreach (DisplayCard defcard in allDisplayCards)
                 {
-                    if (defcard.isSelected && defcard.GetDiscard()) 
+                    if (defcard.isSelected) 
                     {
+                    if ((GetDice() + defcard.Getp2Power()) > ((GetDice2()) + defcard.Getp1Power())) 
+                    {
+                        Debug.Log("ATTACKER Dice:" + GetDice() + "+" + "Attack:" + defcard.Getp2Power() + "=" + (GetDice() + defcard.Getp2Power()));
+                        Debug.Log("DEFENSE Dice:" + GetDice2() + "+" + "Attack:" + defcard.Getp1Power() + "=" + (GetDice2() + defcard.Getp1Power()));
                         // Debug.Log("Discard Value:" +defcard.GetDiscard());
                         // Destroy(defcard.gameObject);
                         animator2.SetBool("isDiscarded",true);
@@ -179,10 +187,10 @@ public class Dice : MonoBehaviour
                         discardCard.SetParent(discardpile2.transform);
                         DiscardSound();
                     }
+                    }
                 }
                 StartCoroutine(DiscardAnim2(2.0f));
             }
-        }
 
         if (GetDice() < GetDice2()) 
         {
