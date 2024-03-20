@@ -1920,6 +1920,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &103581799
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2710,6 +2711,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &110413691
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3951,6 +3953,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &126919881
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -5132,6 +5135,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &137169813
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -5902,6 +5906,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1 &143023075
 GameObject:
   m_ObjectHideFlags: 0
@@ -7147,6 +7152,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &162252936
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -8948,6 +8954,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &221550786
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -9992,6 +9999,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1 &241768670
 GameObject:
   m_ObjectHideFlags: 0
@@ -11464,6 +11472,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!224 &324937119 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7780213861218700707, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -12266,6 +12275,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &327460117
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -13467,6 +13477,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &369664182
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -14359,6 +14370,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1001 &389270311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15054,6 +15066,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1 &394233606
 GameObject:
   m_ObjectHideFlags: 0
@@ -15852,6 +15865,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &404767728
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -16692,6 +16706,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &413228685
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -17477,6 +17492,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &422209859
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -18231,6 +18247,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1 &436575940
 GameObject:
   m_ObjectHideFlags: 0
@@ -19024,6 +19041,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &437691606
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -20068,6 +20086,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1 &450956339
 GameObject:
   m_ObjectHideFlags: 0
@@ -21445,6 +21464,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1 &482816135
 GameObject:
   m_ObjectHideFlags: 0
@@ -23042,6 +23062,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &521585664
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -25097,6 +25118,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!224 &595851186 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7780213861218700707, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -25807,6 +25829,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1 &608664297
 GameObject:
   m_ObjectHideFlags: 0
@@ -26727,6 +26750,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!224 &628577328 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7780213861218700707, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -28520,6 +28544,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &696725877
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -29289,6 +29314,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &697075517
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -30147,6 +30173,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1 &714981811
 GameObject:
   m_ObjectHideFlags: 0
@@ -31028,6 +31055,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1 &720133718
 GameObject:
   m_ObjectHideFlags: 0
@@ -32119,6 +32147,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &736103385
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -33197,6 +33226,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1 &769869591
 GameObject:
   m_ObjectHideFlags: 0
@@ -33979,6 +34009,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1 &781658993
 GameObject:
   m_ObjectHideFlags: 0
@@ -34777,6 +34808,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1 &783239505
 GameObject:
   m_ObjectHideFlags: 0
@@ -36060,6 +36092,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1 &819229741
 GameObject:
   m_ObjectHideFlags: 0
@@ -37032,6 +37065,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!114 &868899180 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3125808900119779088, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -37738,6 +37772,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1 &876342424
 GameObject:
   m_ObjectHideFlags: 0
@@ -38619,6 +38654,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1 &881200540
 GameObject:
   m_ObjectHideFlags: 0
@@ -39629,6 +39665,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &887216699
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -40730,6 +40767,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &903307105
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -41681,6 +41719,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &915578736
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -43559,6 +43598,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!224 &996430261 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7780213861218700707, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -44351,6 +44391,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1 &1010079766
 GameObject:
   m_ObjectHideFlags: 0
@@ -45652,6 +45693,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &1033557562
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -46394,6 +46436,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1 &1035907964
 GameObject:
   m_ObjectHideFlags: 0
@@ -49172,6 +49215,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!224 &1174683860 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7780213861218700707, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -49895,6 +49939,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &1174721819
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -51511,6 +51556,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &1214885554
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -53254,6 +53300,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &1275417427
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -54294,6 +54341,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1 &1306628627
 GameObject:
   m_ObjectHideFlags: 0
@@ -54722,6 +54770,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &1322447476
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -55539,6 +55588,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1001 &1330623454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56234,6 +56284,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1 &1331238736
 GameObject:
   m_ObjectHideFlags: 0
@@ -57807,6 +57858,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &1365877952
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -59332,6 +59384,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!114 &1402345917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60234,6 +60287,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1001 &1433556468
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60972,6 +61026,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &1433556482
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -61864,6 +61919,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1 &1445981845
 GameObject:
   m_ObjectHideFlags: 0
@@ -63098,6 +63154,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &1477093894
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -63915,6 +63972,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!224 &1479817232 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7780213861218700707, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -65041,6 +65099,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1001 &1518532923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65736,6 +65795,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1001 &1527229157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66457,6 +66517,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &1527229171
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -67267,6 +67328,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &1529615366
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -68009,6 +68071,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1 &1542940142
 GameObject:
   m_ObjectHideFlags: 0
@@ -68877,6 +68940,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &1554088472
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -69260,6 +69324,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &1559227098
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -70537,6 +70602,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1 &1598250313
 GameObject:
   m_ObjectHideFlags: 0
@@ -72449,6 +72515,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1 &1670852235
 GameObject:
   m_ObjectHideFlags: 0
@@ -73939,6 +74006,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1 &1721011903
 GameObject:
   m_ObjectHideFlags: 0
@@ -74854,6 +74922,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &1744196529
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -76182,6 +76251,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1 &1828797674
 GameObject:
   m_ObjectHideFlags: 0
@@ -77123,6 +77193,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!224 &1865051894 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7780213861218700707, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -78112,6 +78183,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &1896393044
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -79642,6 +79714,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &1944174847
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -80656,6 +80729,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &1974909842
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -81575,6 +81649,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &1979539352
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -82768,6 +82843,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &2024895048
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -83313,6 +83389,7 @@ MonoBehaviour:
   src: {fileID: 1149496450}
   diceClip: {fileID: 8300000, guid: 64e9825261699964592dd11461ce9604, type: 3}
   discardedClip: {fileID: 8300000, guid: 9a38467fa6c59454b81eb2cd9e05ac1d, type: 3}
+  bslot: {fileID: 502474420}
 --- !u!224 &2035970872 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7780213861218700707, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -83380,6 +83457,7 @@ MonoBehaviour:
   src: {fileID: 1149496450}
   diceClip: {fileID: 8300000, guid: 64e9825261699964592dd11461ce9604, type: 3}
   discardedClip: {fileID: 8300000, guid: 9a38467fa6c59454b81eb2cd9e05ac1d, type: 3}
+  bslot: {fileID: 502474420}
 --- !u!114 &2039420418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84534,6 +84612,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &2045142965
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -85377,6 +85456,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &2059892644
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -87448,6 +87528,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!1 &2133582610
 GameObject:
   m_ObjectHideFlags: 0
@@ -88340,6 +88421,7 @@ MonoBehaviour:
   dice2: {fileID: 2039420420}
   BoSlots: []
   gm: {fileID: 552501282}
+  canMove: 0
 --- !u!225 &206386808268493637
 CanvasGroup:
   m_ObjectHideFlags: 0

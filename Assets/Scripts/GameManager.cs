@@ -45,6 +45,10 @@ public class GameManager : MonoBehaviour
         {
             ChangePhase(GamePhase.Move);
         }
+        else if (currentPhase == GamePhase.Move)
+        {
+            ChangePhase(GamePhase.Attack);
+        }
     }
 
 }
@@ -53,5 +57,6 @@ public enum GamePhase
 {
     Draw, 
     Setup, 
-    Move
+    Move,
+    Attack
 }

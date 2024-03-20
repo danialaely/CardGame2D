@@ -46,6 +46,8 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     public static int P1Power;
     public static int P2Power;
 
+    public bool canMove;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,6 +66,13 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         dice2.enabled = false;
 
         DisCard = false;
+        canMove = true;
+    }
+
+    public IEnumerator CanMoveNow(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        canMove = true;
     }
 
     public void UpdateCardInformation()
@@ -296,7 +305,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                 foreach (GameObject displayCardObject in player1) 
                 {
                     DisplayCard dp = displayCardObject.GetComponent<DisplayCard>();
-                    if (dp != null && dp.adjacentCards.Contains(gameObject)) 
+                    if (dp != null && dp.adjacentCards.Contains(gameObject) && BoardSlot.GetCurrentEnergy() >=2 && gm.currentPhase == GamePhase.Attack) 
                     {
                         outerBorder.color = Color.red;
                         Debug.Log("Player1 Card's Attack:"+dp.GetCardAttack());

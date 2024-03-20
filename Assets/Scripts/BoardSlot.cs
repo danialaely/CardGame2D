@@ -73,7 +73,15 @@ public class BoardSlot : MonoBehaviour, IDropHandler
 
                     if (card.transform.parent.name == "Hand" && gmmm.currentPhase == GamePhase.Setup)
                     {
-                        if (rowIndex >= 84 && rowIndex < maxRowIndex)
+                        if ((rowIndex >= 84 && rowIndex < maxRowIndex) ||
+                            (transform.parent.GetChild(rowIndex - 1).childCount > 0 && transform.parent.GetChild(rowIndex - 1).GetChild(0).tag == "Player1") ||
+                            (transform.parent.GetChild(rowIndex - 13).childCount > 0 && transform.parent.GetChild(rowIndex - 13).GetChild(0).tag == "Player1") ||
+                            (transform.parent.GetChild(rowIndex - 14).childCount > 0 && transform.parent.GetChild(rowIndex - 14).GetChild(0).tag == "Player1") ||
+                            (transform.parent.GetChild(rowIndex - 15).childCount > 0 && transform.parent.GetChild(rowIndex - 15).GetChild(0).tag == "Player1") ||
+                            (transform.parent.GetChild(rowIndex + 1).childCount > 0 && transform.parent.GetChild(rowIndex + 1).GetChild(0).tag == "Player1") ||
+                            (transform.parent.GetChild(rowIndex + 13).childCount > 0 && transform.parent.GetChild(rowIndex + 13).GetChild(0).tag == "Player1") ||
+                            (transform.parent.GetChild(rowIndex + 14).childCount > 0 && transform.parent.GetChild(rowIndex + 14).GetChild(0).tag == "Player1") ||
+                            (transform.parent.GetChild(rowIndex + 15).childCount > 0 && transform.parent.GetChild(rowIndex + 15).GetChild(0).tag == "Player1"))
                         {                                                                 // card.transform.parent.name == "Hand"
                             currentEnergy -= cardEnergy;
                             energyText.text = currentEnergy.ToString();
@@ -184,7 +192,7 @@ public class BoardSlot : MonoBehaviour, IDropHandler
                         }
                     }
 
-                    if (card.transform.parent.tag == "BSlot" && gmmm.currentPhase == GamePhase.Move)
+                    if (card.transform.parent.tag == "BSlot" && gmmm.currentPhase == GamePhase.Move && card.canMove)
                     {
                         if ((rowIndex >= 84 && rowIndex < maxRowIndex) ||
                             (transform.parent.GetChild(rowIndex - 1).childCount > 0 && transform.parent.GetChild(rowIndex - 1).GetChild(0).tag == "Player1") ||
@@ -196,7 +204,10 @@ public class BoardSlot : MonoBehaviour, IDropHandler
                             (transform.parent.GetChild(rowIndex + 14).childCount > 0 && transform.parent.GetChild(rowIndex + 14).GetChild(0).tag == "Player1") ||
                             (transform.parent.GetChild(rowIndex + 15).childCount > 0 && transform.parent.GetChild(rowIndex + 15).GetChild(0).tag == "Player1"))
                         {                                                                 // card.transform.parent.name == "Hand"
-                            currentEnergy -= cardEnergy;
+                            //currentEnergy -= cardEnergy;
+                            card.canMove = false;
+                            StartCoroutine(card.CanMoveNow(10f));
+                            currentEnergy -= 1;
                             energyText.text = currentEnergy.ToString();
                             healthBar.SetHealth(currentEnergy); //
                             if (currentEnergy == 7)
@@ -428,7 +439,7 @@ public class BoardSlot : MonoBehaviour, IDropHandler
                             }
                         }
 
-                        if (cardd.transform.parent.tag == "BSlot" && gmmm.currentPhase == GamePhase.Move)
+                        if (cardd.transform.parent.tag == "BSlot" && gmmm.currentPhase == GamePhase.Move  && cardd.canMove)
                         {
                             if ((rowIndex >= 0 && rowIndex < maxRowIndex) ||
                             (transform.parent.GetChild(rowIndex - 1).childCount > 0 && transform.parent.GetChild(rowIndex - 1).GetChild(0).tag == "Player2") ||
@@ -440,8 +451,10 @@ public class BoardSlot : MonoBehaviour, IDropHandler
                             (transform.parent.GetChild(rowIndex + 14).childCount > 0 && transform.parent.GetChild(rowIndex + 14).GetChild(0).tag == "Player2") ||
                             (transform.parent.GetChild(rowIndex + 15).childCount > 0 && transform.parent.GetChild(rowIndex + 15).GetChild(0).tag == "Player2"))
                             {
-
-                                currentEnergyP2 -= carddEnergy;
+                                cardd.canMove = false;
+                                StartCoroutine(cardd.CanMoveNow(10f));
+                                //currentEnergyP2 -= carddEnergy;
+                                currentEnergyP2 -= 1;
                                 energyTextP2.text = currentEnergyP2.ToString();
                                 healthBar.SetHealth2(currentEnergyP2); //
                                 if (currentEnergyP2 == 7)
@@ -549,6 +562,155 @@ public class BoardSlot : MonoBehaviour, IDropHandler
         // GetComponent<Image>().color = originalColor;
     }
 
+    public void SpendOnAttack() 
+    {
+        int val = currentEnergy;
+   
+        if (val == 7) 
+        {
+            val -= 2;
+            energyText.text = val.ToString();
+            coinP1img8.SetActive(false);
+            coinP1img7.SetActive(false);
+            coinP1img6.SetActive(false);
+        }
+        if (val == 6)
+        {
+            val -= 2;
+            energyText.text = val.ToString();
+            coinP1img8.SetActive(false);
+            coinP1img7.SetActive(false);
+            coinP1img6.SetActive(false);
+            coinP1img5.SetActive(false);
+        }
+        if (val == 5)
+        {
+            val -= 2;
+            energyText.text = val.ToString();
+            coinP1img8.SetActive(false);
+            coinP1img7.SetActive(false);
+            coinP1img6.SetActive(false);
+            coinP1img5.SetActive(false);
+            coinP1img4.SetActive(false);
+        }
+        if (val == 4)
+        {
+            val -= 2;
+            energyText.text = val.ToString();
+            coinP1img8.SetActive(false);
+            coinP1img7.SetActive(false);
+            coinP1img6.SetActive(false);
+            coinP1img5.SetActive(false);
+            coinP1img4.SetActive(false);
+            coinP1img3.SetActive(false);
+        }
+        if (val == 3)
+        {
+            val -= 2;
+            energyText.text = val.ToString();
+            coinP1img8.SetActive(false);
+            coinP1img7.SetActive(false);
+            coinP1img6.SetActive(false);
+            coinP1img5.SetActive(false);
+            coinP1img4.SetActive(false);
+            coinP1img3.SetActive(false);
+            coinP1img2.SetActive(false);
+        }
+        if (val == 2)
+        {
+            val -= 2;
+            energyText.text = val.ToString();
+            coinP1img8.SetActive(false);
+            coinP1img7.SetActive(false);
+            coinP1img6.SetActive(false);
+            coinP1img5.SetActive(false);
+            coinP1img4.SetActive(false);
+            coinP1img3.SetActive(false);
+            coinP1img2.SetActive(false);
+            coinP1img.SetActive(false);
+        }
+
+    }
+
+    public void SpendOnAttack2()
+    {
+        int val = currentEnergyP2;
+        if (val >= 2)
+        {
+            if (val ==8) 
+            {
+                val -= 2;
+                energyTextP2.text = val.ToString();
+                coinP2img8.SetActive(false);
+                coinP2img7.SetActive(false);
+            }
+
+            if (val == 7)
+            {
+                val -= 2;
+                energyTextP2.text = val.ToString();
+                coinP2img8.SetActive(false);
+                coinP2img7.SetActive(false);
+                coinP2img6.SetActive(false);
+            }
+            if (val == 6)
+            {
+                val -= 2;
+                energyTextP2.text = val.ToString();
+                coinP2img8.SetActive(false);
+                coinP2img7.SetActive(false);
+                coinP2img6.SetActive(false);
+                coinP2img5.SetActive(false);
+            }
+            if (val == 5)
+            {
+                val -= 2;
+                energyTextP2.text = val.ToString();
+                coinP2img8.SetActive(false);
+                coinP2img7.SetActive(false);
+                coinP2img6.SetActive(false);
+                coinP2img5.SetActive(false);
+                coinP2img4.SetActive(false);
+            }
+            if (val == 4)
+            {
+                val -= 2;
+                energyTextP2.text = val.ToString();
+                coinP2img8.SetActive(false);
+                coinP2img7.SetActive(false);
+                coinP2img6.SetActive(false);
+                coinP2img5.SetActive(false);
+                coinP2img4.SetActive(false);
+                coinP2img3.SetActive(false);
+            }
+            if (val == 3)
+            {
+                val -= 2;
+                energyTextP2.text = val.ToString();
+                coinP2img8.SetActive(false);
+                coinP2img7.SetActive(false);
+                coinP2img6.SetActive(false);
+                coinP2img5.SetActive(false);
+                coinP2img4.SetActive(false);
+                coinP2img3.SetActive(false);
+                coinP2img2.SetActive(false);
+            }
+            if (val == 2)
+            {
+                val -= 2;
+                energyTextP2.text = val.ToString();
+                coinP2img8.SetActive(false);
+                coinP2img7.SetActive(false);
+                coinP2img6.SetActive(false);
+                coinP2img5.SetActive(false);
+                coinP2img4.SetActive(false);
+                coinP2img3.SetActive(false);
+                coinP2img2.SetActive(false);
+                coinP2img.SetActive(false);
+            }
+        }
+
+    }
 
 
     public void AnotherMethod()  // (1):CARD DRAW PHASE
@@ -630,6 +792,16 @@ public class BoardSlot : MonoBehaviour, IDropHandler
     public static int GetCurrentEnergy()
     {
         return currentEnergy;
+    }
+
+    public static void SetCurrentEnergy(int energy) 
+    {
+        currentEnergy = energy;
+    }
+
+    public static void SetCurrentEnergyP2(int energy)
+    {
+        currentEnergyP2 = energy;
     }
 
     public static int GetCurrentEnergyP2()

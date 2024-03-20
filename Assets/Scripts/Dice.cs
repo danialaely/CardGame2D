@@ -31,6 +31,8 @@ public class Dice : MonoBehaviour
     public AudioClip diceClip;
     public AudioClip discardedClip;
 
+    public BoardSlot bslot;
+
     // Use this for initialization
     private void Start()
     {
@@ -140,8 +142,76 @@ public class Dice : MonoBehaviour
                 bool isP1Turn = ButtonTurn.GetPlayerTurn();
             if (isP1Turn)
             {//DisplayCard2
-                    
-                foreach (DisplayCard2 defenderCard in allDpCards)
+             //  bslot.SpendOnAttack();
+            int val = BoardSlot.GetCurrentEnergy();
+            if (val > 2) 
+            {
+                val -= 2;
+                BoardSlot.SetCurrentEnergy(val);
+                bslot.energyText.text = val.ToString();
+                Debug.Log("Value:"+val);
+                
+                if (val == 6)
+                {
+                    bslot.coinP1img8.SetActive(false);
+                    bslot.coinP1img7.SetActive(false);
+                }
+                if (val == 5)
+                {
+                    bslot.coinP1img8.SetActive(false);
+                    bslot.coinP1img7.SetActive(false);
+                    bslot.coinP1img6.SetActive(false);
+                }
+                if (val == 4)
+                {
+                    bslot.coinP1img8.SetActive(false);
+                    bslot.coinP1img7.SetActive(false);
+                    bslot.coinP1img6.SetActive(false);
+                    bslot.coinP1img5.SetActive(false);
+                }
+                if (val == 3)
+                {
+                    bslot.coinP1img8.SetActive(false);
+                    bslot.coinP1img7.SetActive(false);
+                    bslot.coinP1img6.SetActive(false);
+                    bslot.coinP1img5.SetActive(false);
+                    bslot.coinP1img4.SetActive(false);
+                }
+                if (val == 2)
+                {
+                    bslot.coinP1img8.SetActive(false);
+                    bslot.coinP1img7.SetActive(false);
+                    bslot.coinP1img6.SetActive(false);
+                    bslot.coinP1img5.SetActive(false);
+                    bslot.coinP1img4.SetActive(false);
+                    bslot.coinP1img3.SetActive(false);
+                }
+                if (val == 1)
+                {
+                    bslot.coinP1img8.SetActive(false);
+                    bslot.coinP1img7.SetActive(false);
+                    bslot.coinP1img6.SetActive(false);
+                    bslot.coinP1img5.SetActive(false);
+                    bslot.coinP1img4.SetActive(false);
+                    bslot.coinP1img3.SetActive(false);
+                    bslot.coinP1img2.SetActive(false);
+                }
+                if (val == 0)
+                {
+                    bslot.coinP1img8.SetActive(false);
+                    bslot.coinP1img7.SetActive(false);
+                    bslot.coinP1img6.SetActive(false);
+                    bslot.coinP1img5.SetActive(false);
+                    bslot.coinP1img4.SetActive(false);
+                    bslot.coinP1img3.SetActive(false);
+                    bslot.coinP1img2.SetActive(false);
+                    bslot.coinP1img.SetActive(false);
+                }
+
+            }
+            
+
+            foreach (DisplayCard2 defenderCard in allDpCards)
                 {
                     Debug.Log("Selected:"+defenderCard.isSelected);
                     if (defenderCard.isSelected)
@@ -154,7 +224,6 @@ public class Dice : MonoBehaviour
                         //Destroy(defenderCard.gameObject);
                         //defenderCard.transform.position += new Vector3(600f,-300f,0f);
                         discaranimator.SetBool("isDiscard",true);
-                        
                         Transform discarcard = defenderCard.transform;
                         discarcard.SetParent(discardpile.transform);
                         DiscardSound();
@@ -170,7 +239,77 @@ public class Dice : MonoBehaviour
 
             if (!isP1Turn) 
             {
-                Debug.Log("in dice attack in isp1turn false");
+            //  bslot.SpendOnAttack2();
+            int value = BoardSlot.GetCurrentEnergyP2();
+            if (value > 2)
+            {
+                value -= 2;
+                BoardSlot.SetCurrentEnergyP2(value);
+                bslot.energyTextP2.text = value.ToString();
+                Debug.Log("Value:" + value);
+
+                if (value == 6)
+                {
+                    bslot.coinP2img8.SetActive(false);
+                    bslot.coinP2img7.SetActive(false);
+                }
+                if (value == 5)
+                {
+                    bslot.coinP2img8.SetActive(false);
+                    bslot.coinP2img7.SetActive(false);
+                    bslot.coinP2img6.SetActive(false);
+                }
+                if (value == 4)
+                {
+                    bslot.coinP2img8.SetActive(false);
+                    bslot.coinP2img7.SetActive(false);
+                    bslot.coinP2img6.SetActive(false);
+                    bslot.coinP2img5.SetActive(false);
+                }
+                if (value == 3)
+                {
+                    bslot.coinP2img8.SetActive(false);
+                    bslot.coinP2img7.SetActive(false);
+                    bslot.coinP2img6.SetActive(false);
+                    bslot.coinP2img5.SetActive(false);
+                    bslot.coinP2img4.SetActive(false);
+                }
+                if (value == 2)
+                {
+                    bslot.coinP2img8.SetActive(false);
+                    bslot.coinP2img7.SetActive(false);
+                    bslot.coinP2img6.SetActive(false);
+                    bslot.coinP2img5.SetActive(false);
+                    bslot.coinP2img4.SetActive(false);
+                    bslot.coinP2img3.SetActive(false);
+                }
+                if (value == 1)
+                {
+                    bslot.coinP2img8.SetActive(false);
+                    bslot.coinP2img7.SetActive(false);
+                    bslot.coinP2img6.SetActive(false);
+                    bslot.coinP2img5.SetActive(false);
+                    bslot.coinP2img4.SetActive(false);
+                    bslot.coinP2img3.SetActive(false);
+                    bslot.coinP2img2.SetActive(false);
+                }
+                if (value == 0)
+                {
+                    bslot.coinP2img8.SetActive(false);
+                    bslot.coinP2img7.SetActive(false);
+                    bslot.coinP2img6.SetActive(false);
+                    bslot.coinP2img5.SetActive(false);
+                    bslot.coinP2img4.SetActive(false);
+                    bslot.coinP2img3.SetActive(false);
+                    bslot.coinP2img2.SetActive(false);
+                    bslot.coinP2img.SetActive(false);
+                }
+
+            }
+
+
+
+            Debug.Log("in dice attack in isp1turn false");
                 //DisplayCard
                 foreach (DisplayCard defcard in allDisplayCards)
                 {

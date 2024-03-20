@@ -46,6 +46,8 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public GameManager gm;
 
+    public bool canMove;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -65,6 +67,13 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         dice2.enabled = false;
 
         Discard = false;
+        canMove = true;
+    }
+
+    public IEnumerator CanMoveNow(float delay) 
+    {
+        yield return new WaitForSeconds(delay);
+        canMove = true;
     }
 
     public void UpdateCardInformation()
@@ -102,7 +111,15 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             {
                 if (gm.currentPhase == GamePhase.Setup && this.transform.parent.name == "Hand")
                 {
-                    if(i >= 84)
+                    if ((i >= 84) ||
+                    (i + 13 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 13).childCount > 0 && bslot.transform.parent.GetChild(i + 13).GetChild(0).tag == "Player1") ||
+                    (i + 14 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 14).childCount > 0 && bslot.transform.parent.GetChild(i + 14).GetChild(0).tag == "Player1") ||
+                    (i + 15 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 15).childCount > 0 && bslot.transform.parent.GetChild(i + 15).GetChild(0).tag == "Player1") ||
+                    (i + 1 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 1).childCount > 0 && bslot.transform.parent.GetChild(i + 1).GetChild(0).tag == "Player1") ||
+                    (i - 13 >= 0 && bslot.transform.parent.GetChild(i - 13).childCount > 0 && bslot.transform.parent.GetChild(i - 13).GetChild(0).tag == "Player1") ||
+                    (i - 14 >= 0 && bslot.transform.parent.GetChild(i - 14).childCount > 0 && bslot.transform.parent.GetChild(i - 14).GetChild(0).tag == "Player1") ||
+                    (i - 15 >= 0 && bslot.transform.parent.GetChild(i - 15).childCount > 0 && bslot.transform.parent.GetChild(i - 15).GetChild(0).tag == "Player1") ||
+                    (i - 1 >= 0 && bslot.transform.parent.GetChild(i - 1).childCount > 0 && bslot.transform.parent.GetChild(i - 1).GetChild(0).tag == "Player1"))
                     {
                         Transform slot = bslot.transform.parent.GetChild(i);
                         slot.GetComponent<Image>().color = Color.green;
@@ -291,7 +308,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                 foreach (GameObject displayCardObject in player2)
                 {
                     DisplayCard2 dp = displayCardObject.GetComponent<DisplayCard2>();
-                    if (dp != null && dp.adjCards.Contains(gameObject))
+                    if (dp != null && dp.adjCards.Contains(gameObject) && BoardSlot.GetCurrentEnergyP2() >= 2 && gm.currentPhase == GamePhase.Attack)
                     {
                         outerBorder.color = Color.red;
                         Debug.Log("Player2's Card Attack:"+dp.GetCardAttack());
