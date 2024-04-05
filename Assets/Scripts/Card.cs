@@ -11,10 +11,11 @@ public class Card
     public int cardAttack;
     public int cardHealth;
     public int cardEnergy;
+    public int cardDefence;
     public Sprite cardImage;
 
     public Card() { }
-    public Card(int id, string name, int attack, int health, int energy, Sprite cardImg)
+    public Card(int id, string name, int attack, int health, int energy, Sprite cardImg, int defence)
     {
         cardId = id;
         cardName = name;
@@ -22,6 +23,7 @@ public class Card
         cardHealth = health;
         cardEnergy = energy;
         cardImage = cardImg;
+        cardDefence = defence;
     }
 
 }

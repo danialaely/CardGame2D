@@ -72,9 +72,8 @@ public class BoardSlot : MonoBehaviour, IDropHandler
                     }
 
                     if (card.transform.parent.name == "Hand" && gmmm.currentPhase == GamePhase.Setup)
-                    {
-                        if ((rowIndex >= 84 && rowIndex < maxRowIndex) ||
-                            (transform.parent.GetChild(rowIndex - 1).childCount > 0 && transform.parent.GetChild(rowIndex - 1).GetChild(0).tag == "Player1") ||
+                    {  //(rowIndex >= 84 && rowIndex < maxRowIndex) ||
+                        if ((transform.parent.GetChild(rowIndex - 1).childCount > 0 && transform.parent.GetChild(rowIndex - 1).GetChild(0).tag == "Player1") ||
                             (transform.parent.GetChild(rowIndex - 13).childCount > 0 && transform.parent.GetChild(rowIndex - 13).GetChild(0).tag == "Player1") ||
                             (transform.parent.GetChild(rowIndex - 14).childCount > 0 && transform.parent.GetChild(rowIndex - 14).GetChild(0).tag == "Player1") ||
                             (transform.parent.GetChild(rowIndex - 15).childCount > 0 && transform.parent.GetChild(rowIndex - 15).GetChild(0).tag == "Player1") ||
@@ -184,13 +183,7 @@ public class BoardSlot : MonoBehaviour, IDropHandler
                         gmmm.ErrorSound();
                     }
 
-                    if (card.transform.parent.tag == "BSlot" && gmmm.currentPhase == GamePhase.Setup)
-                    {
-                        if (rowIndex <=84) 
-                        {
-                            gmmm.ErrorSound();
-                        }
-                    }
+                    if (card.transform.parent.tag == "BSlot" && gmmm.currentPhase == GamePhase.Setup)  {  if (rowIndex <=84) {/*  gmmm.ErrorSound();*/ }}
 
                     if (card.transform.parent.tag == "BSlot" && gmmm.currentPhase == GamePhase.Move && card.canMove)
                     {
@@ -336,7 +329,14 @@ public class BoardSlot : MonoBehaviour, IDropHandler
 
                         if (cardd.transform.parent.name == "Hand2" && gmmm.currentPhase == GamePhase.Setup)
                         {
-                            if (rowIndex >= 0 && rowIndex < maxRowIndex)
+                            if ((transform.parent.GetChild(rowIndex - 1).childCount > 0 && transform.parent.GetChild(rowIndex - 1).GetChild(0).tag == "Player2") ||
+                            (transform.parent.GetChild(rowIndex - 13).childCount > 0 && transform.parent.GetChild(rowIndex - 13).GetChild(0).tag == "Player2") ||
+                            (transform.parent.GetChild(rowIndex - 14).childCount > 0 && transform.parent.GetChild(rowIndex - 14).GetChild(0).tag == "Player2") ||
+                            (transform.parent.GetChild(rowIndex - 15).childCount > 0 && transform.parent.GetChild(rowIndex - 15).GetChild(0).tag == "Player2") ||
+                            (transform.parent.GetChild(rowIndex + 1).childCount > 0 && transform.parent.GetChild(rowIndex + 1).GetChild(0).tag == "Player2") ||
+                            (transform.parent.GetChild(rowIndex + 13).childCount > 0 && transform.parent.GetChild(rowIndex + 13).GetChild(0).tag == "Player2") ||
+                            (transform.parent.GetChild(rowIndex + 14).childCount > 0 && transform.parent.GetChild(rowIndex + 14).GetChild(0).tag == "Player2") ||
+                            (transform.parent.GetChild(rowIndex + 15).childCount > 0 && transform.parent.GetChild(rowIndex + 15).GetChild(0).tag == "Player2"))
                             {
 
                                 currentEnergyP2 -= carddEnergy;
@@ -431,13 +431,8 @@ public class BoardSlot : MonoBehaviour, IDropHandler
                             }
                         }
 
-                        if (cardd.transform.parent.tag == "BSlot" && gmmm.currentPhase == GamePhase.Setup)
-                        {
-                            if (rowIndex >= 14)
-                            {
-                                gmmm.ErrorSound();
-                            }
-                        }
+                        if (cardd.transform.parent.tag == "BSlot" && gmmm.currentPhase == GamePhase.Setup) { if (rowIndex >= 14) { /*   gmmm.ErrorSound(); */ }}
+
 
                         if (cardd.transform.parent.tag == "BSlot" && gmmm.currentPhase == GamePhase.Move  && cardd.canMove)
                         {

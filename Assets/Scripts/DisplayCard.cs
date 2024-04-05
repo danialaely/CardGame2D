@@ -17,6 +17,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     public TMP_Text attackText;
     public TMP_Text healthText;
     public TMP_Text energyText;
+  //  public TMP_Text defenseText;
     public Image crdImage;
 
     public CardShuffler shuffler;
@@ -85,7 +86,8 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             nameText.text = card.cardName;
             attackText.text = card.cardAttack.ToString();
             healthText.text = card.cardHealth.ToString();
-            energyText.text = card.cardEnergy.ToString();   
+            energyText.text = card.cardEnergy.ToString(); 
+         //   defenseText.text = card.cardDefence.ToString();
            crdImage.sprite = card.cardImage;
         }
         else
@@ -94,6 +96,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             attackText.text = " ";
             healthText.text = " ";
             energyText.text = " ";
+          //  defenseText.text = " ";
             crdImage.sprite = null;
         }
 
@@ -111,8 +114,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             {
                 if (gm.currentPhase == GamePhase.Setup && this.transform.parent.name == "Hand")
                 {
-                    if ((i >= 84) ||
-                    (i + 13 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 13).childCount > 0 && bslot.transform.parent.GetChild(i + 13).GetChild(0).tag == "Player1") ||
+                    if ((i + 13 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 13).childCount > 0 && bslot.transform.parent.GetChild(i + 13).GetChild(0).tag == "Player1") ||
                     (i + 14 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 14).childCount > 0 && bslot.transform.parent.GetChild(i + 14).GetChild(0).tag == "Player1") ||
                     (i + 15 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 15).childCount > 0 && bslot.transform.parent.GetChild(i + 15).GetChild(0).tag == "Player1") ||
                     (i + 1 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 1).childCount > 0 && bslot.transform.parent.GetChild(i + 1).GetChild(0).tag == "Player1") ||
@@ -210,6 +212,17 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         }
         return 0; // Return 0 if the card is not found.
     }
+
+    public int GetCardHealth()
+    {
+        Card card = display.Find(c => c.cardId == displayId);
+        if (card != null)
+        {
+            return card.cardHealth;
+        }
+        return 0; // Return 0 if the card is not found.
+    }
+
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -317,7 +330,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
                         shuffler.AttackSound();
 
-                        P1Power = this.GetCardAttack();
+                        P1Power = this.GetCardHealth();
                         P2Power = dp.GetCardAttack();
                        /* if (this.GetCardAttack() < dp.GetCardAttack()) 
                         {

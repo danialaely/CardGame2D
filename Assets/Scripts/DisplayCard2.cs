@@ -17,6 +17,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     public TMP_Text attackText;
     public TMP_Text healthText;
     public TMP_Text energyText;
+   // public TMP_Text defenseText;
     public Image crdImage;
 
     public CCardShuffler shuffler;
@@ -85,6 +86,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             attackText.text = cardd.cardAttack.ToString();
             healthText.text = cardd.cardHealth.ToString();
             energyText.text = cardd.cardEnergy.ToString();
+          //  defenseText.text = cardd.cardDefence.ToString();
             crdImage.sprite = cardd.cardImage;
         }
         else
@@ -93,6 +95,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             attackText.text = " ";
             healthText.text = " ";
             energyText.text = " ";
+          //  defenseText.text = " ";
             crdImage.sprite = null;
         }
 
@@ -110,7 +113,14 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             {
                 if (gm.currentPhase == GamePhase.Setup && this.transform.parent.name == "Hand2") 
                 {
-                    if (i <= 13)
+                    if ((i + 13 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 13).childCount > 0 && bslot.transform.parent.GetChild(i + 13).GetChild(0).tag == "Player2") ||
+                    (i + 14 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 14).childCount > 0 && bslot.transform.parent.GetChild(i + 14).GetChild(0).tag == "Player2") ||
+                    (i + 15 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 15).childCount > 0 && bslot.transform.parent.GetChild(i + 15).GetChild(0).tag == "Player2") ||
+                    (i + 1 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 1).childCount > 0 && bslot.transform.parent.GetChild(i + 1).GetChild(0).tag == "Player2") ||
+                    (i - 13 >= 0 && bslot.transform.parent.GetChild(i - 13).childCount > 0 && bslot.transform.parent.GetChild(i - 13).GetChild(0).tag == "Player2") ||
+                    (i - 14 >= 0 && bslot.transform.parent.GetChild(i - 14).childCount > 0 && bslot.transform.parent.GetChild(i - 14).GetChild(0).tag == "Player2") ||
+                    (i - 15 >= 0 && bslot.transform.parent.GetChild(i - 15).childCount > 0 && bslot.transform.parent.GetChild(i - 15).GetChild(0).tag == "Player2") ||
+                    (i - 1 >= 0 && bslot.transform.parent.GetChild(i - 1).childCount > 0 && bslot.transform.parent.GetChild(i - 1).GetChild(0).tag == "Player2"))
                     {
                         Transform slot = bslot.transform.parent.GetChild(i);
                         slot.GetComponent<Image>().color = Color.green;
@@ -206,6 +216,16 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         if (cardd != null)
         {
             return cardd.cardAttack;
+        }
+        return 0; // Return 0 if the card is not found.
+    }
+
+    public int GetCardHealth()
+    {
+        Card cardd = display.Find(c => c.cardId == displayId);
+        if (cardd != null)
+        {
+            return cardd.cardHealth;
         }
         return 0; // Return 0 if the card is not found.
     }
@@ -315,7 +335,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                         shuffler.AttackSound();
 
                         P1Power = dp.GetCardAttack();
-                        P2Power = this.GetCardAttack();
+                        P2Power = this.GetCardHealth();
                       /*  if (this.GetCardAttack() < dp.GetCardAttack()) 
                         {
                             //shuffler.DiscardSound();
