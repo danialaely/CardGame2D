@@ -153,7 +153,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         int dragging = BoardSlot.GetCurrentEnergy();
         int dragging2 = BoardSlot.GetCurrentEnergyP2();
         bool isP1Turn = ButtonTurn.GetPlayerTurn();
-        if (transform.parent!=null && transform.parent.name == "Hand" && isP1Turn) 
+        if (transform.parent!=null && transform.parent.name == "Hand" && isP1Turn ) 
         {
            if (dragging > 0) 
            {

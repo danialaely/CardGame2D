@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using static UnityEngine.GraphicsBuffer;
@@ -39,6 +40,15 @@ public class Dice : MonoBehaviour
     public bool CounterAttackinP1;
     public bool CounterAttackinP2;
 
+    public ShP1Card StrongHoldCardP1;
+    public ShP2Card StrongHoldCardP2;
+
+  //  public TMP_Text SHoldHealthP1;
+  //  float healthValStP1;
+   
+  //  public TMP_Text SHoldHealthP2;
+  //  float healthValStP2;
+
     // Use this for initialization
     private void Start()
     {
@@ -58,6 +68,14 @@ public class Dice : MonoBehaviour
 
         CounterAttackinP1 = false;
         CounterAttackinP2 = false;
+
+      //  healthValStP1 = 100.0f;
+      //  SHoldHealthP1.text = healthValStP1.ToString();
+
+      //  healthValStP2 = 100.0f;
+      //  SHoldHealthP2.text = healthValStP2.ToString();
+
+ 
     }
 
     // If you left click over the dice then RollTheDice coroutine is started
@@ -169,9 +187,12 @@ public class Dice : MonoBehaviour
         CounterAttackinP2 = false;
     }
 
+    
+
     public void Discarded() 
     {
         //if (GetDice() > GetDice2()) {Debug.Log(" Dice Attack True");}
+       
 
                 bool isP1Turn = ButtonTurn.GetPlayerTurn();
             if (isP1Turn && !CounterAttackinP1)
@@ -262,6 +283,10 @@ public class Dice : MonoBehaviour
                             Transform discarcard = defenderCard.transform;
                             discarcard.SetParent(discardpile.transform);
                             DiscardSound();
+
+                          //  healthValStP2 -= 2.5f;
+                          //  SHoldHealthP2.text = healthValStP2.ToString();
+
                         }
                         else if ((GetDice() + defenderCard.GetP1Power()) > ((GetDice2()) + defenderCard.GetP2Power())) 
                         {
@@ -272,6 +297,10 @@ public class Dice : MonoBehaviour
                             Transform discarcard = defenderCard.transform;
                             discarcard.SetParent(discardpile.transform);
                             DiscardSound();
+
+                           // healthValStP2 -= 2.5f;
+                           // SHoldHealthP2.text = healthValStP2.ToString();
+
                             CanAttackP1 = false;
                             StartCoroutine(CanAttackNowP1(10.0f));
                         }
@@ -364,6 +393,9 @@ public class Dice : MonoBehaviour
                                           Transform discarded = atcCard.transform;
                                           discarded.SetParent(discardpile2.transform);
                                           DiscardSound();
+
+                                     //   healthValStP1 -= 2.5f;
+                                     //   SHoldHealthP1.text = healthValStP1.ToString();
                                     }
                                     else { Debug.Log("Counter Attacked Failed"); }
                                 }
@@ -372,6 +404,40 @@ public class Dice : MonoBehaviour
                     }
                     }
                 }
+            if (StrongHoldCardP2.isSelected) 
+            {
+                if (CanAttackP1) 
+                {
+                    if ((GetDice() + StrongHoldCardP2.GetP1Power()) > ((GetDice2()) + StrongHoldCardP2.GetP2Power()))
+                    {
+                        Debug.Log("Attack Attack Attack");
+
+                        Debug.Log("ATTACKER Dice:" + GetDice() + "+" + "Attack:" + StrongHoldCardP2.GetP1Power() + "=" + (GetDice() + StrongHoldCardP2.GetP1Power()));
+                        Debug.Log("DEFENSE Dice:" + GetDice2() + "+" + "Attack:" + StrongHoldCardP2.GetP2Power() + "=" + (GetDice2() + StrongHoldCardP2.GetP2Power()));
+
+                        int newHealth = StrongHoldCardP2.GetCardHealth() - StrongHoldCardP2.GetP1Power();
+                        StrongHoldCardP2.SetSHealth(newHealth);
+                        StrongHoldCardP2.healthText.text = newHealth.ToString();
+                        Debug.Log("New StrongHealth:"+newHealth);
+
+                        CanAttackP1 = false;
+                        StartCoroutine(CanAttackNowP1(10.0f));
+
+                        if (StrongHoldCardP2.GetCardHealth() <=0 ) 
+                        {
+                            Debug.Log("GAME OVER!");
+                        //discaranimator.SetBool("isDiscard", true);
+                        // Transform discarcard = defenderCard.transform;
+                        //  discarcard.SetParent(discardpile.transform);
+                        //  DiscardSound();
+                        }
+
+                        //  healthValStP2 -= 2.5f;
+                        //  SHoldHealthP2.text = healthValStP2.ToString();
+
+                    }
+                }
+            }
                 // discaranimator.SetBool("isDiscard", false);  make IEnumerator
                 StartCoroutine(DiscardAnim(2.0f));
             }
@@ -466,6 +532,9 @@ public class Dice : MonoBehaviour
                             Transform discardCard = defcard.transform;
                             discardCard.SetParent(discardpile2.transform);
                             DiscardSound();
+
+                        //    healthValStP1 -= 2.5f;
+                        //    SHoldHealthP1.text = healthValStP1.ToString();
                         }
                         else if ((GetDice() + defcard.Getp2Power()) > ((GetDice2()) + defcard.Getp1Power()))
                         {
@@ -477,6 +546,9 @@ public class Dice : MonoBehaviour
                             Transform discardCard = defcard.transform;
                             discardCard.SetParent(discardpile2.transform);
                             DiscardSound();
+
+                        //    healthValStP1 -= 2.5f;
+                        //    SHoldHealthP1.text = healthValStP1.ToString();
                             CanAttackP2 = false;
                             StartCoroutine(CanAttackNowP2(10.0f));
                         }
@@ -570,6 +642,9 @@ public class Dice : MonoBehaviour
                                         discards.SetParent(discardpile.transform);
                                         Debug.Log("Discard Pile Name:"+discardpile.name);
                                         DiscardSound();
+
+                                     //   healthValStP2 -= 2.5f;
+                                     //   SHoldHealthP2.text = healthValStP2.ToString();
                                     }
                                     else { Debug.Log("Counter Attacked Failed"); }
                                 }
@@ -578,15 +653,43 @@ public class Dice : MonoBehaviour
                     }
                     }
                 }
-                StartCoroutine(DiscardAnim2(2.0f));
+            if (StrongHoldCardP1.isSelected) 
+            {
+                if (CanAttackP2) 
+                {
+                    if ((GetDice() + StrongHoldCardP1.GetP2Power()) > ((GetDice2()) + StrongHoldCardP1.GetP1Power()))
+                    {
+                        Debug.Log("ATTACKER Dice:" + GetDice() + "+" + "Attack:" + StrongHoldCardP1.GetP2Power() + "=" + (GetDice() + StrongHoldCardP1.GetP2Power()));
+                        Debug.Log("DEFENSE Dice:" + GetDice2() + "+" + "Attack:" + StrongHoldCardP1.GetP1Power() + "=" + (GetDice2() + StrongHoldCardP1.GetP1Power()));
+
+                        int newHealthP1 = StrongHoldCardP1.GetCardHealth() - StrongHoldCardP1.GetP2Power();
+                        StrongHoldCardP2.SetSHealth(newHealthP1);
+                        StrongHoldCardP2.healthText.text = newHealthP1.ToString();
+                        Debug.Log("New StrongHealth:" + newHealthP1);
+
+                        CanAttackP2 = false;
+                        StartCoroutine(CanAttackNowP2(10.0f));
+
+                        if (StrongHoldCardP1.GetCardHealth() <=0) 
+                        {
+                            Debug.Log("GAME OVER, P2 WINS");
+                        // Debug.Log("Discard Value:" +defcard.GetDiscard());
+                        // Destroy(defcard.gameObject);
+                        // animator2.SetBool("isDiscarded", true);
+                        //Transform discardCard = defcard.transform;
+                        //discardCard.SetParent(discardpile2.transform);
+                        //DiscardSound();
+                        }
+
+                        //    healthValStP1 -= 2.5f;
+                        //    SHoldHealthP1.text = healthValStP1.ToString();
+                       
+                    }
+                }
             }
 
-        if (GetDice() < GetDice2()) 
-        {
-            Debug.Log("Dice Attack False");
-        }
-
-       
+                StartCoroutine(DiscardAnim2(2.0f));
+            }
     }
 
     public void DiceSound() 
