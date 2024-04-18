@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
+using UnityEngine.SceneManagement;
 
 public class CCardShuffler : MonoBehaviour
 {
@@ -26,6 +27,8 @@ public class CCardShuffler : MonoBehaviour
     public AudioSource src;
     public AudioClip swordClip;
 
+    public GridLayoutGroup handGrid;
+
     private void Start()
     {
         // boardSlot = FindAnyObjectByType<BoardSlot>();
@@ -39,7 +42,61 @@ public class CCardShuffler : MonoBehaviour
         if (PhotonNetwork.IsMasterClient) 
         {
         }
-        shuffleButton.onClick.AddListener(ShuffleCards);
+
+        Scene currentScene = SceneManager.GetActiveScene();
+        bool isP1Turn = ButtonTurn.GetPlayerTurn();
+        if (currentScene.name == "AI" && !isP1Turn)
+        {
+            // Call the method if the current scene is "Ai"
+            ShuffleCards();
+        }
+        else if(currentScene.name == "SampleScene")
+        {
+            shuffleButton.onClick.AddListener(ShuffleCards);
+        }
+
+    }
+
+    public void SelectRandomCard()
+    {
+        int cardCount = handGrid.transform.childCount;
+
+        if (cardCount > 0)
+        {
+            // Generate a random index within the range of cardCount
+            int randomIndex = Random.Range(0, cardCount);
+
+            // Get the selected card object
+            GameObject selectedCard = handGrid.transform.GetChild(randomIndex).gameObject;
+            Debug.Log("Selected Card from Hand:"+selectedCard);
+            // Now you have the selected card, you can perform actions on it
+            // For example, you can disable the card, remove it from the hand, etc.
+        }
+        else
+        {
+            Debug.LogWarning("No cards in the hand.");
+        }
+    }
+
+    private void Update()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        bool isP1Turn = ButtonTurn.GetPlayerTurn();
+        if (currentScene.name == "AI" && !isP1Turn && gm.currentPhase == GamePhase.Draw)
+        {
+            // Call the method if the current scene is "Ai"
+            ShuffleCards();
+            //gm.ChangePhase(GamePhase.Setup);
+            StartCoroutine(ChangingAIPhase(3.0f));
+            StopCoroutine(ChangingAIPhase(3.01f));
+        }
+    }
+
+    IEnumerator ChangingAIPhase(float delay) 
+    {
+        yield return new WaitForSeconds(delay);
+        gm.ChangePhase(GamePhase.Setup);
+        SelectRandomCard();
     }
 
     private void onStartShuffle(DisplayCard2 c)

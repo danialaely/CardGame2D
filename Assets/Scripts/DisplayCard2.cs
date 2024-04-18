@@ -156,7 +156,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
         if (transform.parent != null && transform.parent.name == "Hand")
         {
-            if (dragging > 0)
+            if (dragging >= 0)
             {
                 transform.position = Input.mousePosition;
             }
@@ -164,7 +164,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
         if (transform.parent != null && transform.parent.name == "Hand2" && !isP1Turn)
         {
-            if (dragging2 > 0)
+            if (dragging2 >= 0)
             {
                 // transform.position = Input.mousePosition;
                 RectTransformUtility.ScreenPointToLocalPointInRectangle(transform.parent.GetComponent<RectTransform>(), Input.mousePosition, Camera.main, out Vector2 localPos);
@@ -248,7 +248,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             isSelected = !isSelected;
             if (isSelected)
             {
-                outerBorder.color = Color.green;
+                outerBorder.color = Color.white;
 
                 foreach (GameObject p1 in player1)
                 {

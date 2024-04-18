@@ -425,7 +425,7 @@ public class Dice : MonoBehaviour
 
                         if (StrongHoldCardP2.GetCardHealth() <=0 ) 
                         {
-                            Debug.Log("GAME OVER!");
+                            Debug.Log("GAME OVER!, P1 Wins");
                         //discaranimator.SetBool("isDiscard", true);
                         // Transform discarcard = defenderCard.transform;
                         //  discarcard.SetParent(discardpile.transform);

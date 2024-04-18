@@ -44,6 +44,15 @@ public class BoardSlot : MonoBehaviour, IDropHandler
     public GameObject coinP2img7;
     public GameObject coinP2img8;
 
+    public List<Transform> availableBSlotsAI = new List<Transform>();
+
+
+    private void Start()
+    {
+        int rowIndex = transform.GetSiblingIndex();
+
+    }
+
     public void OnDrop(PointerEventData eventData)
     {
         DisplayCard card = eventData.pointerDrag.GetComponent<DisplayCard>();
@@ -63,7 +72,7 @@ public class BoardSlot : MonoBehaviour, IDropHandler
                 if (currentEnergy >= cardEnergy && isP1Turn)
                 {
                     int rowIndex = transform.GetSiblingIndex();
-                    int maxRowIndex = 97;
+                    //int maxRowIndex = 97;
 
                     //  int columnIndex = transform.parent.GetSiblingIndex();
                     if (card.transform.parent.name == "Hand" && gmmm.currentPhase == GamePhase.Draw)
@@ -186,9 +195,8 @@ public class BoardSlot : MonoBehaviour, IDropHandler
                     if (card.transform.parent.tag == "BSlot" && gmmm.currentPhase == GamePhase.Setup)  {  if (rowIndex <=84) {/*  gmmm.ErrorSound();*/ }}
 
                     if (card.transform.parent.tag == "BSlot" && gmmm.currentPhase == GamePhase.Move && card.canMove)
-                    {
-                        if ((rowIndex >= 84 && rowIndex < maxRowIndex) ||
-                            (transform.parent.GetChild(rowIndex - 1).childCount > 0 && transform.parent.GetChild(rowIndex - 1).GetChild(0).tag == "Player1") ||
+                    {      //(rowIndex >= 84 && rowIndex < maxRowIndex) ||
+                        if ((transform.parent.GetChild(rowIndex - 1).childCount > 0 && transform.parent.GetChild(rowIndex - 1).GetChild(0).tag == "Player1") ||
                             (transform.parent.GetChild(rowIndex - 13).childCount > 0 && transform.parent.GetChild(rowIndex - 13).GetChild(0).tag == "Player1") ||
                             (transform.parent.GetChild(rowIndex - 14).childCount > 0 && transform.parent.GetChild(rowIndex - 14).GetChild(0).tag == "Player1") ||
                             (transform.parent.GetChild(rowIndex - 15).childCount > 0 && transform.parent.GetChild(rowIndex - 15).GetChild(0).tag == "Player1") ||
@@ -280,10 +288,12 @@ public class BoardSlot : MonoBehaviour, IDropHandler
                             card.transform.localPosition = Vector3.zero;
                             card.GetComponent<CanvasGroup>().blocksRaycasts = true;
                             GetPlacementSound();
+
                         }
                         else 
                         {
-                            gmmm.ErrorSound(); 
+                            gmmm.ErrorSound(); // Handle the boolean here     MAKE THE BOOLEAN TO CONTROL CARD MOVEMENT IN BSLOT
+                           
                         }
                     }
                 }

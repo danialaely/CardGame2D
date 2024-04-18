@@ -49,6 +49,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public bool canMove;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -128,10 +129,9 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                     }
                 }
 
-                if (gm.currentPhase == GamePhase.Move && this.transform.parent.tag == "BSlot") 
-                {
-                    if ((i >= 84) ||
-                    (i + 13 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 13).childCount > 0 && bslot.transform.parent.GetChild(i + 13).GetChild(0).tag == "Player1") ||
+                if (gm.currentPhase == GamePhase.Move && this.transform.parent.tag == "BSlot")
+                {    //(i >= 84) ||
+                    if ((i + 13 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 13).childCount > 0 && bslot.transform.parent.GetChild(i + 13).GetChild(0).tag == "Player1") ||
                     (i + 14 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 14).childCount > 0 && bslot.transform.parent.GetChild(i + 14).GetChild(0).tag == "Player1") ||
                     (i + 15 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 15).childCount > 0 && bslot.transform.parent.GetChild(i + 15).GetChild(0).tag == "Player1") ||
                     (i + 1 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 1).childCount > 0 && bslot.transform.parent.GetChild(i + 1).GetChild(0).tag == "Player1") ||
@@ -153,9 +153,9 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         int dragging = BoardSlot.GetCurrentEnergy();
         int dragging2 = BoardSlot.GetCurrentEnergyP2();
         bool isP1Turn = ButtonTurn.GetPlayerTurn();
-        if (transform.parent!=null && transform.parent.name == "Hand" && isP1Turn ) 
+        if (transform.parent!=null && transform.parent.name == "Hand"  && isP1Turn ) 
         {
-           if (dragging > 0) 
+           if (dragging >= 0) 
            {
                  //transform.position = Input.mousePosition;
 
@@ -184,13 +184,15 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         }
 
         // If the card is not dropped on a slot, return it to the initial position.
-        if (transform.parent == null || transform.parent.CompareTag("Hand"))
+        if (gm.currentPhase == GamePhase.Setup  || gm.currentPhase == GamePhase.Draw) 
         {
-            transform.position = initialPosition;
-
-            int cardEnergy = GetCardEnergy();
-            
+            if (transform.parent == null || transform.parent.CompareTag("Hand") )
+            {
+                transform.position = initialPosition;
+                int cardEnergy = GetCardEnergy();
+            }
         }
+
     }
 
     public int GetCardEnergy()
@@ -242,7 +244,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             isSelected = !isSelected;
             if (isSelected)
             {      
-                outerBorder.color = Color.green;
+                outerBorder.color = Color.white;
 
                 foreach (GameObject p2 in player2)
                 {
