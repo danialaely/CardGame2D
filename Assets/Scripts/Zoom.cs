@@ -98,8 +98,12 @@ public class Zoom : MonoBehaviour
                     Vector3 worldPos = mainCamera.ScreenToWorldPoint(touchPos);
 
 
+                    Vector3 offt1 = new Vector3(-400f, 0, 0);
+                    dice1.transform.position = Input.mousePosition + offt1;
+                    dice2.transform.position = Input.mousePosition - offt1;
+
                     // Set the target orthographic size
-                   // float targetOrthographicSize = 411f;
+                    // float targetOrthographicSize = 411f;
 
                     // Smoothly interpolate to the target orthographic size and position
                     float transitionSpeed = 0.5f;
@@ -191,11 +195,11 @@ public class Zoom : MonoBehaviour
                 dice2.transform.position = originaldice2Pos;
             }
             else 
-            { 
-            mainCamera.orthographicSize = originalOrthographicSize;
-            mainCamera.transform.position = originalCamPos;
-            dice1.transform.position = originaldice1Pos;
-            dice2.transform.position = originaldice2Pos;
+            {
+                mainCamera.orthographicSize = originalOrthographicSize;
+                mainCamera.transform.position = originalCamPos;
+                dice1.transform.position = originaldice1Pos;
+                dice2.transform.position = originaldice2Pos;
             }
         }
     }

@@ -73,7 +73,7 @@ public class CardShuffler : MonoBehaviour
     {
         if (shuffleButton.gameObject.name == "Shuffle" && gm.currentPhase == GamePhase.Draw) 
         {
-         boardSlot.AnotherMethod();
+         //boardSlot.AnotherMethod();
         }
 
         if (shuffleButton.gameObject.name == "Shuffle2" && gm.currentPhase == GamePhase.Draw) 

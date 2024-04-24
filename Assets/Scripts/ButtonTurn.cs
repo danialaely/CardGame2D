@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class ButtonTurn : MonoBehaviour
 {
@@ -25,9 +27,22 @@ public class ButtonTurn : MonoBehaviour
     public Button deckP2;
 
     public GameManager gmm;
+    public BoardSlot boardSlot;
+
+    public GridLayoutGroup handGrid;
+    GameObject selectedCard;
+
+    List<Transform> availableSlots;
+    Transform randomSlot;
+
+    public CCardShuffler CShufflerP2;
 
     private void Start()
     {
+        boardSlot = FindAnyObjectByType<BoardSlot>();
+        availableSlots = boardSlot.Available();
+        boardSlot.AnotherMethod();
+
         turnCoroutine = StartCoroutine(ChangeTurn(30.0f));
         TurnStarter(isPlayer1Turn);
 
@@ -44,12 +59,66 @@ public class ButtonTurn : MonoBehaviour
             originalCamPos = mainCamera.transform.position;
         }
 
-        
+    }
+
+    public IEnumerator PlaceToBoard(float delayed)
+    {
+        yield return new WaitForSeconds(delayed);
+        MoveSelectedCardToRandomSlot();
+        SelectRandomCard();
+        //selectedCard.transform.position = randomSlot.position;
+        selectedCard.transform.SetParent(randomSlot);
+        selectedCard.transform.localPosition = Vector3.zero;
+        Image carddBackImage = selectedCard.transform.Find("Back").GetComponent<Image>();
+        carddBackImage.enabled = false;
+    }
+
+    public void MoveSelectedCardToRandomSlot()
+    {
+        randomSlot = availableSlots[Random.Range(0, availableSlots.Count)];
+        Debug.Log("Random Slot from BSlot:" + randomSlot);
+    }
+
+    public void SelectRandomCard()
+    {
+        int cardCount = handGrid.transform.childCount;
+
+        if (cardCount > 0)
+        {
+            // Generate a random index within the range of cardCount
+            int randomIndex = Random.Range(0, cardCount);
+
+            // Get the selected card object
+            selectedCard = handGrid.transform.GetChild(randomIndex).gameObject;
+            Debug.Log("Selected Card from Hand:" + selectedCard);
+            // Now you have the selected card, you can perform actions on it
+            // For example, you can disable the card, remove it from the hand, etc.
+        }
+        else
+        {
+            Debug.LogWarning("No cards in the hand.");
+        }
+    }
+
+    IEnumerator ChangeAIPhaseToMove(float delayed) 
+    {
+        yield return new WaitForSeconds(delayed);
+        gmm.ChangePhase(GamePhase.Move);
+    }
+
+    IEnumerator ChangingAIPhase(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        gmm.ChangePhase(GamePhase.Setup);
+        //  SelectRandomCard();
+        StartCoroutine(PlaceToBoard(2.0f));
+      //  StartCoroutine(ChangeAIPhaseToMove(3.0f));
     }
 
     public void OnTurnButtonClick()
     {
         ResetTimer();
+        
         //DisplayCard.GetTurn();
 
         if (isPlayer1Turn)
@@ -65,6 +134,18 @@ public class ButtonTurn : MonoBehaviour
 
             deckP1.enabled = false;
             deckP2.enabled = true;
+            boardSlot.AnotherMethod2();
+
+            Scene currentScene = SceneManager.GetActiveScene();
+            if (currentScene.name == "AI") 
+            {
+                if (gmm.currentPhase == GamePhase.Draw) 
+                {
+                   CShufflerP2.ShuffleCards();
+                   StartCoroutine(ChangingAIPhase(3.0f));
+                }
+            }
+            //  MoveSelectedCardToRandomSlot();
         }
         else
         {
@@ -78,6 +159,7 @@ public class ButtonTurn : MonoBehaviour
 
             deckP1.enabled = true;
             deckP2.enabled = false;
+            boardSlot.AnotherMethod();
         }
 
         // Toggle the turn
@@ -106,6 +188,7 @@ public class ButtonTurn : MonoBehaviour
 
                 deckP1.enabled = true;
                 deckP2.enabled = false;
+                boardSlot.AnotherMethod();
             }
             else
             {
@@ -126,8 +209,9 @@ public class ButtonTurn : MonoBehaviour
 
                 deckP1.enabled = false;
                 deckP2.enabled = true;
+                boardSlot.AnotherMethod2();
             }
-            Debug.Log(isPlayer1Turn);
+           // Debug.Log("IS PLAYER TURN:"+isPlayer1Turn);
 
             yield return new WaitForSeconds(delay);
             isPlayer1Turn = !isPlayer1Turn;
@@ -178,6 +262,7 @@ public class ButtonTurn : MonoBehaviour
         {
          //   turnCount = 30;
           //  turnBar.SetTurnTime(turnCount);
+          
             StartCoroutine(Turnbar(1.0f));
             StartCoroutine(Turnbar2(1.0f));
         }

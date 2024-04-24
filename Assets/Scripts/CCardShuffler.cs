@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
 using UnityEngine.SceneManagement;
+using Photon.Pun.Demo.PunBasics;
 
 public class CCardShuffler : MonoBehaviour
 {
@@ -28,10 +29,19 @@ public class CCardShuffler : MonoBehaviour
     public AudioClip swordClip;
 
     public GridLayoutGroup handGrid;
+    GameObject selectedCard;
+
+    List<Transform> availableSlots;
+    Transform randomSlot;
 
     private void Start()
     {
-        // boardSlot = FindAnyObjectByType<BoardSlot>();
+         boardSlot = FindAnyObjectByType<BoardSlot>();
+       // availableSlots = boardSlot.Available();
+      //  Debug.Log("Available SLots:"+availableSlots.Count);
+       // MoveSelectedCardToRandomSlot();
+
+        //   Debug.Log("Available Slots:" + boardSlot.Available().Count);
 
         foreach (var card in displayCards)
         {
@@ -57,28 +67,8 @@ public class CCardShuffler : MonoBehaviour
 
     }
 
-    public void SelectRandomCard()
-    {
-        int cardCount = handGrid.transform.childCount;
 
-        if (cardCount > 0)
-        {
-            // Generate a random index within the range of cardCount
-            int randomIndex = Random.Range(0, cardCount);
-
-            // Get the selected card object
-            GameObject selectedCard = handGrid.transform.GetChild(randomIndex).gameObject;
-            Debug.Log("Selected Card from Hand:"+selectedCard);
-            // Now you have the selected card, you can perform actions on it
-            // For example, you can disable the card, remove it from the hand, etc.
-        }
-        else
-        {
-            Debug.LogWarning("No cards in the hand.");
-        }
-    }
-
-    private void Update()
+  /*  private void Update()
     {
         Scene currentScene = SceneManager.GetActiveScene();
         bool isP1Turn = ButtonTurn.GetPlayerTurn();
@@ -88,16 +78,12 @@ public class CCardShuffler : MonoBehaviour
             ShuffleCards();
             //gm.ChangePhase(GamePhase.Setup);
             StartCoroutine(ChangingAIPhase(3.0f));
-            StopCoroutine(ChangingAIPhase(3.01f));
-        }
-    }
+            StopCoroutine(ChangingAIPhase(3.001f));
 
-    IEnumerator ChangingAIPhase(float delay) 
-    {
-        yield return new WaitForSeconds(delay);
-        gm.ChangePhase(GamePhase.Setup);
-        SelectRandomCard();
-    }
+            //StartCoroutine(MoveSelectedCardToRandomSlot(3.2f));
+            //StopCoroutine(MoveSelectedCardToRandomSlot(3.201f));
+        }
+    }*/
 
     private void onStartShuffle(DisplayCard2 c)
     {
@@ -133,7 +119,7 @@ public class CCardShuffler : MonoBehaviour
 
         if (shuffleButton.gameObject.name == "Shuffle2" && gm.currentPhase == GamePhase.Draw)
         {
-            boardSlot.AnotherMethod2();
+         //   boardSlot.AnotherMethod2();
         }
 
 

@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
         {
             ChangePhase(GamePhase.Attack);
         }
-    }
+    } 
 
 }
 
