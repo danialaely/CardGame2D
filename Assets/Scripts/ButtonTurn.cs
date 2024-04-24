@@ -188,7 +188,7 @@ public class ButtonTurn : MonoBehaviour
 
                 deckP1.enabled = true;
                 deckP2.enabled = false;
-                boardSlot.AnotherMethod();
+              //  boardSlot.AnotherMethod();
             }
             else
             {
@@ -209,12 +209,13 @@ public class ButtonTurn : MonoBehaviour
 
                 deckP1.enabled = false;
                 deckP2.enabled = true;
-                boardSlot.AnotherMethod2();
+               // boardSlot.AnotherMethod2();
             }
            // Debug.Log("IS PLAYER TURN:"+isPlayer1Turn);
 
             yield return new WaitForSeconds(delay);
-            isPlayer1Turn = !isPlayer1Turn;
+           // isPlayer1Turn = !isPlayer1Turn;
+           OnTurnButtonClick();
         }
     }
 
