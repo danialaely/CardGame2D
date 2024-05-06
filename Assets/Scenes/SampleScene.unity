@@ -615,7 +615,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &39306565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -737,7 +736,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &57898685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -849,7 +847,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &60567580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1036,7 +1033,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &100236538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1148,7 +1144,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &102989061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2917,7 +2912,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &113643993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3029,7 +3023,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &119561909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3216,7 +3209,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &122193316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4202,7 +4194,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &127107191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4314,7 +4305,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &130401741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4426,7 +4416,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &130440249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6113,6 +6102,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -7599,7 +7589,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &168245003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7727,7 +7716,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &181031850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7914,7 +7902,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &189214131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8031,7 +8018,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &193746739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8223,7 +8209,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &198877511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9371,7 +9356,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &225117660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9521,7 +9505,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!224 &233005696 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7780213861218700707, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -10333,6 +10316,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -10619,7 +10603,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &266973776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10811,7 +10794,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &284539789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10923,7 +10905,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &291948973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11849,6 +11830,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -12972,7 +12954,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &354081549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14868,6 +14849,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -15683,6 +15665,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -19024,6 +19007,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -19983,7 +19967,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &438077859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20100,7 +20083,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &441139043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20945,6 +20927,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -21175,7 +21158,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &455431879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21316,7 +21298,7 @@ RectTransform:
   m_GameObject: {fileID: 463336433}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.449503, y: 1.4623, z: 1}
+  m_LocalScale: {x: 1.56, y: 1.4623, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1364902188}
@@ -21437,7 +21419,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &463843401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21549,7 +21530,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &468881826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21661,7 +21641,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &472959489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22443,6 +22422,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -23176,7 +23156,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &502474421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24286,7 +24265,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &530447688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24848,7 +24826,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &563702605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25035,7 +25012,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &565463156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26336,6 +26312,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -27087,6 +27064,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -28048,6 +28026,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -28136,7 +28115,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &637919610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28608,7 +28586,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &653829051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28720,7 +28697,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &668241838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29116,7 +29092,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &688496788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29228,7 +29203,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &694360004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30961,7 +30935,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &707340746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31731,6 +31704,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -31884,7 +31858,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &717847700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32654,6 +32627,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -32902,6 +32876,11 @@ MonoBehaviour:
   deckP1: {fileID: 241768672}
   deckP2: {fileID: 1654882287}
   gmm: {fileID: 552501282}
+  boardSlot: {fileID: 0}
+  handGrid: {fileID: 0}
+  boardGrid: {fileID: 0}
+  CardPlacedToBoard: []
+  CShufflerP2: {fileID: 0}
 --- !u!4 &733181124
 Transform:
   m_ObjectHideFlags: 0
@@ -32990,7 +32969,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &736086924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33912,7 +33890,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &753140214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34907,6 +34884,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -35730,6 +35708,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -36569,6 +36548,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -37107,7 +37087,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &813679034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37894,6 +37873,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -38047,7 +38027,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &819507700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38983,6 +38962,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -39864,6 +39844,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -39942,7 +39923,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &876342427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40787,6 +40767,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -40940,7 +40921,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &882859675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43181,7 +43161,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &912229844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44249,7 +44228,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &940845500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44366,7 +44344,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &953312919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44767,7 +44744,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &968596928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46030,6 +46006,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -46863,6 +46840,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -47171,7 +47149,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1021549425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48989,6 +48966,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -49067,7 +49045,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1035907967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49607,7 +49584,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1069008565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49719,7 +49695,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1078153485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49831,7 +49806,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1079359007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50018,7 +49992,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1099228281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50506,7 +50479,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1148602675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50935,7 +50907,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1153791552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51047,7 +51018,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1169695041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51892,6 +51862,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -53278,7 +53249,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1189059587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54594,7 +54564,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1230452650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55086,7 +55055,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1242935611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55203,7 +55171,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1249914870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56326,7 +56293,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1283249261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57317,6 +57283,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -58720,6 +58687,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -59456,6 +59424,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -59534,7 +59503,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1331238739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59646,7 +59614,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1332898934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59758,7 +59725,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1334377005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60005,7 +59971,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1345808403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60122,7 +60087,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1358080866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61432,7 +61396,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1381939188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61699,7 +61662,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1392748621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62720,6 +62682,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -63663,6 +63626,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -65375,6 +65339,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -65747,7 +65712,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1473451732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65859,7 +65823,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1473679567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67510,6 +67473,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -67758,7 +67722,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1504715787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68812,6 +68775,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -69548,6 +69512,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -72078,6 +72043,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -74729,6 +74695,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -74807,7 +74774,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1598250316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75144,7 +75110,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1614685319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75256,7 +75221,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1618089239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75544,7 +75508,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1623317757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75656,7 +75619,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1630846298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76763,6 +76725,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -76941,7 +76904,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1676150281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77053,7 +77015,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1680248052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77165,7 +77126,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1682902209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77417,7 +77377,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1694180727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77529,7 +77488,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1711530025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78299,6 +78257,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -78452,7 +78411,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1732443144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79381,7 +79339,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1753139121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79857,7 +79814,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1814743662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80702,6 +80658,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -81684,6 +81641,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -81842,7 +81800,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1874992424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83070,7 +83027,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1925609975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83187,7 +83143,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1930899850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86605,7 +86560,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &1979886528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86812,7 +86766,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &2000333825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87024,7 +86977,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &2023128032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87943,7 +87895,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &2025179339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88055,7 +88006,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &2026799739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88663,7 +88613,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &2040062024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88775,7 +88724,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &2040138811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90697,7 +90645,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &2060174692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90809,7 +90756,6 @@ MonoBehaviour:
   coinP2img6: {fileID: 890985039}
   coinP2img7: {fileID: 1613635036}
   coinP2img8: {fileID: 501287771}
-  availableBSlotsAI: []
 --- !u!114 &2061204763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92717,6 +92663,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []

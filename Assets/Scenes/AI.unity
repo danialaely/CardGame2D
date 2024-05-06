@@ -6102,6 +6102,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -10315,6 +10316,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -11828,6 +11830,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -14846,6 +14849,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -15661,6 +15665,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -19002,6 +19007,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -20921,6 +20927,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -21291,15 +21298,15 @@ RectTransform:
   m_GameObject: {fileID: 463336433}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.449503, y: 1.4623, z: 1}
+  m_LocalScale: {x: 1.56, y: 1.4623, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1364902188}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -0.87542725, y: -0.7449951}
-  m_SizeDelta: {x: 1040.0652, y: 529.8328}
+  m_SizeDelta: {x: 1040.0652, y: 1051.8328}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &463336435
 MonoBehaviour:
@@ -22415,6 +22422,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -26304,6 +26312,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -27055,6 +27064,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -28016,6 +28026,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -31693,6 +31704,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -32615,6 +32627,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -32865,6 +32878,8 @@ MonoBehaviour:
   gmm: {fileID: 552501282}
   boardSlot: {fileID: 228933049}
   handGrid: {fileID: 1663636630}
+  boardGrid: {fileID: 1048125233}
+  CardPlacedToBoard: []
   CShufflerP2: {fileID: 1954436664}
 --- !u!4 &733181124
 Transform:
@@ -34869,6 +34884,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -35692,6 +35708,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -36531,6 +36548,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -37855,6 +37873,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -38943,6 +38962,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -39824,6 +39844,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -40746,6 +40767,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -45984,6 +46006,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -46817,6 +46840,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -48942,6 +48966,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -51837,6 +51862,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -57257,6 +57283,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -58660,6 +58687,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -59396,6 +59424,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -62653,6 +62682,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -63596,6 +63626,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -65308,6 +65339,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -67441,6 +67473,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -68742,6 +68775,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -69478,6 +69512,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -72008,6 +72043,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -74659,6 +74695,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -76688,6 +76725,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -78219,6 +78257,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -80619,6 +80658,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -81601,6 +81641,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []
@@ -92622,6 +92663,7 @@ MonoBehaviour:
   tagToSearch: Player1
   adjCards: []
   allDisplayCards: []
+  outerBorder: {fileID: 0}
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   BoSlots: []

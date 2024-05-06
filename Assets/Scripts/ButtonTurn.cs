@@ -35,16 +35,28 @@ public class ButtonTurn : MonoBehaviour
     List<Transform> availableSlots;
     Transform randomSlot;
 
+    public GridLayoutGroup boardGrid;
+    GameObject selectedCARD;
+
+    List<Transform> availableSlotsMove;
+    Transform randomSlotMove;
+
+    public List<GameObject> CardPlacedToBoard = new List<GameObject>();
+
     public CCardShuffler CShufflerP2;
+   
+
 
     private void Start()
     {
         boardSlot = FindAnyObjectByType<BoardSlot>();
         availableSlots = boardSlot.Available();
+        availableSlotsMove = boardSlot.MoveAvailable();
         boardSlot.AnotherMethod();
 
         turnCoroutine = StartCoroutine(ChangeTurn(30.0f));
         TurnStarter(isPlayer1Turn);
+
 
         if (mainCamera == null)
         {
@@ -58,25 +70,248 @@ public class ButtonTurn : MonoBehaviour
             originalOrthographicSize = mainCamera.orthographicSize;
             originalCamPos = mainCamera.transform.position;
         }
+        
+    }
 
+    private void Update()
+    {
+        if (selectedCard.transform.parent.name == "DiscardPile") 
+        {
+            CardPlacedToBoard.Remove(selectedCard);
+        }
+        Debug.Log("Adjacent cards P2:"+boardSlot.MoveAvailable().Count);
     }
 
     public IEnumerator PlaceToBoard(float delayed)
     {
         yield return new WaitForSeconds(delayed);
-        MoveSelectedCardToRandomSlot();
+        SelectedRandomSetupSlot();
         SelectRandomCard();
         //selectedCard.transform.position = randomSlot.position;
         selectedCard.transform.SetParent(randomSlot);
         selectedCard.transform.localPosition = Vector3.zero;
         Image carddBackImage = selectedCard.transform.Find("Back").GetComponent<Image>();
         carddBackImage.enabled = false;
+
+       // boardSlot.UpdateMoveListP2();
+        CardPlacedToBoard.Add(selectedCard);
+        Debug.Log("Card in new list:"+CardPlacedToBoard.Count);
+        int cardE = selectedCard.GetComponent<DisplayCard2>().GetCardEnergy();
+        int CoinE =  BoardSlot.GetCurrentEnergyP2();
+        int newCoinE = CoinE - cardE;
+        BoardSlot.SetCurrentEnergyP2(newCoinE);
+        Debug.Log("Card Energy:" + cardE);
+        Debug.Log("Old CEnergy:" + CoinE);
+        Debug.Log("New CEnergy:"+newCoinE);
+        if (newCoinE == 7) 
+        {
+            boardSlot.coinP2img8.SetActive(false);
+        }
+        if (newCoinE == 6)
+        {
+            boardSlot.coinP2img8.SetActive(false);
+            boardSlot.coinP2img7.SetActive(false);
+        }
+        if (newCoinE == 5)
+        {
+            boardSlot.coinP2img8.SetActive(false);
+            boardSlot.coinP2img7.SetActive(false);
+            boardSlot.coinP2img6.SetActive(false);
+        }
+        if (newCoinE == 4)
+        {
+            boardSlot.coinP2img8.SetActive(false);
+            boardSlot.coinP2img7.SetActive(false);
+            boardSlot.coinP2img6.SetActive(false);
+            boardSlot.coinP2img5.SetActive(false);
+        }
+        if (newCoinE == 3)
+        {
+            boardSlot.coinP2img8.SetActive(false);
+            boardSlot.coinP2img7.SetActive(false);
+            boardSlot.coinP2img6.SetActive(false);
+            boardSlot.coinP2img5.SetActive(false);
+            boardSlot.coinP2img4.SetActive(false);
+        }
+        if (newCoinE == 2)
+        {
+            boardSlot.coinP2img8.SetActive(false);
+            boardSlot.coinP2img7.SetActive(false);
+            boardSlot.coinP2img6.SetActive(false);
+            boardSlot.coinP2img5.SetActive(false);
+            boardSlot.coinP2img4.SetActive(false);
+            boardSlot.coinP2img3.SetActive(false);
+        }
+        if (newCoinE == 1)
+        {
+            boardSlot.coinP2img8.SetActive(false);
+            boardSlot.coinP2img7.SetActive(false);
+            boardSlot.coinP2img6.SetActive(false);
+            boardSlot.coinP2img5.SetActive(false);
+            boardSlot.coinP2img4.SetActive(false);
+            boardSlot.coinP2img3.SetActive(false);
+            boardSlot.coinP2img2.SetActive(false);
+        }
+        if (newCoinE == 0)
+        {
+            boardSlot.coinP2img8.SetActive(false);
+            boardSlot.coinP2img7.SetActive(false);
+            boardSlot.coinP2img6.SetActive(false);
+            boardSlot.coinP2img5.SetActive(false);
+            boardSlot.coinP2img4.SetActive(false);
+            boardSlot.coinP2img3.SetActive(false);
+            boardSlot.coinP2img2.SetActive(false);
+            boardSlot.coinP2img.SetActive(false);
+        } 
+        if (newCoinE == -1)
+        {
+            boardSlot.energyTextP2.text = "0";
+            boardSlot.coinP2img8.SetActive(false);
+            boardSlot.coinP2img7.SetActive(false);
+            boardSlot.coinP2img6.SetActive(false);
+            boardSlot.coinP2img5.SetActive(false);
+            boardSlot.coinP2img4.SetActive(false);
+            boardSlot.coinP2img3.SetActive(false);
+            boardSlot.coinP2img2.SetActive(false);
+            boardSlot.coinP2img.SetActive(false);
+        }
+        //if newCoinE ==7 { coinP2img8.SetActive(false); }
+        // boardSlot.UpdateMoveListP2();
     }
 
-    public void MoveSelectedCardToRandomSlot()
+    public IEnumerator MoveInBoard(float del) 
     {
-        randomSlot = availableSlots[Random.Range(0, availableSlots.Count)];
+        yield return new WaitForSeconds(del);
+        SelectRandomMoveSlot();
+        SelectCardToMove();
+
+       // SelectRandomMoveSlot();
+        selectedCARD.transform.SetParent(randomSlotMove);
+        selectedCARD.transform.localPosition = Vector3.zero;
+       // selectedCARD.GetComponent<DisplayCard2>().outerBorder.color = Color.white;
+        int coinEnergy = BoardSlot.GetCurrentEnergyP2();
+        int newCE = coinEnergy - 1;
+        BoardSlot.SetCurrentEnergyP2(newCE);
+        if (newCE == 7)
+        {
+            boardSlot.coinP2img8.SetActive(false);
+        }
+        if (newCE == 6)
+        {
+            boardSlot.coinP2img8.SetActive(false);
+            boardSlot.coinP2img7.SetActive(false);
+        }
+        if (newCE == 5)
+        {
+            boardSlot.coinP2img8.SetActive(false);
+            boardSlot.coinP2img7.SetActive(false);
+            boardSlot.coinP2img6.SetActive(false);
+        }
+        if (newCE == 4)
+        {
+            boardSlot.coinP2img8.SetActive(false);
+            boardSlot.coinP2img7.SetActive(false);
+            boardSlot.coinP2img6.SetActive(false);
+            boardSlot.coinP2img5.SetActive(false);
+        }
+        if (newCE == 3)
+        {
+            boardSlot.coinP2img8.SetActive(false);
+            boardSlot.coinP2img7.SetActive(false);
+            boardSlot.coinP2img6.SetActive(false);
+            boardSlot.coinP2img5.SetActive(false);
+            boardSlot.coinP2img4.SetActive(false);
+        }
+        if (newCE == 2)
+        {
+            boardSlot.coinP2img8.SetActive(false);
+            boardSlot.coinP2img7.SetActive(false);
+            boardSlot.coinP2img6.SetActive(false);
+            boardSlot.coinP2img5.SetActive(false);
+            boardSlot.coinP2img4.SetActive(false);
+            boardSlot.coinP2img3.SetActive(false);
+        }
+        if (newCE == 1)
+        {
+            boardSlot.coinP2img8.SetActive(false);
+            boardSlot.coinP2img7.SetActive(false);
+            boardSlot.coinP2img6.SetActive(false);
+            boardSlot.coinP2img5.SetActive(false);
+            boardSlot.coinP2img4.SetActive(false);
+            boardSlot.coinP2img3.SetActive(false);
+            boardSlot.coinP2img2.SetActive(false);
+        }
+        if (newCE == 0)
+        {
+            boardSlot.coinP2img8.SetActive(false);
+            boardSlot.coinP2img7.SetActive(false);
+            boardSlot.coinP2img6.SetActive(false);
+            boardSlot.coinP2img5.SetActive(false);
+            boardSlot.coinP2img4.SetActive(false);
+            boardSlot.coinP2img3.SetActive(false);
+            boardSlot.coinP2img2.SetActive(false);
+            boardSlot.coinP2img.SetActive(false);
+        }
+        if (newCE == -1)
+        {
+            boardSlot.energyTextP2.text = "0";
+            boardSlot.coinP2img8.SetActive(false);
+            boardSlot.coinP2img7.SetActive(false);
+            boardSlot.coinP2img6.SetActive(false);
+            boardSlot.coinP2img5.SetActive(false);
+            boardSlot.coinP2img4.SetActive(false);
+            boardSlot.coinP2img3.SetActive(false);
+            boardSlot.coinP2img2.SetActive(false);
+            boardSlot.coinP2img.SetActive(false);
+        }
+
+    }
+
+    public void SelectedRandomSetupSlot() //PICKING SETUP SLOT
+    {
+        // Check if any slot has no child
+        bool hasEmptySlot = false;
+        foreach (var slot in availableSlots)
+        {
+            if (slot.childCount == 0)
+            {
+                hasEmptySlot = true;
+                break;
+            }
+        }
+
+        // If there are no slots without children, exit the function
+        if (!hasEmptySlot)
+        {
+            Debug.Log("All slots have children. Exiting function.");
+            return;
+        }
+
+        // List to store indices of available slots without children
+        List<int> emptyIndices = new List<int>();
+        for (int i = 0; i < availableSlots.Count; i++)
+        {
+            if (availableSlots[i].childCount == 0)
+            {
+                emptyIndices.Add(i);
+            }
+        }
+
+        // Select a random empty slot
+        int randomIndex = emptyIndices[Random.Range(0, emptyIndices.Count)];
+        randomSlot = availableSlots[randomIndex];
+
         Debug.Log("Random Slot from BSlot:" + randomSlot);
+    }
+
+    public void SelectRandomMoveSlot() //Movement of card on board MovePhase
+    {
+        do 
+        {
+            randomSlotMove = availableSlotsMove[Random.Range(0, availableSlotsMove.Count)];    //APPLY SAME LOGIC FOR CARD SELECTION
+        } while (randomSlotMove.childCount > 0);
+        Debug.Log("Move Phase BoardSlot:"+randomSlotMove);
+
     }
 
     public void SelectRandomCard()
@@ -100,19 +335,30 @@ public class ButtonTurn : MonoBehaviour
         }
     }
 
+    public void SelectCardToMove()  // SELECTED CARD(P2 CARD) TO MOVE 
+    {
+      selectedCARD = CardPlacedToBoard[Random.Range(0, CardPlacedToBoard.Count)];   
+    }
+
+    public void Attack() 
+    {
+        //Same logic random slot, the adjacent would be "player2"
+    }
+
     IEnumerator ChangeAIPhaseToMove(float delayed) 
     {
         yield return new WaitForSeconds(delayed);
         gmm.ChangePhase(GamePhase.Move);
     }
 
-    IEnumerator ChangingAIPhase(float delay)
+    IEnumerator ChangeAIPhaseToSetup(float delay)
     {
         yield return new WaitForSeconds(delay);
         gmm.ChangePhase(GamePhase.Setup);
         //  SelectRandomCard();
         StartCoroutine(PlaceToBoard(2.0f));
-      //  StartCoroutine(ChangeAIPhaseToMove(3.0f));
+        StartCoroutine(ChangeAIPhaseToMove(3.0f));
+        StartCoroutine(MoveInBoard(4.0f));
     }
 
     public void OnTurnButtonClick()
@@ -142,7 +388,9 @@ public class ButtonTurn : MonoBehaviour
                 if (gmm.currentPhase == GamePhase.Draw) 
                 {
                    CShufflerP2.ShuffleCards();
-                   StartCoroutine(ChangingAIPhase(3.0f));
+                  // boardSlot.UpdateMoveListP2();
+                  //  boardSlot.AnotherMethod2();
+                   StartCoroutine(ChangeAIPhaseToSetup(3.0f));
                 }
             }
             //  MoveSelectedCardToRandomSlot();

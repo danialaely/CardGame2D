@@ -83,7 +83,7 @@ public class CCardShuffler : MonoBehaviour
             //StartCoroutine(MoveSelectedCardToRandomSlot(3.2f));
             //StopCoroutine(MoveSelectedCardToRandomSlot(3.201f));
         }
-    }*/
+    }*/ 
 
     private void onStartShuffle(DisplayCard2 c)
     {

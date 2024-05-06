@@ -33,7 +33,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     public List<GameObject> adjCards = new List<GameObject>();
 
     public List<DisplayCard2> allDisplayCards; // Reference to all DisplayCard instances
-    UnityEngine.UI.Image outerBorder;
+    public UnityEngine.UI.Image outerBorder;
 
     public Image dice1;
     public Image dice2;
@@ -161,7 +161,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             }
         }
 
-        if (transform.parent != null && transform.parent.name == "Hand2" && !isP1Turn)
+        if (transform.parent != null && transform.parent.name == "Hand2" && !isP1Turn && gm.currentPhase == GamePhase.Setup)
         {
             if (dragging2 >= 0)
             {
