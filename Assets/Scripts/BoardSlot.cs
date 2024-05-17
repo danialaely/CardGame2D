@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -47,10 +48,13 @@ public class BoardSlot : MonoBehaviour, IDropHandler
     public static List<Transform> availableBSlotsAI = new List<Transform>();
     public static List<Transform> availableBSlotsAIMove = new List<Transform>();
 
+    public static List<Transform> adjacentBSlotsPlayer1 = new List<Transform>(); //Player1 adjacent BoardSlots
+
 
     private void Start()
     {
         UpdateMoveListP2();
+        AdjacentBslotListP1();
         int rowIndex = transform.GetSiblingIndex();
 
         if ((transform.parent.GetChild(rowIndex - 1).childCount > 0 && transform.parent.GetChild(rowIndex - 1).GetChild(0).name == "SHCardP2") ||
@@ -100,6 +104,35 @@ public class BoardSlot : MonoBehaviour, IDropHandler
     public List<Transform> MoveAvailable() 
     {
         return availableBSlotsAIMove;
+    }
+
+    public void AdjacentBslotListP1()  //Adjacent P1 BSlot List
+    {
+        adjacentBSlotsPlayer1.Clear(); // Clear the list before updating it for the new turn
+
+        // Iterate through all slots to find adjacent slots with a card tagged as "Player1"
+        foreach (Transform slot in transform.parent)
+        {
+            int rwindex = slot.GetSiblingIndex();
+
+            // Check if any adjacent slot has a card tagged as "Player2"
+            if ((rwindex > 0 && transform.parent.GetChild(rwindex - 1).childCount > 0 && transform.parent.GetChild(rwindex - 1).GetChild(0).CompareTag("Player1")) ||
+                (rwindex > 12 && transform.parent.GetChild(rwindex - 13).childCount > 0 && transform.parent.GetChild(rwindex - 13).GetChild(0).CompareTag("Player1")) ||
+                (rwindex > 13 && transform.parent.GetChild(rwindex - 14).childCount > 0 && transform.parent.GetChild(rwindex - 14).GetChild(0).CompareTag("Player1")) ||
+                (rwindex > 14 && transform.parent.GetChild(rwindex - 15).childCount > 0 && transform.parent.GetChild(rwindex - 15).GetChild(0).CompareTag("Player1")) ||
+                (rwindex < transform.parent.childCount - 1 && transform.parent.GetChild(rwindex + 1).childCount > 0 && transform.parent.GetChild(rwindex + 1).GetChild(0).CompareTag("Player1")) ||
+                (rwindex < transform.parent.childCount - 13 && transform.parent.GetChild(rwindex + 13).childCount > 0 && transform.parent.GetChild(rwindex + 13).GetChild(0).CompareTag("Player1")) ||
+                (rwindex < transform.parent.childCount - 14 && transform.parent.GetChild(rwindex + 14).childCount > 0 && transform.parent.GetChild(rwindex + 14).GetChild(0).CompareTag("Player1")) ||
+                (rwindex < transform.parent.childCount - 15 && transform.parent.GetChild(rwindex + 15).childCount > 0 && transform.parent.GetChild(rwindex + 15).GetChild(0).CompareTag("Player1")))
+            {
+                adjacentBSlotsPlayer1.Add(slot);
+            }
+        }
+    }
+
+    public List<Transform> AdjacentP1Available()
+    {
+        return adjacentBSlotsPlayer1;
     }
 
     public void OnDrop(PointerEventData eventData)
@@ -809,6 +842,7 @@ public class BoardSlot : MonoBehaviour, IDropHandler
 
     public void AnotherMethod2()  // (1):CARD DRAW PHASE
     {
+        AdjacentBslotListP1();
        // UpdateMoveListP2();
         int value = currentEnergyP2;
         // Debug.Log("CE: " + value);

@@ -28,6 +28,8 @@ public class CCardShuffler : MonoBehaviour
     public AudioSource src;
     public AudioClip swordClip;
 
+    public Zoom zm;
+
     public GridLayoutGroup handGrid;
     GameObject selectedCard;
 
@@ -130,41 +132,49 @@ public class CCardShuffler : MonoBehaviour
         if (handchildCount==0 && gm.currentPhase == GamePhase.Draw) 
         { 
         cardAnimator.SetTrigger("ShuffleTrigger");
+            zm.DeckSound();
         StartCoroutine(BackToDefault(3));
         }
         if (handchildCount == 7 && gm.currentPhase == GamePhase.Draw)
         {
             cardAnimator.SetTrigger("ShuffleTriger2");
+            zm.DeckSound();
             StartCoroutine(BackToDefault(2));
         }
         if (handchildCount == 6 && gm.currentPhase == GamePhase.Draw)
         {
             cardAnimator.SetTrigger("ShuffleTrigger3");
+            zm.DeckSound();
             StartCoroutine(BackToDefault(2));
         }
         if (handchildCount == 5 && gm.currentPhase == GamePhase.Draw)
         {
             cardAnimator.SetTrigger("ShuffleTrigger4");
+            zm.DeckSound();
             StartCoroutine(BackToDefault(2));
         }
         if (handchildCount == 4 && gm.currentPhase == GamePhase.Draw)
         {
             cardAnimator.SetTrigger("ShuffleTrigger5");
+            zm.DeckSound();
             StartCoroutine(BackToDefault(2));
         }
         if (handchildCount == 3 && gm.currentPhase == GamePhase.Draw)
         {
             cardAnimator.SetTrigger("ShuffleTrigger6");
+            zm.DeckSound();
             StartCoroutine(BackToDefault(2));
         }
         if (handchildCount == 2 && gm.currentPhase == GamePhase.Draw)
         {
             cardAnimator.SetTrigger("ShuffleTrigger7");
+            zm.DeckSound();
             StartCoroutine(BackToDefault(2));
         }
         if (handchildCount == 1 && gm.currentPhase == GamePhase.Draw)
         {
             cardAnimator.SetTrigger("ShuffleTrigger8");
+            zm.DeckSound();
             StartCoroutine(BackToDefault(2));
         }
 

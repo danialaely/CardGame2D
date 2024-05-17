@@ -229,20 +229,20 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         return 0; // Return 0 if the card is not found.
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    public void OnPtClc() 
     {
-       // isSelected = !isSelected;
+        // isSelected = !isSelected;
         bool isP1Turn = ButtonTurn.GetPlayerTurn();
 
         bool isZoom = Zoom.GetBool();
         if (isZoom)
         {
-           // Vector3 offt1 = new Vector3(-400f, 0, 0);
-           // dice1.transform.position = this.transform.position + offt1;
-           // dice2.transform.position = this.transform.position - offt1;
+            // Vector3 offt1 = new Vector3(-400f, 0, 0);
+            // dice1.transform.position = this.transform.position + offt1;
+            // dice2.transform.position = this.transform.position - offt1;
         }
 
-        if (!isP1Turn) 
+        if (!isP1Turn)
         {
             isSelected = !isSelected;
             if (isSelected)
@@ -259,13 +259,13 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                         p2outerborder.color = Color.blue;
 
                         adjCards.Add(p1);
-                      
+
                     }
                 }
 
-                foreach (DisplayCard2 othercard in allDisplayCards) 
+                foreach (DisplayCard2 othercard in allDisplayCards)
                 {
-                    if (othercard!=this) 
+                    if (othercard != this)
                     {
                         othercard.isSelected = false;
                         othercard.adjCards.Clear();
@@ -291,10 +291,10 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                     }
                 }
 
-            } 
+            }
         }
 
-        if (isP1Turn) 
+        if (isP1Turn)
         {
             foreach (GameObject displayCardObject in player1)
             {
@@ -309,25 +309,25 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                             lastselected.isSelected = false;
                             lastselected.outerBorder.color = Color.blue;
                         }
-                        else 
+                        else
                         {
                             isSelected = !isSelected;
                         }
                     }
-                            isSelected = !isSelected;
+                    isSelected = !isSelected;
                 }
             }
 
-           
+
             if (isSelected) //(3):ATTACKING PHASE
             {
-                foreach (GameObject displayCardObject in player1) 
+                foreach (GameObject displayCardObject in player1)
                 {
                     DisplayCard dp = displayCardObject.GetComponent<DisplayCard>();
-                    if (dp != null && dp.adjacentCards.Contains(gameObject) && BoardSlot.GetCurrentEnergy() >=2 && gm.currentPhase == GamePhase.Attack) 
+                    if (dp != null && dp.adjacentCards.Contains(gameObject) && BoardSlot.GetCurrentEnergy() >= 2 && gm.currentPhase == GamePhase.Attack)
                     {
                         outerBorder.color = Color.red;
-                        Debug.Log("Player1 Card's Attack:"+dp.GetCardAttack());
+                        Debug.Log("Player1 Card's Attack:" + dp.GetCardAttack());
                         dice1.enabled = true;
                         dice2.enabled = true;
 
@@ -335,16 +335,16 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
                         P1Power = dp.GetCardAttack();
                         P2Power = this.GetCardHealth();
-                      /*  if (this.GetCardAttack() < dp.GetCardAttack()) 
-                        {
-                            //shuffler.DiscardSound();
-                            DisCard = true; 
-                        }*/
-                      
+                        /*  if (this.GetCardAttack() < dp.GetCardAttack()) 
+                          {
+                              //shuffler.DiscardSound();
+                              DisCard = true; 
+                          }*/
+
                     }
                 }
             }
-            if (!isSelected) 
+            if (!isSelected)
             {
                 foreach (GameObject displayCardObject in player1)
                 {
@@ -360,6 +360,11 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         }
 
         Debug.Log(isSelected);
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        OnPtClc();
     }
 
     public bool GetDiscard() 

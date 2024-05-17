@@ -44,7 +44,15 @@ public class ButtonTurn : MonoBehaviour
     public List<GameObject> CardPlacedToBoard = new List<GameObject>();
 
     public CCardShuffler CShufflerP2;
-   
+
+    List<Transform> adjacentSlotsP1;
+    Transform randomAdjSlotP1;
+
+    public List<GameObject> AiAttackCards = new List<GameObject>();
+    GameObject randomAiAtcCard;
+
+    GameObject defenseCard;
+    public Dice dice;
 
 
     private void Start()
@@ -52,6 +60,7 @@ public class ButtonTurn : MonoBehaviour
         boardSlot = FindAnyObjectByType<BoardSlot>();
         availableSlots = boardSlot.Available();
         availableSlotsMove = boardSlot.MoveAvailable();
+        adjacentSlotsP1 = boardSlot.AdjacentP1Available();
         boardSlot.AnotherMethod();
 
         turnCoroutine = StartCoroutine(ChangeTurn(30.0f));
@@ -80,6 +89,7 @@ public class ButtonTurn : MonoBehaviour
             CardPlacedToBoard.Remove(selectedCard);
         }
         Debug.Log("Adjacent cards P2:"+boardSlot.MoveAvailable().Count);
+        Debug.Log("Adjacent cards P1:"+boardSlot.AdjacentP1Available().Count);
     }
 
     public IEnumerator PlaceToBoard(float delayed)
@@ -92,6 +102,7 @@ public class ButtonTurn : MonoBehaviour
         selectedCard.transform.localPosition = Vector3.zero;
         Image carddBackImage = selectedCard.transform.Find("Back").GetComponent<Image>();
         carddBackImage.enabled = false;
+        boardSlot.GetPlacementSound();
 
        // boardSlot.UpdateMoveListP2();
         CardPlacedToBoard.Add(selectedCard);
@@ -184,10 +195,10 @@ public class ButtonTurn : MonoBehaviour
         yield return new WaitForSeconds(del);
         SelectRandomMoveSlot();
         SelectCardToMove();
-
        // SelectRandomMoveSlot();
         selectedCARD.transform.SetParent(randomSlotMove);
         selectedCARD.transform.localPosition = Vector3.zero;
+        boardSlot.GetPlacementSound();
        // selectedCARD.GetComponent<DisplayCard2>().outerBorder.color = Color.white;
         int coinEnergy = BoardSlot.GetCurrentEnergyP2();
         int newCE = coinEnergy - 1;
@@ -264,6 +275,7 @@ public class ButtonTurn : MonoBehaviour
             boardSlot.coinP2img2.SetActive(false);
             boardSlot.coinP2img.SetActive(false);
         }
+        //SelectAttackCard();
 
     }
 
@@ -343,12 +355,80 @@ public class ButtonTurn : MonoBehaviour
     public void Attack() 
     {
         //Same logic random slot, the adjacent would be "player2"
+        if (adjacentSlotsP1.Count>0) 
+        {
+            foreach (Transform slot in adjacentSlotsP1) 
+            {
+                if (slot.childCount > 0)  // Added check for child count
+                {
+                    if (slot.GetChild(0).gameObject.CompareTag("Player2"))  // Changed to CompareTag for efficiency
+                    {
+                        // Make a new list and add them to that list   List name: AiAttackCards
+                        AiAttackCards.Add(slot.GetChild(0).gameObject);
+                        Debug.Log("Addedto AiAttackCards List");
+                    }
+                }
+            }
+        }
+    }
+
+    public void SelectAttackCard()
+    {
+        Attack();
+        if (AiAttackCards.Count > 0)
+        {
+            randomAiAtcCard = AiAttackCards[Random.Range(0, AiAttackCards.Count)];
+            Debug.Log("Picked card for attack:" + randomAiAtcCard);
+            randomAiAtcCard.GetComponent<DisplayCard2>().OnPtClc();
+            // Assuming adjCards is a list of adjacent cards of the player being attacked
+            List<GameObject> adjCards = randomAiAtcCard.GetComponent<DisplayCard2>().adjCards;
+
+            // Check if there are adjacent cards
+            if (adjCards.Count > 0)
+            {
+                // Select a random adjacent card for defense
+                defenseCard = adjCards[Random.Range(0, adjCards.Count)];
+                defenseCard.GetComponent<DisplayCard>().OnPtcClk();
+                StartCoroutine(RollingDice(2.0f));
+                StartCoroutine(DeselectAtcCard(6.0f));
+            }
+            else
+            {
+                Debug.Log("No adjacent cards for defense.");
+            }
+            // randomAiAtcCard.GetComponent<DisplayCard2>().isSelected = true;
+            //randomAiAtcCard.GetComponent<DisplayCard2>().outerBorder.color = Color.white;
+        }
+        else 
+        {
+            Debug.Log("No Cards for Attack");
+        }
+    }
+
+    IEnumerator RollingDice(float delay) 
+    { 
+        yield return new WaitForSeconds(delay);
+        dice.OnMouseDown();
+    }
+
+    IEnumerator DeselectAtcCard(float del) 
+    {
+        yield return new WaitForSeconds(del);
+        defenseCard.GetComponent<DisplayCard>().OnPtcClk();
+        randomAiAtcCard.GetComponent<DisplayCard2>().OnPtClc();
     }
 
     IEnumerator ChangeAIPhaseToMove(float delayed) 
     {
         yield return new WaitForSeconds(delayed);
         gmm.ChangePhase(GamePhase.Move);
+    }
+
+    IEnumerator ChangeAIPhaseToAttack(float delayed)
+    {
+        yield return new WaitForSeconds(delayed);
+        gmm.ChangePhase(GamePhase.Attack);
+        SelectAttackCard();
     }
 
     IEnumerator ChangeAIPhaseToSetup(float delay)
@@ -359,6 +439,7 @@ public class ButtonTurn : MonoBehaviour
         StartCoroutine(PlaceToBoard(2.0f));
         StartCoroutine(ChangeAIPhaseToMove(3.0f));
         StartCoroutine(MoveInBoard(4.0f));
+        StartCoroutine(ChangeAIPhaseToAttack(5.0f));
     }
 
     public void OnTurnButtonClick()

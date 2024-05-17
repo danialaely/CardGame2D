@@ -225,25 +225,24 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         return 0; // Return 0 if the card is not found.
     }
 
-
-    public void OnPointerClick(PointerEventData eventData)
+    public void OnPtcClk() 
     {
         bool isP1Turn = ButtonTurn.GetPlayerTurn();    // Debug.Log("DC P1 Turn:"+isTurn);
 
         bool isZoom = Zoom.GetBool();
-        if (isZoom) 
+        if (isZoom)
         {
-          //  Vector3 offt1 = new Vector3(-400f, 0, 0);
-          //  dice1.transform.position = this.transform.position + offt1;
-          //  dice2.transform.position = this.transform.position - offt1;
+            //  Vector3 offt1 = new Vector3(-400f, 0, 0);
+            //  dice1.transform.position = this.transform.position + offt1;
+            //  dice2.transform.position = this.transform.position - offt1;
         }
 
         if (isP1Turn)
         {
-                
+
             isSelected = !isSelected;
             if (isSelected)
-            {      
+            {
                 outerBorder.color = Color.white;
 
                 foreach (GameObject p2 in player2)
@@ -278,7 +277,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                 outerBorder.color = Color.black;
                 // DisplayCard2.dice1.enabled = false;
                 // Reset the orthographic camera's size when the card is deselected
-                
+
 
                 foreach (GameObject p2 in player2)
                 {
@@ -293,7 +292,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                 }
             }
         }
-        if (!isP1Turn) 
+        if (!isP1Turn)
         {
             foreach (GameObject displayCardObject in player2)
             {
@@ -326,7 +325,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                     if (dp != null && dp.adjCards.Contains(gameObject) && BoardSlot.GetCurrentEnergyP2() >= 2 && gm.currentPhase == GamePhase.Attack)
                     {
                         outerBorder.color = Color.red;
-                        Debug.Log("Player2's Card Attack:"+dp.GetCardAttack());
+                        Debug.Log("Player2's Card Attack:" + dp.GetCardAttack());
                         dice1.enabled = true;
                         dice2.enabled = true;
 
@@ -334,10 +333,10 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
                         P1Power = this.GetCardHealth();
                         P2Power = dp.GetCardAttack();
-                       /* if (this.GetCardAttack() < dp.GetCardAttack()) 
-                        {
-                            Discard = true;
-                        }*/
+                        /* if (this.GetCardAttack() < dp.GetCardAttack()) 
+                         {
+                             Discard = true;
+                         }*/
                     }
                 }
             }
@@ -355,8 +354,13 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                 }
             }
         }
-       
+
         Debug.Log(isSelected);
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        OnPtcClk();
     }
 
     public bool GetDiscard() 
