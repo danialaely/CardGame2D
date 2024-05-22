@@ -218,7 +218,7 @@ public class Zoom : MonoBehaviour
         src.clip = shuffleClip;
         src.Play();
         }
-        if (gm.currentPhase == GamePhase.Setup || gm.currentPhase == GamePhase.Move) 
+        if (gm.currentPhase == GamePhase.Play || gm.currentPhase == GamePhase.Move) 
         {
             src.clip = errorClip;
             src.Play();

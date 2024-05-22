@@ -44,6 +44,7 @@ public class ButtonTurn : MonoBehaviour
     public List<GameObject> CardPlacedToBoard = new List<GameObject>();
 
     public CCardShuffler CShufflerP2;
+    public CardShuffler CShufflerP1;
 
     List<Transform> adjacentSlotsP1;
     Transform randomAdjSlotP1;
@@ -54,6 +55,10 @@ public class ButtonTurn : MonoBehaviour
     GameObject defenseCard;
     public Dice dice;
 
+    public List<DisplayCard> allDisplayCards; // Reference to all DisplayCard instances
+    public List<DisplayCard2> allDisplayCardsP2; // Reference to all DisplayCard instances
+
+  //  Scene currentScene;
 
     private void Start()
     {
@@ -62,10 +67,12 @@ public class ButtonTurn : MonoBehaviour
         availableSlotsMove = boardSlot.MoveAvailable();
         adjacentSlotsP1 = boardSlot.AdjacentP1Available();
         boardSlot.AnotherMethod();
+        allDisplayCards = new List<DisplayCard>(FindObjectsOfType<DisplayCard>());
+        allDisplayCardsP2 = new List<DisplayCard2>(FindObjectsOfType<DisplayCard2>());
 
-        turnCoroutine = StartCoroutine(ChangeTurn(30.0f));
+        turnCoroutine = StartCoroutine(ChangeTurn(60.0f));
         TurnStarter(isPlayer1Turn);
-
+       // currentScene = SceneManager.GetActiveScene();
 
         if (mainCamera == null)
         {
@@ -434,7 +441,7 @@ public class ButtonTurn : MonoBehaviour
     IEnumerator ChangeAIPhaseToSetup(float delay)
     {
         yield return new WaitForSeconds(delay);
-        gmm.ChangePhase(GamePhase.Setup);
+        gmm.ChangePhase(GamePhase.Play);
         //  SelectRandomCard();
         StartCoroutine(PlaceToBoard(2.0f));
         StartCoroutine(ChangeAIPhaseToMove(3.0f));
@@ -456,7 +463,7 @@ public class ButtonTurn : MonoBehaviour
             turnBar.SetTurnTime(turnCount);
             //StartCoroutine(Turnbar2(1.0f));
 
-            turnCount2 = 30;
+            turnCount2 = 60;
             turnBar.SetTurnTime2(turnCount2);
 
             deckP1.enabled = false;
@@ -464,23 +471,32 @@ public class ButtonTurn : MonoBehaviour
             boardSlot.AnotherMethod2();
 
             Scene currentScene = SceneManager.GetActiveScene();
-            if (currentScene.name == "AI") 
-            {
+            //if (currentScene.name == "AI") {}
                 if (gmm.currentPhase == GamePhase.Draw) 
                 {
                    CShufflerP2.ShuffleCards();
-                  // boardSlot.UpdateMoveListP2();
-                  //  boardSlot.AnotherMethod2();
+                // boardSlot.UpdateMoveListP2();
+                //  boardSlot.AnotherMethod2();
+                if (currentScene.name =="AI") 
+                {
                    StartCoroutine(ChangeAIPhaseToSetup(3.0f));
                 }
+                }
+            foreach (DisplayCard otherCard in allDisplayCards)
+            {
+                if (otherCard.isSelected)
+                {
+                    otherCard.OnPtcClk();
+                }
             }
+             //foreach (DisplayCard2 otherCards in allDisplayCardsP2) {if (otherCards.isSelected){otherCards.OnPtClc();}}
             //  MoveSelectedCardToRandomSlot();
         }
         else
         {
             gmm.ChangePhase(GamePhase.Draw);
             turnText.text = "P1 Turn";
-            turnCount = 30;
+            turnCount = 60;
             turnBar.SetTurnTime(turnCount);
 
             turnCount2 = 0;
@@ -489,6 +505,19 @@ public class ButtonTurn : MonoBehaviour
             deckP1.enabled = true;
             deckP2.enabled = false;
             boardSlot.AnotherMethod();
+            CShufflerP1.ShuffleCards();
+            Scene currentScene = SceneManager.GetActiveScene();
+
+            if (currentScene.name == "SampleScene") 
+            {
+                foreach (DisplayCard2 otherCard in allDisplayCardsP2)
+                {
+                    if (otherCard.isSelected)
+                    {
+                        otherCard.OnPtClc();
+                    }
+                }
+            }
         }
 
         // Toggle the turn
@@ -509,7 +538,7 @@ public class ButtonTurn : MonoBehaviour
             {
                 gmm.ChangePhase(GamePhase.Draw);
                 turnText.text = "P1 Turn";
-                turnCount = 30;
+                turnCount = 60;
                 turnBar.SetTurnTime(turnCount);
 
                 turnCount2 = 0;
@@ -523,7 +552,7 @@ public class ButtonTurn : MonoBehaviour
             {
                 gmm.ChangePhase(GamePhase.Draw);
                 turnText.text = "P2 Turn";
-                turnCount2 = 30;
+                turnCount2 = 60;
                 turnBar.SetTurnTime2(turnCount2);
               // StartCoroutine(Turnbar2(1.0f));
 
@@ -552,7 +581,7 @@ public class ButtonTurn : MonoBehaviour
     {
         StopCoroutine(turnCoroutine);
 
-        turnCoroutine = StartCoroutine(ChangeTurn(30.0f));
+        turnCoroutine = StartCoroutine(ChangeTurn(60.0f));
     }
 
     private IEnumerator Turnbar(float delay)

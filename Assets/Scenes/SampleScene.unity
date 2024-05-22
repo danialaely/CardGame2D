@@ -361,9 +361,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 30
+  m_MaxValue: 60
   m_WholeNumbers: 1
-  m_Value: 30
+  m_Value: 60
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -32876,11 +32876,16 @@ MonoBehaviour:
   deckP1: {fileID: 241768672}
   deckP2: {fileID: 1654882287}
   gmm: {fileID: 552501282}
-  boardSlot: {fileID: 0}
+  boardSlot: {fileID: 1392748620}
   handGrid: {fileID: 0}
   boardGrid: {fileID: 0}
   CardPlacedToBoard: []
-  CShufflerP2: {fileID: 0}
+  CShufflerP2: {fileID: 1954436664}
+  CShufflerP1: {fileID: 1276202206}
+  AiAttackCards: []
+  dice: {fileID: 0}
+  allDisplayCards: []
+  allDisplayCardsP2: []
 --- !u!4 &733181124
 Transform:
   m_ObjectHideFlags: 0
@@ -53520,7 +53525,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 30
+  m_MaxValue: 60
   m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
@@ -84494,6 +84499,7 @@ MonoBehaviour:
   gm: {fileID: 552501282}
   src: {fileID: 1149496450}
   swordClip: {fileID: 8300000, guid: 28c6e611bb113934696ae705a70b1d8c, type: 3}
+  zm: {fileID: 313359074}
   handGrid: {fileID: 0}
 --- !u!1 &1957102883
 GameObject:

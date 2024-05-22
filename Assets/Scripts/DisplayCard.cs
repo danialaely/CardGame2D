@@ -113,7 +113,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         {
             for (int i = 0; i < bslot.transform.parent.childCount; i++)
             {
-                if (gm.currentPhase == GamePhase.Setup && this.transform.parent.name == "Hand")
+                if (gm.currentPhase == GamePhase.Play && this.transform.parent.name == "Hand")
                 {
                     if ((i + 13 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 13).childCount > 0 && bslot.transform.parent.GetChild(i + 13).GetChild(0).name == "SHCardP1") ||
                     (i + 14 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 14).childCount > 0 && bslot.transform.parent.GetChild(i + 14).GetChild(0).name == "SHCardP1") ||
@@ -153,7 +153,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         int dragging = BoardSlot.GetCurrentEnergy();
         int dragging2 = BoardSlot.GetCurrentEnergyP2();
         bool isP1Turn = ButtonTurn.GetPlayerTurn();
-        if (transform.parent!=null && transform.parent.name == "Hand"  && isP1Turn && gm.currentPhase == GamePhase.Setup) 
+        if (transform.parent!=null && transform.parent.name == "Hand"  && isP1Turn && gm.currentPhase == GamePhase.Play) 
         {
            if (dragging >= 0) 
            {
@@ -184,7 +184,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         }
 
         // If the card is not dropped on a slot, return it to the initial position.
-        if (gm.currentPhase == GamePhase.Setup  || gm.currentPhase == GamePhase.Draw) 
+        if (gm.currentPhase == GamePhase.Play  || gm.currentPhase == GamePhase.Draw) 
         {
             if (transform.parent == null || transform.parent.CompareTag("Hand") )
             {
@@ -262,9 +262,10 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                 // Unselect other DisplayCard instances
                 foreach (DisplayCard otherCard in allDisplayCards)
                 {
-                    if (otherCard != this)
+                    if (otherCard != this && otherCard.isSelected)
                     {
-                        otherCard.isSelected = false;
+                        //otherCard.isSelected = false;
+                        otherCard.OnPtcClk();
                         otherCard.adjacentCards.Clear();
                         otherCard.outerBorder.color = Color.black;
 

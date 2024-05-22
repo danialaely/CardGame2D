@@ -111,7 +111,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         {
             for (int i = 0; i < bslot.transform.parent.childCount; i++)
             {
-                if (gm.currentPhase == GamePhase.Setup && this.transform.parent.name == "Hand2") 
+                if (gm.currentPhase == GamePhase.Play && this.transform.parent.name == "Hand2") 
                 {
                     if ((i + 13 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 13).childCount > 0 && bslot.transform.parent.GetChild(i + 13).GetChild(0).name == "SHCardP2") ||
                     (i + 14 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 14).childCount > 0 && bslot.transform.parent.GetChild(i + 14).GetChild(0).name == "SHCardP2") ||
@@ -161,7 +161,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             }
         }
 
-        if (transform.parent != null && transform.parent.name == "Hand2" && !isP1Turn && gm.currentPhase == GamePhase.Setup)
+        if (transform.parent != null && transform.parent.name == "Hand2" && !isP1Turn && gm.currentPhase == GamePhase.Play)
         {
             if (dragging2 >= 0)
             {
@@ -265,9 +265,10 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
                 foreach (DisplayCard2 othercard in allDisplayCards)
                 {
-                    if (othercard != this)
+                    if (othercard != this && othercard.isSelected)
                     {
-                        othercard.isSelected = false;
+                        //othercard.isSelected = false;
+                        othercard.OnPtClc();
                         othercard.adjCards.Clear();
                         othercard.outerBorder.color = Color.yellow;
                     }

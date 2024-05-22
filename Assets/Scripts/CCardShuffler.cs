@@ -62,9 +62,10 @@ public class CCardShuffler : MonoBehaviour
             // Call the method if the current scene is "Ai"
             ShuffleCards();
         }
-        else if(currentScene.name == "SampleScene")
+        else if(currentScene.name == "SampleScene" && !isP1Turn)
         {
-            shuffleButton.onClick.AddListener(ShuffleCards);
+            ShuffleCards();
+            //shuffleButton.onClick.AddListener(ShuffleCards);
         }
 
     }

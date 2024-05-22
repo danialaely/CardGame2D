@@ -361,9 +361,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 30
+  m_MaxValue: 60
   m_WholeNumbers: 1
-  m_Value: 30
+  m_Value: 60
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -32881,6 +32881,7 @@ MonoBehaviour:
   boardGrid: {fileID: 1048125233}
   CardPlacedToBoard: []
   CShufflerP2: {fileID: 1954436664}
+  CShufflerP1: {fileID: 1276202206}
   AiAttackCards: []
   dice: {fileID: 2039420417}
 --- !u!4 &733181124
@@ -53522,7 +53523,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 30
+  m_MaxValue: 60
   m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:

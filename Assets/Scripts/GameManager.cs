@@ -39,9 +39,9 @@ public class GameManager : MonoBehaviour
         // Assuming GameManager is a static class or a singleton
         if (currentPhase == GamePhase.Draw)
         {
-            ChangePhase(GamePhase.Setup);
+            ChangePhase(GamePhase.Play);
         }
-        else if (currentPhase == GamePhase.Setup) 
+        else if (currentPhase == GamePhase.Play) 
         {
             ChangePhase(GamePhase.Move);
         }
@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
 public enum GamePhase 
 {
     Draw, 
-    Setup, 
+    Play, 
     Move,
     Attack
 }
