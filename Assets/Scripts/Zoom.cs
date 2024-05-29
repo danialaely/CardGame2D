@@ -64,137 +64,91 @@ public class Zoom : MonoBehaviour
 
     void Update()
     {
-       
-       // mainCamera.orthographicSize = Mathf.Lerp(mainCamera.orthographicSize, 400f, 0.0123f);
-        // Check for a tap or click
-        if (Input.GetMouseButtonDown(0)) // Assuming left mouse button for simplicity
+
+        if (Input.touchCount == 2)
         {
-            // Check if it's a double tap
-            if (Time.time - lastTapTime < maxDoubleTapTime && mainCamera != null)
+            Touch touch1 = Input.GetTouch(0);
+            Touch touch2 = Input.GetTouch(1);
+
+            // Calculate the distance between the two touches in the previous frame and in the current frame
+            Vector2 touch1PrevPos = touch1.position - touch1.deltaPosition;
+            Vector2 touch2PrevPos = touch2.position - touch2.deltaPosition;
+            float prevTouchDeltaMag = (touch1PrevPos - touch2PrevPos).magnitude;
+            float touchDeltaMag = (touch1.position - touch2.position).magnitude;
+
+            // Find the difference in the distances between each frame
+            float deltaMagnitudeDiff = prevTouchDeltaMag - touchDeltaMag;
+
+            // Perform zoom based on the magnitude difference
+            if (deltaMagnitudeDiff > 0)
             {
-                // Double tap detected
-                Debug.Log("Double Tap!");
-
-                // Toggle the boolean variable
-                isBoolVariableTrue = !isBoolVariableTrue;
-                // stickToPos = !stickToPos;
-                StartCoroutine(Fluctuate(2f));
-                Debug.Log("SticToPos:"+stickToPos);
-
-                if (isBoolVariableTrue)
-                {
-                    Debug.Log("Boolean variable is true. Performing zoom in.");
-
-                    // Get the position of the touch/click on the screen
-                    Vector3 touchPos = Input.mousePosition;
-                    touchPos.z = -10f; // Set a fixed distance from the camera
-
-
-                    Vector3 touchPoz = Input.mousePosition;
-                    touchPoz.z = 400f;
-                    touchPoz.x += 90f;
-
-                    // Convert screen space to world space
-                    Vector3 worldPos = mainCamera.ScreenToWorldPoint(touchPos);
-
-
-                    Vector3 offt1 = new Vector3(-400f, 0, 0);
-                    dice1.transform.position = Input.mousePosition + offt1;
-                    dice2.transform.position = Input.mousePosition - offt1;
-
-                    // Set the target orthographic size
-                    // float targetOrthographicSize = 411f;
-
-                    // Smoothly interpolate to the target orthographic size and position
-                    float transitionSpeed = 0.5f;
-
-                    //mainCamera.orthographicSize = Mathf.Lerp(mainCamera.orthographicSize, targetOrthographicSize, transitionSpeed);
-                   zoomPos = Vector3.Lerp(mainCamera.transform.position, worldPos, transitionSpeed);
-
-                }
+                // Pinch zoom out
+                isBoolVariableTrue = false;
             }
+            else if (deltaMagnitudeDiff < 0)
+            {
+                // Pinch zoom in
+                isBoolVariableTrue = true;
 
-            // Update the last tap time
-            lastTapTime = Time.time;
+                // Get the midpoint between the two touches for zoom center
+                Vector3 touchPos = (touch1.position + touch2.position) / 2;
+                touchPos.z = -10f; // Set a fixed distance from the camera
+                Vector3 worldPos = mainCamera.ScreenToWorldPoint(touchPos);
+                zoomPos = Vector3.Lerp(mainCamera.transform.position, worldPos, 0.5f);
+
+                // Update dice positions
+                Vector3 offt1 = new Vector3(-400f, 0, 0);
+                dice1.transform.position = touchPos + offt1;
+                dice2.transform.position = touchPos - offt1;
+            }
         }
 
-        // Perform actions based on the boolean variable
         if (isBoolVariableTrue)
         {
-            Debug.Log("Boolean variable is true. Performing zoom in.");
-
-            // Set the target orthographic size
             float targetOrthographicSize = 411f;
-
-            // Smoothly interpolate to the target orthographic size and position
             float transitionSpeed = 0.0925f;
-
             mainCamera.orthographicSize = Mathf.Lerp(mainCamera.orthographicSize, targetOrthographicSize, transitionSpeed);
 
-            if (Input.GetMouseButton(0) ==false && stickToPos==false) 
+            if (!Input.GetMouseButton(0) && !stickToPos)
             {
-                //IF I HAVE NOT DRAGGED UP TILL NOW THEN ONLY IT WILL HAPPEN OTHERWISE IT WON'T EXECUTE 
                 mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, zoomPos, 8f);
             }
-            
-                //HERE
-                if (Input.GetMouseButton(0))
-                {
-                    Difference = (Camera.main.ScreenToWorldPoint(Input.mousePosition)) - mainCamera.transform.position;
-                    if (drag == false)
-                    {
-                        drag = true;
-                        Origin = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                    }
-                }
-                else 
-                {
-                    drag = false;
-                if (mainCamera.transform.position.x < -200f)
-                {
-                    mainCamera.transform.position += new Vector3(5f, 0, 0);
-                }
-                if (mainCamera.transform.position.x > 1230f) 
-                {
-                    mainCamera.transform.position += new Vector3(-5f, 0, 0);
-                }
 
-                if (mainCamera.transform.position.y > 690f) 
+            if (Input.GetMouseButton(0))
+            {
+                Difference = (Camera.main.ScreenToWorldPoint(Input.mousePosition)) - mainCamera.transform.position;
+                if (!drag)
                 {
-                    mainCamera.transform.position += new Vector3(0,-5f,0);
-                }
-                if (mainCamera.transform.position.y < -170f) 
-                {
-                    mainCamera.transform.position += new Vector3(0, 5f, 0);
+                    drag = true;
+                    Origin = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 }
             }
+            else
+            {
+                drag = false;
+                RestrictCameraPosition();
+            }
 
-                if (drag==true) 
-                {
-                if (mainCamera.transform.position.x > -200f && mainCamera.transform.position.x < 1230f && mainCamera.transform.position.y < 690f && mainCamera.transform.position.y > -170f) 
+            if (drag)
+            {
+                if (mainCamera.transform.position.x > -200f && mainCamera.transform.position.x < 1230f && mainCamera.transform.position.y < 690f && mainCamera.transform.position.y > -170f)
                 {
                     Camera.main.transform.position = Origin - Difference;
                 }
-
-                    //stickToPos = true;
-                }
-            
+            }
         }
         else
         {
-            Debug.Log("Boolean variable is false. Performing reset.");
-
-            // Reset the camera to its original state
             if (mainCamera.orthographicSize <= 765f)
             {
                 float targetOrthographicSize = 765.3f;
                 float transitionSpeed = 0.0925f;
                 mainCamera.orthographicSize = Mathf.Lerp(mainCamera.orthographicSize, targetOrthographicSize, transitionSpeed);
-                mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position,originalCamPos,8f);
+                mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, originalCamPos, 8f);
                 dice1.transform.position = originaldice1Pos;
                 dice2.transform.position = originaldice2Pos;
             }
-            else 
+            else
             {
                 mainCamera.orthographicSize = originalOrthographicSize;
                 mainCamera.transform.position = originalCamPos;
@@ -222,6 +176,26 @@ public class Zoom : MonoBehaviour
         {
             src.clip = errorClip;
             src.Play();
+        }
+    }
+
+    private void RestrictCameraPosition()
+    {
+        if (mainCamera.transform.position.x < -200f)
+        {
+            mainCamera.transform.position += new Vector3(5f, 0, 0);
+        }
+        if (mainCamera.transform.position.x > 1230f)
+        {
+            mainCamera.transform.position += new Vector3(-5f, 0, 0);
+        }
+        if (mainCamera.transform.position.y > 690f)
+        {
+            mainCamera.transform.position += new Vector3(0, -5f, 0);
+        }
+        if (mainCamera.transform.position.y < -170f)
+        {
+            mainCamera.transform.position += new Vector3(0, 5f, 0);
         }
     }
 

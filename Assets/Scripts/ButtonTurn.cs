@@ -384,7 +384,11 @@ public class ButtonTurn : MonoBehaviour
         Attack();
         if (AiAttackCards.Count > 0)
         {
-            randomAiAtcCard = AiAttackCards[Random.Range(0, AiAttackCards.Count)];
+            do
+            {
+                randomAiAtcCard = AiAttackCards[Random.Range(0, AiAttackCards.Count)];
+            } while (randomAiAtcCard.name == "SHCardP2");
+            
             Debug.Log("Picked card for attack:" + randomAiAtcCard);
             randomAiAtcCard.GetComponent<DisplayCard2>().OnPtClc();
             // Assuming adjCards is a list of adjacent cards of the player being attacked
