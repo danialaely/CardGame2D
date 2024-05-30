@@ -49,6 +49,14 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public bool canMove;
 
+    public GameObject PopUpCardP2;
+    public TMP_Text pop2NameTxt;
+    public TMP_Text pop2AttackTxt;
+    public TMP_Text pop2HealthTxt;
+    public TMP_Text pop2EnergyTxt;
+    public Image pop2CardImg;
+    public UnityEngine.UI.Image popOuterBdr;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,6 +68,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         // Populate allDisplayCards with all instances of DisplayCard
         allDisplayCards = new List<DisplayCard2>(FindObjectsOfType<DisplayCard2>());
         outerBorder = this.transform.Find("OuterBorder").GetComponent<Image>();
+        popOuterBdr = PopUpCardP2.transform.Find("OuterBorder").GetComponent<Image>();
 
         BoSlots = new List<BoardSlot>(FindObjectsOfType<BoardSlot>());
 
@@ -234,19 +243,27 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         // isSelected = !isSelected;
         bool isP1Turn = ButtonTurn.GetPlayerTurn();
 
-        bool isZoom = Zoom.GetBool();
+     /*   bool isZoom = Zoom.GetBool();
         if (isZoom)
         {
             // Vector3 offt1 = new Vector3(-400f, 0, 0);
             // dice1.transform.position = this.transform.position + offt1;
             // dice2.transform.position = this.transform.position - offt1;
-        }
+        } */
 
         if (!isP1Turn)
         {
             isSelected = !isSelected;
             if (isSelected)
             {
+                PopUpCardP2.SetActive(true);
+                pop2NameTxt.text = nameText.text;
+                pop2AttackTxt.text = attackText.text;
+                pop2EnergyTxt.text = energyText.text;
+                pop2HealthTxt.text = healthText.text;
+                pop2CardImg.sprite = crdImage.sprite;
+                popOuterBdr.color = Color.yellow;
+
                 outerBorder.color = Color.white;
 
                 foreach (GameObject p1 in player1)
@@ -277,6 +294,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             }
             if (!isSelected)
             {
+                PopUpCardP2.SetActive(false);
                 outerBorder.color = Color.yellow;
 
                 foreach (GameObject p1 in player1)
@@ -322,6 +340,17 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
             if (isSelected) //(3):ATTACKING PHASE
             {
+                if (gm.currentPhase == GamePhase.Attack)
+                {
+                    PopUpCardP2.SetActive(true);
+                    pop2NameTxt.text = nameText.text;
+                    pop2AttackTxt.text = attackText.text;
+                    pop2EnergyTxt.text = energyText.text;
+                    pop2HealthTxt.text = healthText.text;
+                    pop2CardImg.sprite = crdImage.sprite;
+                    popOuterBdr.color = Color.red;
+                }
+
                 foreach (GameObject displayCardObject in player1)
                 {
                     DisplayCard dp = displayCardObject.GetComponent<DisplayCard>();
@@ -347,6 +376,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             }
             if (!isSelected)
             {
+                PopUpCardP2.SetActive(false);
                 foreach (GameObject displayCardObject in player1)
                 {
                     DisplayCard dp = displayCardObject.GetComponent<DisplayCard>();

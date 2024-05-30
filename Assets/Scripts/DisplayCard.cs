@@ -49,6 +49,14 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public bool canMove;
 
+    public GameObject PopUpCardP1;
+    public TMP_Text popNameTxt;
+    public TMP_Text popAttackTxt;
+    public TMP_Text popHealthTxt;
+    public TMP_Text popEnergyTxt;
+    public Image popCardImg;
+    UnityEngine.UI.Image popOuterBdr;
+
 
     // Start is called before the first frame update
     void Start()
@@ -62,6 +70,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         // Populate allDisplayCards with all instances of DisplayCard
         allDisplayCards = new List<DisplayCard>(FindObjectsOfType<DisplayCard>());
         outerBorder = this.transform.Find("OuterBorder").GetComponent<Image>();
+        popOuterBdr = PopUpCardP1.transform.Find("OuterBorder").GetComponent<Image>();
 
         BoSlots = new List<BoardSlot>(FindObjectsOfType<BoardSlot>());
 
@@ -229,13 +238,13 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     {
         bool isP1Turn = ButtonTurn.GetPlayerTurn();    // Debug.Log("DC P1 Turn:"+isTurn);
 
-        bool isZoom = Zoom.GetBool();
+       /* //bool isZoom = Zoom.GetBool();
         if (isZoom)
         {
-            //  Vector3 offt1 = new Vector3(-400f, 0, 0);
-            //  dice1.transform.position = this.transform.position + offt1;
-            //  dice2.transform.position = this.transform.position - offt1;
-        }
+             Vector3 offt1 = new Vector3(-400f, 0, 0);
+             dice1.transform.position = this.transform.position + offt1;
+             dice2.transform.position = this.transform.position - offt1;
+        } */
 
         if (isP1Turn)
         {
@@ -243,6 +252,14 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             isSelected = !isSelected;
             if (isSelected)
             {
+                PopUpCardP1.SetActive(true);
+                popNameTxt.text = nameText.text;
+                popAttackTxt.text = attackText.text;
+                popEnergyTxt.text = energyText.text;
+                popHealthTxt.text = healthText.text;
+                popCardImg.sprite = crdImage.sprite;
+                popOuterBdr.color = Color.yellow;
+
                 outerBorder.color = Color.white;
 
                 foreach (GameObject p2 in player2)
@@ -265,6 +282,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                     if (otherCard != this && otherCard.isSelected)
                     {
                         //otherCard.isSelected = false;
+                        //otherCard.PopUpCardP1.SetActive(false);
                         otherCard.OnPtcClk();
                         otherCard.adjacentCards.Clear();
                         otherCard.outerBorder.color = Color.black;
@@ -276,6 +294,8 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             if (!isSelected)
             {
                 outerBorder.color = Color.black;
+                PopUpCardP1.SetActive(false);
+                
                 // DisplayCard2.dice1.enabled = false;
                 // Reset the orthographic camera's size when the card is deselected
 
@@ -320,6 +340,17 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
             if (isSelected)  //(3):ATTACKING PHASE
             {
+                if (gm.currentPhase == GamePhase.Attack) 
+                {
+                    PopUpCardP1.SetActive(true);
+                    popNameTxt.text = nameText.text;
+                    popAttackTxt.text = attackText.text;
+                    popEnergyTxt.text = energyText.text;
+                    popHealthTxt.text = healthText.text;
+                    popCardImg.sprite = crdImage.sprite;
+                    popOuterBdr.color = Color.red;
+                }
+
                 foreach (GameObject displayCardObject in player2)
                 {
                     DisplayCard2 dp = displayCardObject.GetComponent<DisplayCard2>();
@@ -343,6 +374,8 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             }
             if (!isSelected)
             {
+                PopUpCardP1.SetActive(false);
+
                 foreach (GameObject displayCardObject in player2)
                 {
                     DisplayCard2 dp = displayCardObject.GetComponent<DisplayCard2>();
