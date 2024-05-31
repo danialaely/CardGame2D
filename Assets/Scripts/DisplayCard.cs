@@ -295,7 +295,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             {
                 outerBorder.color = Color.black;
                 PopUpCardP1.SetActive(false);
-                
+
                 // DisplayCard2.dice1.enabled = false;
                 // Reset the orthographic camera's size when the card is deselected
 
@@ -309,6 +309,41 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                         UnityEngine.UI.Image p2outerborder = p2.transform.Find("OuterBorder").GetComponent<Image>();
                         p2outerborder.color = Color.yellow; //FFFF00
                         adjacentCards.Clear();
+
+                        // Check if DisplayCard2 component is attached
+                        DisplayCard2 displayCard2 = p2.GetComponent<DisplayCard2>();
+                        if (displayCard2 != null)
+                        {
+                            bool selected = displayCard2.isSelected;
+                            if (selected)
+                            {
+                                Debug.Log("IT WAS SELECTED BEFORE: " + p2.name);
+                                selected = false;
+                                displayCard2.SetSelected(selected);
+                                displayCard2.OnPtClc();
+                                dice1.enabled = false;
+                                dice2.enabled = false;
+                                //dice1.gameObject.SetActive(false);
+                                //dice2.gameObject.SetActive(false);
+                                //displayCard2.OnPtClc();
+                            }
+                        }
+
+                        // Check if ShP2Card component is attached
+                        ShP2Card shP2Card = p2.GetComponent<ShP2Card>();
+                        if (shP2Card != null)
+                        {
+                            bool selection = shP2Card.isSelected;
+                            if (selection)
+                            {
+                                Debug.Log("IT WAS SELECTED BEFORE: " + p2.name);
+                                //selection = false;
+                               // shP2Card.setSelection(selection);
+                                shP2Card.OnptcClick();
+                                dice1.enabled = false;
+                                dice2.enabled = false;
+                            }
+                        }
                     }
                 }
             }
@@ -415,6 +450,11 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     public int Getp2Power() 
     {
         return P2Power;
+    }
+
+    public void SetSelected(bool selection) 
+    {
+        isSelected = selection;
     }
 
     public void OnPointerEnter(PointerEventData eventData)

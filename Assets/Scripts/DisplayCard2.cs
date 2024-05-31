@@ -242,7 +242,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     {
         // isSelected = !isSelected;
         bool isP1Turn = ButtonTurn.GetPlayerTurn();
-
+        Debug.Log("DISPLAY C2 PTC CALLED");
      /*   bool isZoom = Zoom.GetBool();
         if (isZoom)
         {
@@ -307,6 +307,42 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                         p1outerborder.color = Color.black;
 
                         adjCards.Clear();
+
+                        // Check if DisplayCard component is attached
+                        DisplayCard displayCard = p1.GetComponent<DisplayCard>();
+                        if (displayCard != null)
+                        {
+                            bool selected = displayCard.isSelected;
+                            if (selected)
+                            {
+                                Debug.Log("IT WAS SELECTED BEFORE: " + p1.name);
+                                selected = false;
+                                displayCard.SetSelected(selected);
+                                displayCard.OnPtcClk();
+                                dice1.enabled = false;
+                                dice2.enabled = false;
+                                //dice1.gameObject.SetActive(false);
+                                //dice2.gameObject.SetActive(false);
+                            }
+                        }
+                        else
+                        {
+                            // Check if ShP1Card component is attached
+                            ShP1Card shP1Card = p1.GetComponent<ShP1Card>();
+                            if (shP1Card != null)
+                            {
+                                bool selection = shP1Card.isSelected;
+                                if (selection)
+                                {
+                                    Debug.Log("IT WAS SELECTED BEFORE: " + p1.name);
+                                   // selection = false;
+                                   // shP1Card.SetSelection(selection);
+                                    shP1Card.OnPtcClick();
+                                    dice1.enabled = false;
+                                    dice2.enabled = false;
+                                }
+                            }
+                        }
                     }
                 }
 
@@ -411,6 +447,11 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     public int GetP2Power() 
     {
         return P2Power;
+    }
+
+    public void SetSelected(bool select) 
+    {
+        isSelected = select;
     }
 
 }

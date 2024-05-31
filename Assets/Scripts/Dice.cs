@@ -282,6 +282,7 @@ public class Dice : MonoBehaviour
                             discaranimator.SetBool("isDiscard", true);
                             Transform discarcard = defenderCard.transform;
                             discarcard.SetParent(discardpile.transform);
+                            defenderCard.OnPtClc(); //MADE CHANGES HERE
                             DiscardSound();
 
                           //  healthValStP2 -= 2.5f;
@@ -296,6 +297,7 @@ public class Dice : MonoBehaviour
                             discaranimator.SetBool("isDiscard", true);
                             Transform discarcard = defenderCard.transform;
                             discarcard.SetParent(discardpile.transform);
+                            defenderCard.OnPtClc(); //MADE CHANGES HERE
                             DiscardSound();
 
                            // healthValStP2 -= 2.5f;
@@ -390,9 +392,10 @@ public class Dice : MonoBehaviour
                                     {
                                         Debug.Log("Counter Attacked Succeeded");
                                         animator2.SetBool("isDiscarded",true);
-                                          Transform discarded = atcCard.transform;
-                                          discarded.SetParent(discardpile2.transform);
-                                          DiscardSound();
+                                        Transform discarded = atcCard.transform;
+                                        discarded.SetParent(discardpile2.transform);
+                                        atcCard.OnPtcClk();
+                                        DiscardSound();
 
                                      //   healthValStP1 -= 2.5f;
                                      //   SHoldHealthP1.text = healthValStP1.ToString();
@@ -531,6 +534,7 @@ public class Dice : MonoBehaviour
                             animator2.SetBool("isDiscarded", true);
                             Transform discardCard = defcard.transform;
                             discardCard.SetParent(discardpile2.transform);
+                            defcard.OnPtcClk(); //MADE CHANGES HERE
                             DiscardSound();
 
                         //    healthValStP1 -= 2.5f;
@@ -545,6 +549,7 @@ public class Dice : MonoBehaviour
                             animator2.SetBool("isDiscarded", true);
                             Transform discardCard = defcard.transform;
                             discardCard.SetParent(discardpile2.transform);
+                            defcard.OnPtcClk(); //MADE CHANGES HERE
                             DiscardSound();
 
                         //    healthValStP1 -= 2.5f;
@@ -640,6 +645,7 @@ public class Dice : MonoBehaviour
                                         discaranimator.SetBool("isDiscard", true);
                                         Transform discards = atcCard.transform;
                                         discards.SetParent(discardpile.transform);
+                                        atcCard.OnPtClc();
                                         Debug.Log("Discard Pile Name:"+discardpile.name);
                                         DiscardSound();
 

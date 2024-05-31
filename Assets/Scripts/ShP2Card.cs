@@ -11,6 +11,7 @@ public class ShP2Card : MonoBehaviour , IPointerClickHandler
     public TMP_Text defenseText;
     public TMP_Text healthText;
     public Image outerBorder;
+    public Image crdImg;
 
     private int defense = 5;
     public  int health = 100;
@@ -32,6 +33,14 @@ public class ShP2Card : MonoBehaviour , IPointerClickHandler
 
     public CCardShuffler shuffler;
 
+    public GameObject PopUpCardP2;
+    public TMP_Text pop2NameTxt;
+    public TMP_Text pop2AttackTxt;
+    public TMP_Text pop2HealthTxt;
+    public TMP_Text pop2EnergyTxt;
+    public Image pop2CardImg;
+    public UnityEngine.UI.Image popOuterBdr;
+
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +49,7 @@ public class ShP2Card : MonoBehaviour , IPointerClickHandler
         healthText.text = health.ToString();
 
         player1 = GameObject.FindGameObjectsWithTag(tagToSearch);
+        popOuterBdr = PopUpCardP2.transform.Find("OuterBorder").GetComponent<Image>();
     }
 
     // Update is called once per frame
@@ -58,14 +68,23 @@ public class ShP2Card : MonoBehaviour , IPointerClickHandler
         return defense;
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    public void OnptcClick() 
     {
         bool isP1Turn = ButtonTurn.GetPlayerTurn();
-        if (isP1Turn) 
+        if (isP1Turn)
         {
             isSelected = !isSelected;
-            if (isSelected) 
+            if (isSelected)
             {
+                if (gm.currentPhase == GamePhase.Attack) 
+                {
+                    PopUpCardP2.SetActive(true);
+                    pop2NameTxt.text = "StrongHold";
+                    pop2HealthTxt.text = healthText.text;
+                    pop2CardImg.sprite = crdImg.sprite;
+                    popOuterBdr.color = Color.red;
+                }
+
                 foreach (GameObject displayCardObject in player1)
                 {
                     DisplayCard dp = displayCardObject.GetComponent<DisplayCard>();
@@ -94,6 +113,7 @@ public class ShP2Card : MonoBehaviour , IPointerClickHandler
 
             if (!isSelected)
             {
+                PopUpCardP2.SetActive(false);
                 foreach (GameObject displayCardObject in player1)
                 {
                     DisplayCard dp = displayCardObject.GetComponent<DisplayCard>();
@@ -107,6 +127,11 @@ public class ShP2Card : MonoBehaviour , IPointerClickHandler
             }
 
         }
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        OnptcClick();
     }
 
     public int GetP1Power()
@@ -127,5 +152,10 @@ public class ShP2Card : MonoBehaviour , IPointerClickHandler
     public void SetSHealth(int health) 
     { 
         SHealth = health;
+    }
+
+    public void setSelection(bool selected) 
+    {
+        isSelected = selected;
     }
 }

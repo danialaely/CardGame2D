@@ -11,13 +11,14 @@ public class ShP1Card : MonoBehaviour, IPointerClickHandler
     public TMP_Text defenseText;
     public TMP_Text healthText;
     public Image outerBorder;
+    public Image crdImg;
 
     private int defense = 5;
     public int health = 100;
 
     public bool isSelected = false;
 
-    public string tagToSearch = "Player2";
+    private string tagToSearch = "Player2";
     GameObject[] player2;
 
     public Image dice1;
@@ -31,6 +32,14 @@ public class ShP1Card : MonoBehaviour, IPointerClickHandler
     public GameManager gm;
 
     public CardShuffler shuffler;
+
+    public GameObject PopUpCardP1;
+    public TMP_Text popNameTxt;
+    public TMP_Text popAttackTxt;
+    public TMP_Text popHealthTxt;
+    public TMP_Text popEnergyTxt;
+    public Image popCardImg;
+    UnityEngine.UI.Image popOuterBdr;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +48,7 @@ public class ShP1Card : MonoBehaviour, IPointerClickHandler
         healthText.text = health.ToString();
 
         player2 = GameObject.FindGameObjectsWithTag(tagToSearch);
+        popOuterBdr = PopUpCardP1.transform.Find("OuterBorder").GetComponent<Image>();
     }
 
     // Update is called once per frame
@@ -57,31 +67,43 @@ public class ShP1Card : MonoBehaviour, IPointerClickHandler
         return defense;
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    public void OnPtcClick() 
     {
         bool isP1Turn = ButtonTurn.GetPlayerTurn();
 
-        if (!isP1Turn) 
+        if (!isP1Turn)
         {
             isSelected = !isSelected;
             if (isSelected)
             {
+                //   if (gm.currentPhase == GamePhase.Attack) { }
+                // if (gm != null) 
+                // { 
+                //dp != null && dp.adjCards.Contains(gameObject) && BoardSlot.GetCurrentEnergyP2() >= 2 && gm.currentPhase == GamePhase.Attack
                 foreach (GameObject displayCardObject in player2)
                 {
                     DisplayCard2 dp = displayCardObject.GetComponent<DisplayCard2>();
-                    if (dp != null && dp.adjCards.Contains(gameObject) && BoardSlot.GetCurrentEnergyP2() >= 2 && gm.currentPhase == GamePhase.Attack)
+                    if (dp!=null && dp.adjCards.Contains(gameObject))  
                     {
+                        if (gm.currentPhase == GamePhase.Attack) 
+                        {
                         outerBorder.color = Color.red;
                         Debug.Log("Player2 Card's Attack:" + dp.GetCardAttack());
                         dice1.enabled = true;
                         dice2.enabled = true;
 
                         shuffler.AttackSound();
+                        PopUpCardP1.SetActive(true);
+                        popNameTxt.text = "StrongHold";
+                        popHealthTxt.text = healthText.text;
+                        popCardImg.sprite = crdImg.sprite;
+                        popOuterBdr.color = Color.red;
 
                         P1Power = this.GetCardDefense();
                         P2Power = dp.GetCardAttack();
 
                         SHealth = this.GetCardHealth();
+                        }
                         /*  if (this.GetCardAttack() < dp.GetCardAttack()) 
                           {
                               //shuffler.DiscardSound();
@@ -90,10 +112,12 @@ public class ShP1Card : MonoBehaviour, IPointerClickHandler
 
                     }
                 }
+                //}
             }
 
             if (!isSelected)
             {
+                PopUpCardP1.SetActive(false);
                 foreach (GameObject displayCardObject in player2)
                 {
                     DisplayCard2 dp = displayCardObject.GetComponent<DisplayCard2>();
@@ -107,7 +131,11 @@ public class ShP1Card : MonoBehaviour, IPointerClickHandler
             }
 
         }
+    }
 
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        OnPtcClick();
     }
     public int GetP1Power()
     {
@@ -127,6 +155,11 @@ public class ShP1Card : MonoBehaviour, IPointerClickHandler
     public void SetSHealth(int health)
     {
         SHealth = health;
+    }
+
+    public void SetSelection(bool select) 
+    {
+        isSelected = select;
     }
 
 }
