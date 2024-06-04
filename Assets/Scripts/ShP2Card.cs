@@ -41,6 +41,8 @@ public class ShP2Card : MonoBehaviour , IPointerClickHandler
     public Image pop2CardImg;
     public UnityEngine.UI.Image popOuterBdr;
 
+    public Animator popupAnim;
+
 
     // Start is called before the first frame update
     void Start()
@@ -79,6 +81,8 @@ public class ShP2Card : MonoBehaviour , IPointerClickHandler
                 if (gm.currentPhase == GamePhase.Attack) 
                 {
                     PopUpCardP2.SetActive(true);
+                    popupAnim.SetBool("Select",true);
+
                     pop2NameTxt.text = "StrongHold";
                     pop2HealthTxt.text = healthText.text;
                     pop2CardImg.sprite = crdImg.sprite;
@@ -113,7 +117,9 @@ public class ShP2Card : MonoBehaviour , IPointerClickHandler
 
             if (!isSelected)
             {
-                PopUpCardP2.SetActive(false);
+                //PopUpCardP2.SetActive(false);
+                popupAnim.SetBool("Select",false);
+                StartCoroutine(PopUpActiveFalse(0.6f));
                 foreach (GameObject displayCardObject in player1)
                 {
                     DisplayCard dp = displayCardObject.GetComponent<DisplayCard>();
@@ -157,5 +163,11 @@ public class ShP2Card : MonoBehaviour , IPointerClickHandler
     public void setSelection(bool selected) 
     {
         isSelected = selected;
+    }
+
+    IEnumerator PopUpActiveFalse(float delay) 
+    {
+        yield return new WaitForSeconds(delay);
+        PopUpCardP2.SetActive(false);
     }
 }

@@ -576,8 +576,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00067902, y: 0}
-  m_SizeDelta: {x: 300.27, y: 50}
+  m_AnchoredPosition: {x: -0.00047302, y: 0.00011086}
+  m_SizeDelta: {x: 13.949, y: 2.8932}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &38296417
 MonoBehaviour:
@@ -626,8 +626,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 1.6
+  m_fontSizeBase: 1.6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -710,8 +710,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0.0579, y: 0.00020218}
+  m_SizeDelta: {x: 6.3315, y: 4.2476}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &38547247
 MonoBehaviour:
@@ -760,8 +760,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 67
-  m_fontSizeBase: 67
+  m_fontSize: 3
+  m_fontSizeBase: 3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1076,8 +1076,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 0, y: 0.000080109}
+  m_SizeDelta: {x: 2.7602, y: 2.8738}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &59978434
 MonoBehaviour:
@@ -1126,8 +1126,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 67
-  m_fontSizeBase: 67
+  m_fontSize: 3
+  m_fontSizeBase: 3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2369,6 +2369,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &103581799
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3206,6 +3207,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &110413691
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -4494,6 +4496,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &126919881
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -5722,6 +5725,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &137169813
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -6541,6 +6545,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1 &143023075
 GameObject:
   m_ObjectHideFlags: 0
@@ -7833,6 +7838,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &162252936
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -9681,6 +9687,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &221550786
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -10774,6 +10781,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1 &241768670
 GameObject:
   m_ObjectHideFlags: 0
@@ -12291,6 +12299,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!224 &324937119 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7780213861218700707, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -13140,6 +13149,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &327460117
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -14388,6 +14398,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &369664182
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -15329,6 +15340,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1 &387083159
 GameObject:
   m_ObjectHideFlags: 0
@@ -16152,6 +16164,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1 &394233606
 GameObject:
   m_ObjectHideFlags: 0
@@ -16997,6 +17010,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &404767728
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -17079,8 +17093,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 117.05, y: -101.27}
-  m_SizeDelta: {x: 98.9621, y: 90.9404}
+  m_AnchoredPosition: {x: 6.0374, y: -3.6859}
+  m_SizeDelta: {x: 2.7603, y: 2.7189}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &407321344
 MonoBehaviour:
@@ -17960,6 +17974,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &413228685
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -18792,6 +18807,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &422209859
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -19595,6 +19611,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1 &436575940
 GameObject:
   m_ObjectHideFlags: 0
@@ -20435,6 +20452,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &437691606
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -21528,6 +21546,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1 &446218470
 GameObject:
   m_ObjectHideFlags: 0
@@ -23030,6 +23049,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1 &482816135
 GameObject:
   m_ObjectHideFlags: 0
@@ -24753,6 +24773,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &521585664
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -26070,10 +26091,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 913018291}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.0745, y: -0.00009536743}
+  m_SizeDelta: {x: 1.3065, y: 0.0006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &588663075
 MonoBehaviour:
@@ -26122,8 +26143,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 67
-  m_fontSizeBase: 67
+  m_fontSize: 2
+  m_fontSizeBase: 2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -27067,6 +27088,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!224 &595851186 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7780213861218700707, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -27117,8 +27139,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.6255, y: 225}
-  m_SizeDelta: {x: 300.2733, y: 100}
+  m_AnchoredPosition: {x: -0.0239, y: 9.282504}
+  m_SizeDelta: {x: 13.9482, y: 2.893}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &603521316
 MonoBehaviour:
@@ -27902,6 +27924,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1 &608664297
 GameObject:
   m_ObjectHideFlags: 0
@@ -28162,8 +28185,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -99.2, y: -104.96163}
-  m_SizeDelta: {x: 109.2558, y: 97.5552}
+  m_AnchoredPosition: {x: -4.62, y: -3.7}
+  m_SizeDelta: {x: 3.2162, y: 3.0808}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &621663126
 MonoBehaviour:
@@ -28947,6 +28970,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!224 &628577328 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7780213861218700707, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -30078,10 +30102,10 @@ RectTransform:
   - {fileID: 971387568}
   m_Father: {fileID: 1771221701}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.001152, y: 0.001008}
-  m_SizeDelta: {x: 419.09, y: 648.05}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.0011444092, y: 0.0010070801}
+  m_SizeDelta: {x: -0.0014038086, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &692098578
 MonoBehaviour:
@@ -30997,6 +31021,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &696725877
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -31813,6 +31838,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &697075517
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -31900,8 +31926,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 113.7, y: -241.4}
-  m_SizeDelta: {x: 105.66, y: 99.998}
+  m_AnchoredPosition: {x: 6.1689, y: -10.07}
+  m_SizeDelta: {x: 3.0232, y: 3.0179}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &707332302
 MonoBehaviour:
@@ -32796,6 +32822,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1 &714981811
 GameObject:
   m_ObjectHideFlags: 0
@@ -33726,6 +33753,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1 &720133718
 GameObject:
   m_ObjectHideFlags: 0
@@ -34874,6 +34902,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &736103385
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -36001,6 +36030,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1 &769869591
 GameObject:
   m_ObjectHideFlags: 0
@@ -36832,6 +36862,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1 &781658993
 GameObject:
   m_ObjectHideFlags: 0
@@ -37679,6 +37710,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1 &783239505
 GameObject:
   m_ObjectHideFlags: 0
@@ -37796,10 +37828,10 @@ RectTransform:
   - {fileID: 1659822298}
   m_Father: {fileID: 1685708410}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.1434, y: 1.1386}
-  m_SizeDelta: {x: 376.9933, y: 608.9059}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.13689995, y: -0.040800095}
+  m_SizeDelta: {x: -1.9847, y: -1.6609}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &790837628
 MonoBehaviour:
@@ -39091,6 +39123,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1 &819229741
 GameObject:
   m_ObjectHideFlags: 0
@@ -40187,6 +40220,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1 &864317901
 GameObject:
   m_ObjectHideFlags: 0
@@ -41076,6 +41110,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1 &876342424
 GameObject:
   m_ObjectHideFlags: 0
@@ -42006,6 +42041,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1 &881200540
 GameObject:
   m_ObjectHideFlags: 0
@@ -42224,10 +42260,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1580188771}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00067902, y: 0}
-  m_SizeDelta: {x: 300.27, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.00040006638, y: 0}
+  m_SizeDelta: {x: 1.0803, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &885250391
 MonoBehaviour:
@@ -42276,8 +42312,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 2
+  m_fontSizeBase: 2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -43197,6 +43233,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &887216699
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -43614,8 +43651,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.3911, y: 70.37}
-  m_SizeDelta: {x: 268.2922, y: 209.26}
+  m_AnchoredPosition: {x: 0.3474, y: 2.8079}
+  m_SizeDelta: {x: 12.3872, y: 8.1607}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &901117088
 MonoBehaviour:
@@ -44420,6 +44457,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &903307105
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -44688,8 +44726,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 115.2, y: -100.56509}
-  m_SizeDelta: {x: 98.7902, y: 88.7624}
+  m_AnchoredPosition: {x: 5.04, y: -3.7}
+  m_SizeDelta: {x: 3.2162, y: 3.0808}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &913018292
 MonoBehaviour:
@@ -45494,6 +45532,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &915578736
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -46355,10 +46394,10 @@ RectTransform:
   - {fileID: 901117087}
   m_Father: {fileID: 692098577}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0178, y: 2.0546}
-  m_SizeDelta: {x: 375.8388, y: 609.6271}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.07919979, y: 0.029999733}
+  m_SizeDelta: {x: -1.497, y: -1.2502}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &971387569
 MonoBehaviour:
@@ -47635,6 +47674,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!224 &996430261 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7780213861218700707, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -48476,6 +48516,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1 &1010079766
 GameObject:
   m_ObjectHideFlags: 0
@@ -49824,6 +49865,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &1033557562
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -50615,6 +50657,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1 &1035907964
 GameObject:
   m_ObjectHideFlags: 0
@@ -52734,8 +52777,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 116.1, y: -239.90143}
-  m_SizeDelta: {x: 104.9871, y: 101.0026}
+  m_AnchoredPosition: {x: 5.04, y: -8.85}
+  m_SizeDelta: {x: 3.2163, y: 3.0808}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1171326530
 MonoBehaviour:
@@ -53594,6 +53637,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!224 &1174683860 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7780213861218700707, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -54364,6 +54408,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &1174721819
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -55290,10 +55335,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1171326529}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.000038146973, y: -0.000045776367}
+  m_SizeDelta: {x: -0.00039672852, y: -0.0004043579}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1214439073
 MonoBehaviour:
@@ -55342,8 +55387,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 67
-  m_fontSizeBase: 67
+  m_fontSize: 2
+  m_fontSizeBase: 2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -56161,6 +56206,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &1214885554
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -57951,6 +57997,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &1275417427
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -59174,6 +59221,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1 &1306628627
 GameObject:
   m_ObjectHideFlags: 0
@@ -59411,6 +59459,7 @@ GameObject:
   - component: {fileID: 1314568915}
   - component: {fileID: 1314568917}
   - component: {fileID: 1314568916}
+  - component: {fileID: 1314568918}
   m_Layer: 5
   m_Name: P2PopUpCard
   m_TagString: Untagged
@@ -59435,8 +59484,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1395, y: 43.524994}
-  m_SizeDelta: {x: 419.0914, y: 648.05}
+  m_AnchoredPosition: {x: 1403.6, y: 37.8}
+  m_SizeDelta: {x: 18.0831, y: 23.8954}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1314568916
 MonoBehaviour:
@@ -59476,6 +59525,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1314568914}
   m_CullTransparentMesh: 1
+--- !u!95 &1314568918
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314568914}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e7cca2d810d408a4e92d655e5fa24880, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1322447471 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8264469810296139573, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -59801,6 +59871,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &1322447476
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -60667,6 +60738,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1001 &1330623454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61411,6 +61483,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1 &1331238736
 GameObject:
   m_ObjectHideFlags: 0
@@ -63034,6 +63107,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &1365877952
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -64684,6 +64758,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!114 &1402345917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65635,6 +65710,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1001 &1433556468
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66420,6 +66496,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &1433556482
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -67361,6 +67438,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1 &1445981845
 GameObject:
   m_ObjectHideFlags: 0
@@ -68642,6 +68720,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &1477093894
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -69508,6 +69587,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!224 &1479817232 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7780213861218700707, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -70817,6 +70897,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1001 &1518532923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71561,6 +71642,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1 &1524915147
 GameObject:
   m_ObjectHideFlags: 0
@@ -72463,6 +72545,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &1527229171
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -73320,6 +73403,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &1529615366
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -74111,6 +74195,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1 &1542940142
 GameObject:
   m_ObjectHideFlags: 0
@@ -75026,6 +75111,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &1554088472
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -75456,6 +75542,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &1559227098
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -75843,8 +75930,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.6255, y: 225}
-  m_SizeDelta: {x: 300.2733, y: 100}
+  m_AnchoredPosition: {x: 0.0868, y: 8.1836}
+  m_SizeDelta: {x: 12.2166, y: 2.8165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1580188772
 MonoBehaviour:
@@ -76858,6 +76945,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1 &1598250313
 GameObject:
   m_ObjectHideFlags: 0
@@ -77738,8 +77826,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -98.13002, y: -105.8}
-  m_SizeDelta: {x: 109.2642, y: 100}
+  m_AnchoredPosition: {x: -5.6179, y: -3.6083}
+  m_SizeDelta: {x: 2.7602, y: 2.874}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1629365528
 MonoBehaviour:
@@ -78149,8 +78237,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8, y: 70.51227}
-  m_SizeDelta: {x: 262.8108, y: 206.9755}
+  m_AnchoredPosition: {x: 0.32, y: 2.4}
+  m_SizeDelta: {x: 11.0821, y: 7.4558}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1659822299
 MonoBehaviour:
@@ -79046,6 +79134,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1 &1670852235
 GameObject:
   m_ObjectHideFlags: 0
@@ -79512,10 +79601,10 @@ RectTransform:
   - {fileID: 790837627}
   m_Father: {fileID: 1314568915}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0011215, y: 0.001008}
-  m_SizeDelta: {x: 419.09, y: 648.05}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.0011138916, y: 0.0010070801}
+  m_SizeDelta: {x: -0.0014038086, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1685708411
 MonoBehaviour:
@@ -80661,6 +80750,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1 &1721011903
 GameObject:
   m_ObjectHideFlags: 0
@@ -81623,6 +81713,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &1744196529
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -81813,10 +81904,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 621663125}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.00065231323, y: -0.000032424927}
+  m_SizeDelta: {x: -0.0016975403, y: 0.00030136108}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1755524040
 MonoBehaviour:
@@ -81865,8 +81956,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 67
-  m_fontSizeBase: 67
+  m_fontSize: 3
+  m_fontSizeBase: 3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -82076,6 +82167,7 @@ GameObject:
   - component: {fileID: 1771221701}
   - component: {fileID: 1771221703}
   - component: {fileID: 1771221702}
+  - component: {fileID: 1771221704}
   m_Layer: 5
   m_Name: PopUpCard
   m_TagString: Untagged
@@ -82100,8 +82192,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1317.7756, y: 43.524994}
-  m_SizeDelta: {x: 419.0914, y: 648.05}
+  m_AnchoredPosition: {x: -1311.1594, y: 43.8}
+  m_SizeDelta: {x: 18.7822, y: 26.2664}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1771221702
 MonoBehaviour:
@@ -82141,6 +82233,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1771221700}
   m_CullTransparentMesh: 1
+--- !u!95 &1771221704
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771221700}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b4976e6dd267afc48b6fe5f012b3a7fa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!224 &1774909519 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7780213861218700707, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -83285,6 +83398,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1 &1828797674
 GameObject:
   m_ObjectHideFlags: 0
@@ -84275,6 +84389,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!224 &1865051894 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7780213861218700707, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -85311,6 +85426,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &1896393044
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -86888,6 +87004,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &1944174847
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -87027,6 +87144,7 @@ MonoBehaviour:
   defenseText: {fileID: 864317903}
   healthText: {fileID: 965339064}
   outerBorder: {fileID: 1133571860}
+  crdImg: {fileID: 0}
   health: 100
   isSelected: 0
   tagToSearch: Player1
@@ -87035,6 +87153,14 @@ MonoBehaviour:
   SHealth: 0
   gm: {fileID: 552501282}
   shuffler: {fileID: 1954436664}
+  PopUpCardP2: {fileID: 1314568914}
+  pop2NameTxt: {fileID: 885250391}
+  pop2AttackTxt: {fileID: 1755524040}
+  pop2HealthTxt: {fileID: 588663075}
+  pop2EnergyTxt: {fileID: 1214439073}
+  pop2CardImg: {fileID: 1659822299}
+  popOuterBdr: {fileID: 0}
+  popupAnim: {fileID: 1314568918}
 --- !u!224 &1951906093 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7780213861218700707, guid: 34cae7e96244b474da5f17df54197ba4, type: 3}
@@ -88127,6 +88253,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &1974909842
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -89093,6 +89220,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &1979539352
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -89549,14 +89677,21 @@ MonoBehaviour:
   defenseText: {fileID: 1508059451}
   healthText: {fileID: 1524915149}
   outerBorder: {fileID: 1964593671}
+  crdImg: {fileID: 0}
   health: 100
   isSelected: 0
-  tagToSearch: Player1
   dice1: {fileID: 2029075385}
   dice2: {fileID: 2039420420}
   SHealth: 0
   gm: {fileID: 552501282}
   shuffler: {fileID: 1276202206}
+  PopUpCardP1: {fileID: 1771221700}
+  popNameTxt: {fileID: 38296417}
+  popAttackTxt: {fileID: 59978434}
+  popHealthTxt: {fileID: 38547247}
+  popEnergyTxt: {fileID: 2112672884}
+  popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!1 &2023128029
 GameObject:
   m_ObjectHideFlags: 0
@@ -90433,6 +90568,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &2024895048
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -92261,6 +92397,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &2045142965
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -93151,6 +93288,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &2059892644
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -94154,10 +94292,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 707332301}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -0.00028800964, y: 0.0000019073486}
+  m_SizeDelta: {x: -0.0001, y: -0.000026703}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2112672884
 MonoBehaviour:
@@ -94206,8 +94344,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 67
-  m_fontSizeBase: 67
+  m_fontSize: 3
+  m_fontSizeBase: 3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -95481,6 +95619,7 @@ MonoBehaviour:
   pop2EnergyTxt: {fileID: 1214439073}
   pop2CardImg: {fileID: 1659822299}
   popOuterBdr: {fileID: 0}
+  popupanim2: {fileID: 1314568918}
 --- !u!1 &2133582610
 GameObject:
   m_ObjectHideFlags: 0
@@ -96420,6 +96559,7 @@ MonoBehaviour:
   popHealthTxt: {fileID: 38547247}
   popEnergyTxt: {fileID: 2112672884}
   popCardImg: {fileID: 901117088}
+  popupAnim: {fileID: 1771221704}
 --- !u!225 &206386808268493637
 CanvasGroup:
   m_ObjectHideFlags: 0

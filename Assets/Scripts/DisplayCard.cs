@@ -57,6 +57,8 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     public Image popCardImg;
     UnityEngine.UI.Image popOuterBdr;
 
+    public Animator popupAnim;
+
 
     // Start is called before the first frame update
     void Start()
@@ -259,7 +261,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                 popHealthTxt.text = healthText.text;
                 popCardImg.sprite = crdImage.sprite;
                 popOuterBdr.color = Color.yellow;
-
+                popupAnim.SetBool("Select",true);
                 outerBorder.color = Color.white;
 
                 foreach (GameObject p2 in player2)
@@ -294,7 +296,9 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             if (!isSelected)
             {
                 outerBorder.color = Color.black;
-                PopUpCardP1.SetActive(false);
+                popupAnim.SetBool("Select",false);
+                StartCoroutine(PopUpActiveFalse(0.6f));
+                //PopUpCardP1.SetActive(false); //HERE
 
                 // DisplayCard2.dice1.enabled = false;
                 // Reset the orthographic camera's size when the card is deselected
@@ -384,6 +388,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                     popHealthTxt.text = healthText.text;
                     popCardImg.sprite = crdImage.sprite;
                     popOuterBdr.color = Color.red;
+                    popupAnim.SetBool("Select",true);
                 }
 
                 foreach (GameObject displayCardObject in player2)
@@ -409,7 +414,9 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             }
             if (!isSelected)
             {
-                PopUpCardP1.SetActive(false);
+                //  PopUpCardP1.SetActive(false);
+                popupAnim.SetBool("Select",false);
+                StartCoroutine(PopUpActiveFalse(0.6f));
 
                 foreach (GameObject displayCardObject in player2)
                 {
@@ -465,5 +472,11 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     public void OnPointerExit(PointerEventData eventData)
     {
         
+    }
+
+    IEnumerator PopUpActiveFalse(float delay) 
+    {
+        yield return new WaitForSeconds(delay);
+        PopUpCardP1.SetActive(false);
     }
 }

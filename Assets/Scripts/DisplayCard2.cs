@@ -57,6 +57,8 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     public Image pop2CardImg;
     public UnityEngine.UI.Image popOuterBdr;
 
+    public Animator popupanim2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -263,6 +265,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                 pop2HealthTxt.text = healthText.text;
                 pop2CardImg.sprite = crdImage.sprite;
                 popOuterBdr.color = Color.yellow;
+                popupanim2.SetBool("Select",true);
 
                 outerBorder.color = Color.white;
 
@@ -294,7 +297,9 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             }
             if (!isSelected)
             {
-                PopUpCardP2.SetActive(false);
+                // PopUpCardP2.SetActive(false);
+                popupanim2.SetBool("Select",false);
+                StartCoroutine(PopUpActiveFalse(0.6f));
                 outerBorder.color = Color.yellow;
 
                 foreach (GameObject p1 in player1)
@@ -385,6 +390,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                     pop2HealthTxt.text = healthText.text;
                     pop2CardImg.sprite = crdImage.sprite;
                     popOuterBdr.color = Color.red;
+                    popupanim2.SetBool("Select",true);
                 }
 
                 foreach (GameObject displayCardObject in player1)
@@ -412,7 +418,10 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             }
             if (!isSelected)
             {
-                PopUpCardP2.SetActive(false);
+                // PopUpCardP2.SetActive(false);
+                popupanim2.SetBool("Select",false);
+                StartCoroutine(PopUpActiveFalse(0.6f));
+
                 foreach (GameObject displayCardObject in player1)
                 {
                     DisplayCard dp = displayCardObject.GetComponent<DisplayCard>();
@@ -452,6 +461,12 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     public void SetSelected(bool select) 
     {
         isSelected = select;
+    }
+
+    IEnumerator PopUpActiveFalse(float delay) 
+    {
+        yield return new WaitForSeconds(delay);
+        PopUpCardP2.SetActive(false);
     }
 
 }

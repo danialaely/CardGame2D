@@ -40,6 +40,9 @@ public class ShP1Card : MonoBehaviour, IPointerClickHandler
     public TMP_Text popEnergyTxt;
     public Image popCardImg;
     UnityEngine.UI.Image popOuterBdr;
+
+    public Animator popupAnim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -87,22 +90,23 @@ public class ShP1Card : MonoBehaviour, IPointerClickHandler
                     {
                         if (gm.currentPhase == GamePhase.Attack) 
                         {
-                        outerBorder.color = Color.red;
-                        Debug.Log("Player2 Card's Attack:" + dp.GetCardAttack());
-                        dice1.enabled = true;
-                        dice2.enabled = true;
+                            outerBorder.color = Color.red;
+                            Debug.Log("Player2 Card's Attack:" + dp.GetCardAttack());
+                            dice1.enabled = true;
+                            dice2.enabled = true;
+                            
+                            shuffler.AttackSound();
+                            PopUpCardP1.SetActive(true);
+                            popNameTxt.text = "StrongHold";
+                            popHealthTxt.text = healthText.text;
+                            popCardImg.sprite = crdImg.sprite;
+                            popOuterBdr.color = Color.red;
+                            popupAnim.SetBool("Select", true);
 
-                        shuffler.AttackSound();
-                        PopUpCardP1.SetActive(true);
-                        popNameTxt.text = "StrongHold";
-                        popHealthTxt.text = healthText.text;
-                        popCardImg.sprite = crdImg.sprite;
-                        popOuterBdr.color = Color.red;
+                            P1Power = this.GetCardDefense();
+                            P2Power = dp.GetCardAttack();
 
-                        P1Power = this.GetCardDefense();
-                        P2Power = dp.GetCardAttack();
-
-                        SHealth = this.GetCardHealth();
+                            SHealth = this.GetCardHealth();
                         }
                         /*  if (this.GetCardAttack() < dp.GetCardAttack()) 
                           {
@@ -117,7 +121,10 @@ public class ShP1Card : MonoBehaviour, IPointerClickHandler
 
             if (!isSelected)
             {
-                PopUpCardP1.SetActive(false);
+                // PopUpCardP1.SetActive(false);
+                popupAnim.SetBool("Select",false);
+                StartCoroutine(popupActiveFalse(0.6f));
+
                 foreach (GameObject displayCardObject in player2)
                 {
                     DisplayCard2 dp = displayCardObject.GetComponent<DisplayCard2>();
@@ -160,6 +167,12 @@ public class ShP1Card : MonoBehaviour, IPointerClickHandler
     public void SetSelection(bool select) 
     {
         isSelected = select;
+    }
+
+    IEnumerator popupActiveFalse(float delay) 
+    {
+        yield return new WaitForSeconds(delay);
+        PopUpCardP1.SetActive(false);
     }
 
 }
