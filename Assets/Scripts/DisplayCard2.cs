@@ -258,7 +258,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             isSelected = !isSelected;
             if (isSelected)
             {
-                PopUpCardP2.SetActive(true);
+              //  PopUpCardP2.SetActive(true);
                 pop2NameTxt.text = nameText.text;
                 pop2AttackTxt.text = attackText.text;
                 pop2EnergyTxt.text = energyText.text;
@@ -299,7 +299,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             {
                 // PopUpCardP2.SetActive(false);
                 popupanim2.SetBool("Select",false);
-                StartCoroutine(PopUpActiveFalse(0.6f));
+               // StartCoroutine(PopUpActiveFalse(0.6f));
                 outerBorder.color = Color.yellow;
 
                 foreach (GameObject p1 in player1)
@@ -383,7 +383,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             {
                 if (gm.currentPhase == GamePhase.Attack)
                 {
-                    PopUpCardP2.SetActive(true);
+                  //  PopUpCardP2.SetActive(true);
                     pop2NameTxt.text = nameText.text;
                     pop2AttackTxt.text = attackText.text;
                     pop2EnergyTxt.text = energyText.text;
@@ -420,7 +420,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             {
                 // PopUpCardP2.SetActive(false);
                 popupanim2.SetBool("Select",false);
-                StartCoroutine(PopUpActiveFalse(0.6f));
+               // StartCoroutine(PopUpActiveFalse(0.6f));
 
                 foreach (GameObject displayCardObject in player1)
                 {

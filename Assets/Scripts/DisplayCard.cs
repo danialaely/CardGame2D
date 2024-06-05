@@ -254,7 +254,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             isSelected = !isSelected;
             if (isSelected)
             {
-                PopUpCardP1.SetActive(true);
+                //PopUpCardP1.SetActive(true);
                 popNameTxt.text = nameText.text;
                 popAttackTxt.text = attackText.text;
                 popEnergyTxt.text = energyText.text;
@@ -297,7 +297,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             {
                 outerBorder.color = Color.black;
                 popupAnim.SetBool("Select",false);
-                StartCoroutine(PopUpActiveFalse(0.6f));
+              //  StartCoroutine(PopUpActiveFalse(0.6f));
                 //PopUpCardP1.SetActive(false); //HERE
 
                 // DisplayCard2.dice1.enabled = false;
@@ -381,7 +381,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             {
                 if (gm.currentPhase == GamePhase.Attack) 
                 {
-                    PopUpCardP1.SetActive(true);
+                   // PopUpCardP1.SetActive(true);
                     popNameTxt.text = nameText.text;
                     popAttackTxt.text = attackText.text;
                     popEnergyTxt.text = energyText.text;
@@ -416,7 +416,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             {
                 //  PopUpCardP1.SetActive(false);
                 popupAnim.SetBool("Select",false);
-                StartCoroutine(PopUpActiveFalse(0.6f));
+              //  StartCoroutine(PopUpActiveFalse(0.6f));
 
                 foreach (GameObject displayCardObject in player2)
                 {
