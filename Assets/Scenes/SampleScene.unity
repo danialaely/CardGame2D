@@ -2178,6 +2178,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &103581799
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3016,6 +3017,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &110413691
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -4385,6 +4387,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &126919881
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -5614,6 +5617,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &137169813
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -7803,6 +7807,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &162252936
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -9786,6 +9791,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &221550786
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -13248,6 +13254,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &327460117
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -14573,6 +14580,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &369664182
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -17319,6 +17327,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &404767728
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -18207,6 +18216,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &413228685
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -19040,6 +19050,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &422209859
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -20685,6 +20696,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &437691606
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -25006,6 +25018,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &521585664
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -30968,6 +30981,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &696725877
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -31785,6 +31799,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &697075517
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -34849,6 +34864,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &736103385
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -43042,6 +43058,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &887216699
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -44191,6 +44208,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &903307105
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -45190,6 +45208,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &915578736
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -49443,6 +49462,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &1033557562
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -54044,6 +54064,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &1174721819
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -55708,6 +55729,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &1214885554
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -57633,6 +57655,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &1275417427
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -59525,6 +59548,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &1322447476
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -62916,6 +62940,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &1365877952
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -66381,6 +66406,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &1433556482
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -68605,6 +68631,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &1477093894
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -72430,6 +72457,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &1527229171
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -73288,6 +73316,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &1529615366
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -74996,6 +75025,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &1554088472
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -75427,6 +75457,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &1559227098
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -81371,6 +81402,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &1744196529
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -84852,6 +84884,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &1896393044
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -86791,6 +86824,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &1944174847
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -88156,6 +88190,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &1974909842
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -89123,6 +89158,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &1979539352
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -90471,6 +90507,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &2024895048
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -92300,6 +92337,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &2045142965
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -93191,6 +93229,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &2059892644
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -96596,6 +96635,7 @@ MonoBehaviour:
   popEnergyTxt: {fileID: 398156304}
   popCardImg: {fileID: 1342908919}
   popupAnim: {fileID: 1318995884}
+  boardSlot: {fileID: 1614685318}
 --- !u!225 &206386808268493637
 CanvasGroup:
   m_ObjectHideFlags: 0

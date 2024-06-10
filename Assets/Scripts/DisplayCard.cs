@@ -59,7 +59,6 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public Animator popupAnim;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -67,7 +66,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         UpdateCardInformation();
 
         player2 = GameObject.FindGameObjectsWithTag(tagToSearch);
-
+        
 
         // Populate allDisplayCards with all instances of DisplayCard
         allDisplayCards = new List<DisplayCard>(FindObjectsOfType<DisplayCard>());
@@ -81,9 +80,10 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
         Discard = false;
         canMove = true;
-    }
 
-    public IEnumerator CanMoveNow(float delay) 
+        
+    }
+        public IEnumerator CanMoveNow(float delay) 
     {
         yield return new WaitForSeconds(delay);
         canMove = true;
@@ -122,24 +122,30 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
         foreach (BoardSlot bslot in BoSlots)
         {
-            for (int i = 0; i < bslot.transform.parent.childCount; i++)
-            {
-                if (gm.currentPhase == GamePhase.Play && this.transform.parent.name == "Hand")
+            //  bslot.UpdatePreviousCardsList();
+            bslot.UpdateMovementPhaseList();
+            //PLAY HIGHLIGHT
+            if (gm.currentPhase == GamePhase.Play && this.transform.parent.name == "Hand")
+            { 
+                if (bslot.PreviouslyPlacedAvailable().Contains(bslot.transform))
                 {
-                    if ((i + 13 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 13).childCount > 0 && bslot.transform.parent.GetChild(i + 13).GetChild(0).name == "SHCardP1") ||
-                    (i + 14 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 14).childCount > 0 && bslot.transform.parent.GetChild(i + 14).GetChild(0).name == "SHCardP1") ||
-                    (i + 15 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 15).childCount > 0 && bslot.transform.parent.GetChild(i + 15).GetChild(0).name == "SHCardP1") ||
-                    (i + 1 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 1).childCount > 0 && bslot.transform.parent.GetChild(i + 1).GetChild(0).name == "SHCardP1") ||
-                    (i - 13 >= 0 && bslot.transform.parent.GetChild(i - 13).childCount > 0 && bslot.transform.parent.GetChild(i - 13).GetChild(0).name == "SHCardP1") ||
-                    (i - 14 >= 0 && bslot.transform.parent.GetChild(i - 14).childCount > 0 && bslot.transform.parent.GetChild(i - 14).GetChild(0).name == "SHCardP1") ||
-                    (i - 15 >= 0 && bslot.transform.parent.GetChild(i - 15).childCount > 0 && bslot.transform.parent.GetChild(i - 15).GetChild(0).name == "SHCardP1") ||
-                    (i - 1 >= 0 && bslot.transform.parent.GetChild(i - 1).childCount > 0 && bslot.transform.parent.GetChild(i - 1).GetChild(0).name == "SHCardP1"))
-                    {
-                        Transform slot = bslot.transform.parent.GetChild(i);
-                        slot.GetComponent<Image>().color = Color.green;
-                    }
+                    // Highlight the slot
+                    bslot.GetComponent<Image>().color = Color.green;
                 }
+            }
 
+            if (gm.currentPhase == GamePhase.Move && this.transform.parent.tag == "BSlot")
+            {
+                if (bslot.MovementAvailable().Contains(bslot.transform))
+                {
+                    // Highlight the slot
+                    bslot.GetComponent<Image>().color = Color.green;
+                }
+            }
+
+                for (int i = 0; i < bslot.transform.parent.childCount; i++)
+            {
+                //MOVE HIGHLIGHT
                 if (gm.currentPhase == GamePhase.Move && this.transform.parent.tag == "BSlot")
                 {    //(i >= 84) ||
                     if ((i + 13 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 13).childCount > 0 && bslot.transform.parent.GetChild(i + 13).GetChild(0).tag == "Player1") ||
@@ -151,8 +157,8 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                     (i - 15 >= 0 && bslot.transform.parent.GetChild(i - 15).childCount > 0 && bslot.transform.parent.GetChild(i - 15).GetChild(0).tag == "Player1") ||
                     (i - 1 >= 0 && bslot.transform.parent.GetChild(i - 1).childCount > 0 && bslot.transform.parent.GetChild(i - 1).GetChild(0).tag == "Player1"))
                     {
-                    Transform slot = bslot.transform.parent.GetChild(i);
-                    slot.GetComponent<Image>().color = Color.green;
+                   // Transform slot = bslot.transform.parent.GetChild(i);
+                   // slot.GetComponent<Image>().color = Color.green;
                     }
                 }
             }
