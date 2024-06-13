@@ -474,14 +474,7 @@ public class BoardSlot : MonoBehaviour, IDropHandler
 
                         if (cardd.transform.parent.name == "Hand2" && gmmm.currentPhase == GamePhase.Play)
                         {
-                            if ((transform.parent.GetChild(rowIndex - 1).childCount > 0 && transform.parent.GetChild(rowIndex - 1).GetChild(0).name == "SHCardP2") ||
-                            (transform.parent.GetChild(rowIndex - 13).childCount > 0 && transform.parent.GetChild(rowIndex - 13).GetChild(0).name == "SHCardP2") ||
-                            (transform.parent.GetChild(rowIndex - 14).childCount > 0 && transform.parent.GetChild(rowIndex - 14).GetChild(0).name == "SHCardP2") ||
-                            (transform.parent.GetChild(rowIndex - 15).childCount > 0 && transform.parent.GetChild(rowIndex - 15).GetChild(0).name == "SHCardP2") ||
-                            (transform.parent.GetChild(rowIndex + 1).childCount > 0 && transform.parent.GetChild(rowIndex + 1).GetChild(0).name == "SHCardP2") ||
-                            (transform.parent.GetChild(rowIndex + 13).childCount > 0 && transform.parent.GetChild(rowIndex + 13).GetChild(0).name == "SHCardP2") ||
-                            (transform.parent.GetChild(rowIndex + 14).childCount > 0 && transform.parent.GetChild(rowIndex + 14).GetChild(0).name == "SHCardP2") ||
-                            (transform.parent.GetChild(rowIndex + 15).childCount > 0 && transform.parent.GetChild(rowIndex + 15).GetChild(0).name == "SHCardP2"))
+                            if (PreviouslyPlacedAvailableP2().Contains(transform))
                             {
 
                                 currentEnergyP2 -= carddEnergy;
@@ -581,18 +574,10 @@ public class BoardSlot : MonoBehaviour, IDropHandler
 
                         if (cardd.transform.parent.tag == "BSlot" && gmmm.currentPhase == GamePhase.Move  && cardd.canMove)
                         {
-                            if ( //(rowIndex >= 0 && rowIndex < maxRowIndex) ||
-                            (transform.parent.GetChild(rowIndex - 1).childCount > 0 && transform.parent.GetChild(rowIndex - 1).GetChild(0).tag == "Player2") ||
-                            (transform.parent.GetChild(rowIndex - 13).childCount > 0 && transform.parent.GetChild(rowIndex - 13).GetChild(0).tag == "Player2") ||
-                            (transform.parent.GetChild(rowIndex - 14).childCount > 0 && transform.parent.GetChild(rowIndex - 14).GetChild(0).tag == "Player2") ||
-                            (transform.parent.GetChild(rowIndex - 15).childCount > 0 && transform.parent.GetChild(rowIndex - 15).GetChild(0).tag == "Player2") ||
-                            (transform.parent.GetChild(rowIndex + 1).childCount > 0 && transform.parent.GetChild(rowIndex + 1).GetChild(0).tag == "Player2") ||
-                            (transform.parent.GetChild(rowIndex + 13).childCount > 0 && transform.parent.GetChild(rowIndex + 13).GetChild(0).tag == "Player2") ||
-                            (transform.parent.GetChild(rowIndex + 14).childCount > 0 && transform.parent.GetChild(rowIndex + 14).GetChild(0).tag == "Player2") ||
-                            (transform.parent.GetChild(rowIndex + 15).childCount > 0 && transform.parent.GetChild(rowIndex + 15).GetChild(0).tag == "Player2"))
-                            {
+                            if (cardd.AdjacentBSlotsAvailable().Contains(transform))
+                            { 
                                 cardd.canMove = false;
-                                StartCoroutine(cardd.CanMoveNow(10f));
+                                StartCoroutine(cardd.CanMoveNow(20f));
                                 //currentEnergyP2 -= carddEnergy;
                                 currentEnergyP2 -= 1;
                                 energyTextP2.text = currentEnergyP2.ToString();

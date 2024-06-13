@@ -64,8 +64,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     GameObject[] player1;
 
     public List<Transform> MoveBoardSlots = new List<Transform>();
-    public string boardTag = "BSlot";
-
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -204,26 +203,6 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                             MoveBoardSlots.Add(bslot.transform);
                             processedSlots.Add(bslot.transform);
                         }
-                    }
-                }
-            }
-
-                for (int i = 0; i < bslot.transform.parent.childCount; i++)
-            {
-                //MOVE HIGHLIGHT
-                if (gm.currentPhase == GamePhase.Move && this.transform.parent.tag == "BSlot")
-                {    //(i >= 84) ||
-                    if ((i + 13 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 13).childCount > 0 && bslot.transform.parent.GetChild(i + 13).GetChild(0).tag == "Player1") ||
-                    (i + 14 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 14).childCount > 0 && bslot.transform.parent.GetChild(i + 14).GetChild(0).tag == "Player1") ||
-                    (i + 15 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 15).childCount > 0 && bslot.transform.parent.GetChild(i + 15).GetChild(0).tag == "Player1") ||
-                    (i + 1 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 1).childCount > 0 && bslot.transform.parent.GetChild(i + 1).GetChild(0).tag == "Player1") ||
-                    (i - 13 >= 0 && bslot.transform.parent.GetChild(i - 13).childCount > 0 && bslot.transform.parent.GetChild(i - 13).GetChild(0).tag == "Player1") ||
-                    (i - 14 >= 0 && bslot.transform.parent.GetChild(i - 14).childCount > 0 && bslot.transform.parent.GetChild(i - 14).GetChild(0).tag == "Player1") ||
-                    (i - 15 >= 0 && bslot.transform.parent.GetChild(i - 15).childCount > 0 && bslot.transform.parent.GetChild(i - 15).GetChild(0).tag == "Player1") ||
-                    (i - 1 >= 0 && bslot.transform.parent.GetChild(i - 1).childCount > 0 && bslot.transform.parent.GetChild(i - 1).GetChild(0).tag == "Player1"))
-                    {
-                   // Transform slot = bslot.transform.parent.GetChild(i);
-                   // slot.GetComponent<Image>().color = Color.green;
                     }
                 }
             }

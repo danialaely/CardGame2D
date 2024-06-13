@@ -60,12 +60,11 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     public Animator popupanim2;
 
     public List<GameObject> movementAdjacentCards = new List<GameObject>();
-    public string Movtag = "Player1";
+    private string Movtag = "Player2";
     GameObject[] player2;
 
     public List<Transform> MoveBoardSlots = new List<Transform>();
-    public string boardTag = "BSlot";
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -73,6 +72,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         UpdateCardInformation();
 
         player1 = GameObject.FindGameObjectsWithTag(tagToSearch);
+        player2 = GameObject.FindGameObjectsWithTag(Movtag);
 
         // Populate allDisplayCards with all instances of DisplayCard
         allDisplayCards = new List<DisplayCard2>(FindObjectsOfType<DisplayCard2>());
@@ -86,6 +86,11 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
         DisCard = false;
         canMove = true;
+    }
+
+    public List<Transform> AdjacentBSlotsAvailable()
+    {
+        return MoveBoardSlots;
     }
 
     public IEnumerator CanMoveNow(float delay)
@@ -127,40 +132,79 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
         foreach (BoardSlot bslot in BoSlots)
         {
-            for (int i = 0; i < bslot.transform.parent.childCount; i++)
-            {
-                if (gm.currentPhase == GamePhase.Play && this.transform.parent.name == "Hand2") 
+            if (gm.currentPhase == GamePhase.Play && this.transform.parent.name == "Hand2") 
                 {
-                    if ((i + 13 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 13).childCount > 0 && bslot.transform.parent.GetChild(i + 13).GetChild(0).name == "SHCardP2") ||
-                    (i + 14 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 14).childCount > 0 && bslot.transform.parent.GetChild(i + 14).GetChild(0).name == "SHCardP2") ||
-                    (i + 15 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 15).childCount > 0 && bslot.transform.parent.GetChild(i + 15).GetChild(0).name == "SHCardP2") ||
-                    (i + 1 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 1).childCount > 0 && bslot.transform.parent.GetChild(i + 1).GetChild(0).name == "SHCardP2") ||
-                    (i - 13 >= 0 && bslot.transform.parent.GetChild(i - 13).childCount > 0 && bslot.transform.parent.GetChild(i - 13).GetChild(0).name == "SHCardP2") ||
-                    (i - 14 >= 0 && bslot.transform.parent.GetChild(i - 14).childCount > 0 && bslot.transform.parent.GetChild(i - 14).GetChild(0).name == "SHCardP2") ||
-                    (i - 15 >= 0 && bslot.transform.parent.GetChild(i - 15).childCount > 0 && bslot.transform.parent.GetChild(i - 15).GetChild(0).name == "SHCardP2") ||
-                    (i - 1 >= 0 && bslot.transform.parent.GetChild(i - 1).childCount > 0 && bslot.transform.parent.GetChild(i - 1).GetChild(0).name == "SHCardP2"))
+                if (bslot.PreviouslyPlacedAvailableP2().Contains(bslot.transform))
+                {
+                    bslot.GetComponent<Image>().color = Color.green;
+                }
+            }
+            
+            if (gm.currentPhase == GamePhase.Move && this.transform.parent.tag == "BSlot")
+            { 
+                // Cache components and avoid redundant calculations
+                List<GameObject> cachedMovementAdjacentCards = new List<GameObject>();
+                Dictionary<GameObject, DisplayCard2> displayCardCache = new Dictionary<GameObject, DisplayCard2>();
+                Dictionary<Transform, Image> imageCache = new Dictionary<Transform, Image>();
+
+                // Cache the current position to avoid accessing it multiple times in the loop
+                Vector3 currentPosition = transform.position;
+               // Debug.Log("IS IT WORKING?");
+
+                foreach (GameObject p2 in player2)
+                {
+                   // Debug.Log("WORKING?");
+                    float distance = Vector3.Distance(p2.transform.position, currentPosition);
+                    if (p2.gameObject.name == "SHCardP2")
                     {
-                        Transform slot = bslot.transform.parent.GetChild(i);
-                        slot.GetComponent<Image>().color = Color.green;
+                        if (distance < 210f && p2 != this.gameObject)
+                        {
+                            cachedMovementAdjacentCards.Add(p2);
+                        }
+                    }
+                    else
+                    {
+                        if (!displayCardCache.TryGetValue(p2, out DisplayCard2 displayCard2))
+                        {
+                            displayCard2 = p2.GetComponent<DisplayCard2>();
+                            displayCardCache[p2] = displayCard2;
+                        }
+
+                        if (displayCard2 != null && displayCard2.canMove)
+                        {
+                            if (distance < 210f && p2 != this.gameObject)
+                            {
+                                cachedMovementAdjacentCards.Add(p2);
+                                Debug.Log("Cached P2:"+cachedMovementAdjacentCards);
+                            }
+                        }
                     }
                 }
 
-                if (gm.currentPhase == GamePhase.Move && this.transform.parent.tag == "BSlot")
-                { //(i <= 13) ||
-                    if ((i + 13 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 13).childCount > 0 && bslot.transform.parent.GetChild(i + 13).GetChild(0).tag == "Player2") ||
-                    (i + 14 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 14).childCount > 0 && bslot.transform.parent.GetChild(i + 14).GetChild(0).tag == "Player2") ||
-                    (i + 15 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 15).childCount > 0 && bslot.transform.parent.GetChild(i + 15).GetChild(0).tag == "Player2") ||
-                    (i + 1 < bslot.transform.parent.childCount && bslot.transform.parent.GetChild(i + 1).childCount > 0 && bslot.transform.parent.GetChild(i + 1).GetChild(0).tag == "Player2") ||
-                    (i - 13 >= 0 && bslot.transform.parent.GetChild(i - 13).childCount > 0 && bslot.transform.parent.GetChild(i - 13).GetChild(0).tag == "Player2") ||
-                    (i - 14 >= 0 && bslot.transform.parent.GetChild(i - 14).childCount > 0 && bslot.transform.parent.GetChild(i - 14).GetChild(0).tag == "Player2") ||
-                    (i - 15 >= 0 && bslot.transform.parent.GetChild(i - 15).childCount > 0 && bslot.transform.parent.GetChild(i - 15).GetChild(0).tag == "Player2") ||
-                    (i - 1 >= 0 && bslot.transform.parent.GetChild(i - 1).childCount > 0 && bslot.transform.parent.GetChild(i - 1).GetChild(0).tag == "Player2"))
+                HashSet<Transform> processedSlots = new HashSet<Transform>();
+
+                foreach (GameObject gb in cachedMovementAdjacentCards)
+                {
+                    float dist = Vector3.Distance(bslot.transform.position, gb.transform.position);
+
+                    if (dist < 210f && !processedSlots.Contains(bslot.transform))
                     {
-                    Transform slot = bslot.transform.parent.GetChild(i);
-                    slot.GetComponent<Image>().color = Color.green;
+                        if (!imageCache.TryGetValue(bslot.transform, out Image image))
+                        {
+                            image = bslot.GetComponent<Image>();
+                            imageCache[bslot.transform] = image;
+                        }
+
+                        if (image != null)
+                        {
+                            image.color = Color.green;
+                            MoveBoardSlots.Add(bslot.transform);
+                            processedSlots.Add(bslot.transform);
+                        }
                     }
                 }
             }
+            
         }
 
     }
@@ -206,6 +250,7 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                 slot.GetComponent<Image>().color = Color.white;
             }
         }
+        MoveBoardSlots.Clear();
 
         // If the card is not dropped on a slot, return it to the initial position.
         if (transform.parent == null || transform.parent.CompareTag("Hand"))
@@ -214,6 +259,20 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
             int cardEnergy = GetCardEnergy();
 
+        }
+
+        foreach (GameObject p2 in player2)
+        {
+            float distance = Vector3.Distance(p2.transform.position, transform.position);
+
+            if (distance < 210f)
+            {
+                UnityEngine.UI.Image p1outerborder = p2.transform.Find("OuterBorder").GetComponent<Image>();
+               // p1outerborder.color = Color.black;
+
+                //adjacentCards.Add(p1);
+                movementAdjacentCards.Clear();
+            }
         }
     }
 
