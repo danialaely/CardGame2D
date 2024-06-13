@@ -59,6 +59,13 @@ public class DisplayCard2 : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public Animator popupanim2;
 
+    public List<GameObject> movementAdjacentCards = new List<GameObject>();
+    public string Movtag = "Player1";
+    GameObject[] player2;
+
+    public List<Transform> MoveBoardSlots = new List<Transform>();
+    public string boardTag = "BSlot";
+
     // Start is called before the first frame update
     void Start()
     {

@@ -43,6 +43,8 @@ public class ShP1Card : MonoBehaviour, IPointerClickHandler
 
     public Animator popupAnim;
 
+    public bool canMove;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +54,8 @@ public class ShP1Card : MonoBehaviour, IPointerClickHandler
 
         player2 = GameObject.FindGameObjectsWithTag(tagToSearch);
         popOuterBdr = PopUpCardP1.transform.Find("OuterBorder").GetComponent<Image>();
+
+        canMove = true;
     }
 
     // Update is called once per frame

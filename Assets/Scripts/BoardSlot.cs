@@ -51,7 +51,7 @@ public class BoardSlot : MonoBehaviour, IDropHandler
     public static List<Transform> adjacentBSlotsPlayer1 = new List<Transform>(); //Player1 adjacent BoardSlots
 
     public static List<Transform> cardsPlacedInPreviousTurn = new List<Transform>(); //Keeping track of cards placed in previous turns
-    public static List<Transform> cardsPlacesMovePhase = new List<Transform>(); //Available places to move in Move Phase
+    public static List<Transform> cardsPlacedInPreviousTurnP2 = new List<Transform>(); //FOR P2 Keeping track of cards placed in previous turns
 
 
     private void Start()
@@ -75,7 +75,9 @@ public class BoardSlot : MonoBehaviour, IDropHandler
         UpdatePreviousCardsList();
         Debug.Log("Previously Placed Cards P1:"+PreviouslyPlacedAvailable().Count);
 
-        UpdateMovementPhaseList();
+        UpdatePreviousCardsListP2();
+
+       // UpdateMovementPhaseList();
        // Debug.Log("Available Slots:"+availableBSlotsAI.Count);
     }
     #region Ai Logics
@@ -172,35 +174,33 @@ public class BoardSlot : MonoBehaviour, IDropHandler
         return cardsPlacedInPreviousTurn ;
     }
 
-    public void UpdateMovementPhaseList() 
+    public void UpdatePreviousCardsListP2()
     {
-        cardsPlacesMovePhase.Clear();
+        cardsPlacedInPreviousTurnP2.Clear();
 
         foreach (Transform slot in transform.parent)
         {
             int rwindex = slot.GetSiblingIndex();
 
             // Check if any adjacent slot has a card tagged as "Player1"
-            if ((rwindex > 0 && transform.parent.GetChild(rwindex - 1).childCount > 0 && transform.parent.GetChild(rwindex - 1).GetChild(0).CompareTag("Player1")) ||
-                (rwindex > 12 && transform.parent.GetChild(rwindex - 13).childCount > 0 && transform.parent.GetChild(rwindex - 13).GetChild(0).CompareTag("Player1")) ||
-                (rwindex > 13 && transform.parent.GetChild(rwindex - 14).childCount > 0 && transform.parent.GetChild(rwindex - 14).GetChild(0).CompareTag("Player1")) ||
-                (rwindex > 14 && transform.parent.GetChild(rwindex - 15).childCount > 0 && transform.parent.GetChild(rwindex - 15).GetChild(0).CompareTag("Player1")) ||
-                (rwindex < transform.parent.childCount - 1 && transform.parent.GetChild(rwindex + 1).childCount > 0 && transform.parent.GetChild(rwindex + 1).GetChild(0).CompareTag("Player1")) ||
-                (rwindex < transform.parent.childCount - 13 && transform.parent.GetChild(rwindex + 13).childCount > 0 && transform.parent.GetChild(rwindex + 13).GetChild(0).CompareTag("Player1")) ||
-                (rwindex < transform.parent.childCount - 14 && transform.parent.GetChild(rwindex + 14).childCount > 0 && transform.parent.GetChild(rwindex + 14).GetChild(0).CompareTag("Player1")) ||
-                (rwindex < transform.parent.childCount - 15 && transform.parent.GetChild(rwindex + 15).childCount > 0 && transform.parent.GetChild(rwindex + 15).GetChild(0).CompareTag("Player1")))
+            if ((rwindex > 0 && transform.parent.GetChild(rwindex - 1).childCount > 0 && transform.parent.GetChild(rwindex - 1).GetChild(0).CompareTag("Player2")) ||
+                (rwindex > 12 && transform.parent.GetChild(rwindex - 13).childCount > 0 && transform.parent.GetChild(rwindex - 13).GetChild(0).CompareTag("Player2")) ||
+                (rwindex > 13 && transform.parent.GetChild(rwindex - 14).childCount > 0 && transform.parent.GetChild(rwindex - 14).GetChild(0).CompareTag("Player2")) ||
+                (rwindex > 14 && transform.parent.GetChild(rwindex - 15).childCount > 0 && transform.parent.GetChild(rwindex - 15).GetChild(0).CompareTag("Player2")) ||
+                (rwindex < transform.parent.childCount - 1 && transform.parent.GetChild(rwindex + 1).childCount > 0 && transform.parent.GetChild(rwindex + 1).GetChild(0).CompareTag("Player2")) ||
+                (rwindex < transform.parent.childCount - 13 && transform.parent.GetChild(rwindex + 13).childCount > 0 && transform.parent.GetChild(rwindex + 13).GetChild(0).CompareTag("Player2")) ||
+                (rwindex < transform.parent.childCount - 14 && transform.parent.GetChild(rwindex + 14).childCount > 0 && transform.parent.GetChild(rwindex + 14).GetChild(0).CompareTag("Player2")) ||
+                (rwindex < transform.parent.childCount - 15 && transform.parent.GetChild(rwindex + 15).childCount > 0 && transform.parent.GetChild(rwindex + 15).GetChild(0).CompareTag("Player2")))
             {
-                cardsPlacesMovePhase.Add(slot);
+                cardsPlacedInPreviousTurnP2.Add(slot);
             }
         }
     }
 
-    public List<Transform> MovementAvailable() 
+    public List<Transform> PreviouslyPlacedAvailableP2()
     {
-        return cardsPlacesMovePhase;
+        return cardsPlacedInPreviousTurnP2;
     }
-
-
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -337,12 +337,12 @@ public class BoardSlot : MonoBehaviour, IDropHandler
                     if (card.transform.parent.tag == "BSlot" && gmmm.currentPhase == GamePhase.Play)  {  if (rowIndex <=84) {/*  gmmm.ErrorSound();*/ }}
 
                     if (card.transform.parent.tag == "BSlot" && gmmm.currentPhase == GamePhase.Move && card.canMove)
-                    {      //(rowIndex >= 84 && rowIndex < maxRowIndex) ||
-                        if (MovementAvailable().Contains(transform))
+                    {      //(rowIndex >= 84 && rowIndex < maxRowIndex) ||   card.GetComponent<DisplayCard>().MoveBoardSlots().Contains(transform
+                        if (card.AdjacentBSlotsAvailable().Contains(transform))  //MovementAvailable().Contains(transform)
                         {                                                                 // card.transform.parent.name == "Hand"
                             //currentEnergy -= cardEnergy;
                             card.canMove = false;
-                            StartCoroutine(card.CanMoveNow(10f));
+                            StartCoroutine(card.CanMoveNow(20f));
                             currentEnergy -= 1;
                             energyText.text = currentEnergy.ToString();
                             healthBar.SetHealth(currentEnergy); //
@@ -860,7 +860,7 @@ public class BoardSlot : MonoBehaviour, IDropHandler
         UpdatePreviousCardsList();
         Debug.Log("Previously Placed Cards P1:" + PreviouslyPlacedAvailable().Count);
 
-        UpdateMovementPhaseList();
+       // UpdateMovementPhaseList();
 
         int value = currentEnergy;
         // Debug.Log("CE: " + value);
@@ -902,6 +902,8 @@ public class BoardSlot : MonoBehaviour, IDropHandler
     public void AnotherMethod2()  // (1):CARD DRAW PHASE
     {
         AdjacentBslotListP1();
+
+        UpdatePreviousCardsListP2();
        // UpdateMoveListP2();
         int value = currentEnergyP2;
         // Debug.Log("CE: " + value);

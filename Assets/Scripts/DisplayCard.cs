@@ -59,6 +59,13 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public Animator popupAnim;
 
+    public List<GameObject> movementAdjacentCards = new List<GameObject>();
+    public string Movtag = "Player1";
+    GameObject[] player1;
+
+    public List<Transform> MoveBoardSlots = new List<Transform>();
+    public string boardTag = "BSlot";
+
     // Start is called before the first frame update
     void Start()
     {
@@ -66,7 +73,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         UpdateCardInformation();
 
         player2 = GameObject.FindGameObjectsWithTag(tagToSearch);
-        
+        player1 = GameObject.FindGameObjectsWithTag(Movtag);
 
         // Populate allDisplayCards with all instances of DisplayCard
         allDisplayCards = new List<DisplayCard>(FindObjectsOfType<DisplayCard>());
@@ -83,6 +90,11 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
         
     }
+    public List<Transform> AdjacentBSlotsAvailable() 
+    {
+        return MoveBoardSlots;
+    }
+
         public IEnumerator CanMoveNow(float delay) 
     {
         yield return new WaitForSeconds(delay);
@@ -123,7 +135,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         foreach (BoardSlot bslot in BoSlots)
         {
             //  bslot.UpdatePreviousCardsList();
-            bslot.UpdateMovementPhaseList();
+           // bslot.UpdateMovementPhaseList();
             //PLAY HIGHLIGHT
             if (gm.currentPhase == GamePhase.Play && this.transform.parent.name == "Hand")
             { 
@@ -136,10 +148,63 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
             if (gm.currentPhase == GamePhase.Move && this.transform.parent.tag == "BSlot")
             {
-                if (bslot.MovementAvailable().Contains(bslot.transform))
+                // Cache components and avoid redundant calculations
+                List<GameObject> cachedMovementAdjacentCards = new List<GameObject>();
+                Dictionary<GameObject, DisplayCard> displayCardCache = new Dictionary<GameObject, DisplayCard>();
+                Dictionary<Transform, Image> imageCache = new Dictionary<Transform, Image>();
+
+                // Cache the current position to avoid accessing it multiple times in the loop
+                Vector3 currentPosition = transform.position;
+
+                foreach (GameObject p1 in player1)
                 {
-                    // Highlight the slot
-                    bslot.GetComponent<Image>().color = Color.green;
+                    float distance = Vector3.Distance(p1.transform.position, currentPosition);
+                    if (p1.gameObject.name == "SHCardP1")
+                    {
+                        if (distance < 210f && p1 != this.gameObject)
+                        {
+                            cachedMovementAdjacentCards.Add(p1);
+                        }
+                    }
+                    else
+                    {
+                        if (!displayCardCache.TryGetValue(p1, out DisplayCard displayCard))
+                        {
+                            displayCard = p1.GetComponent<DisplayCard>();
+                            displayCardCache[p1] = displayCard;
+                        }
+
+                        if (displayCard != null && displayCard.canMove)
+                        {
+                            if (distance < 210f && p1 != this.gameObject)
+                            {
+                                cachedMovementAdjacentCards.Add(p1);
+                            }
+                        }
+                    }
+                }
+
+                HashSet<Transform> processedSlots = new HashSet<Transform>();
+
+                foreach (GameObject gb in cachedMovementAdjacentCards)
+                {
+                    float dist = Vector3.Distance(bslot.transform.position, gb.transform.position);
+
+                    if (dist < 210f && !processedSlots.Contains(bslot.transform))
+                    {
+                        if (!imageCache.TryGetValue(bslot.transform, out Image image))
+                        {
+                            image = bslot.GetComponent<Image>();
+                            imageCache[bslot.transform] = image;
+                        }
+
+                        if (image != null)
+                        {
+                            image.color = Color.green;
+                            MoveBoardSlots.Add(bslot.transform);
+                            processedSlots.Add(bslot.transform);
+                        }
+                    }
                 }
             }
 
@@ -199,6 +264,7 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                 slot.GetComponent<Image>().color = Color.white;
             }
         }
+        MoveBoardSlots.Clear();
 
         // If the card is not dropped on a slot, return it to the initial position.
         if (gm.currentPhase == GamePhase.Play  || gm.currentPhase == GamePhase.Draw) 
@@ -207,6 +273,20 @@ public class DisplayCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             {
                 transform.position = initialPosition;
                 int cardEnergy = GetCardEnergy();
+            }
+        }
+
+        foreach (GameObject p1 in player1)
+        {
+            float distance = Vector3.Distance(p1.transform.position, transform.position);
+
+            if (distance < 210f)
+            {
+                UnityEngine.UI.Image p1outerborder = p1.transform.Find("OuterBorder").GetComponent<Image>();
+                p1outerborder.color = Color.black;
+
+                //adjacentCards.Add(p1);
+                movementAdjacentCards.Clear();
             }
         }
 
